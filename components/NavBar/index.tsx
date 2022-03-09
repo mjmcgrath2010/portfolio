@@ -1,5 +1,6 @@
 import React, { MouseEvent } from "react";
 import styled, { css } from "styled-components";
+import NextLink from "next/link";
 import NavBarProps, { LogoProps } from "./types";
 import AppBar from "../AppBar";
 import Logo from "../../public/assets/branding/logo.svg";
@@ -50,10 +51,18 @@ const NavBarContainer = styled.div`
   align-items: center;
 `;
 
-const NavBarLogoContainer = styled.div`
+const NavBarLogoContainer = styled.div<Scrolled>`
   width: 250px;
   flex: 1;
   justify-self: flex-start;
+
+  ${({ isScrolled }) =>
+    !isScrolled &&
+    css`
+      ${StyledLogo} {
+        color: ${({ theme }) => theme.palette.text.light};
+      }
+    `}
 `;
 
 const StyledLink = styled(Link)`
@@ -127,17 +136,13 @@ NavRoutes.defaultProps = {
 const NavBarLogo = ({ className }: LogoProps) => {
   const { thresholdMet } = useScroll(70);
 
-  const handleClick = (e: MouseEvent) => {
-    e.preventDefault();
-  };
-
   return (
-    <NavBarLogoContainer className={className}>
-      <StyledLogo
-        isScrolled={thresholdMet}
-        role="button"
-        onClick={handleClick}
-      />
+    <NavBarLogoContainer isScrolled={thresholdMet} className={className}>
+      <NextLink href="/" passHref>
+        <a>
+          <StyledLogo role="button" />
+        </a>
+      </NextLink>
     </NavBarLogoContainer>
   );
 };

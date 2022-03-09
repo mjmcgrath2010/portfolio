@@ -6,11 +6,3 @@ export interface LinkProps {
   className?: string;
   showUnderline?: boolean;
 }
-
-export interface StyledLinkProps {
-  children: ReactElement | string;
-  className?: string;
-  showUnderline?: boolean | undefined;
-}
-
-export default LinkProps;

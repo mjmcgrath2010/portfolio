@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import NextLink from "next/link";
 
-import { LinkProps, StyledLinkProps } from "./types";
+import { LinkProps } from "./types";
 
 const BaseLinkStyles = css<LinkProps>`
   color: ${({ theme }) => theme.palette.info.main};
