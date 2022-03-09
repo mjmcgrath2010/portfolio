@@ -1,10 +1,10 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { Link as RouterLink } from "react-router-dom";
+import NextLink from "next/link";
 
-import { LinkProps, LinkElementProps } from "./types";
+import { LinkProps, StyledLinkProps } from "./types";
 
-const BaseLinkStyles = css<LinkElementProps>`
+const BaseLinkStyles = css<LinkProps>`
   color: ${({ theme }) => theme.palette.info.main};
   cursor: pointer;
   font-size: ${({ theme }) => theme.fontSizes.md};
@@ -28,31 +28,27 @@ const BaseLinkStyles = css<LinkElementProps>`
   }
 `;
 
-const StyledRouterLink = styled.a.attrs(({ to }: { to: string }) => ({
-  href: to,
-}))`
+const ExternalLink = styled.a<LinkProps>`
   ${BaseLinkStyles};
 `;
 
-const ExternalLink = styled.a.attrs(({ to }: { to: string }) => ({
-  href: to,
-}))`
+const InternalLink = styled.a<LinkProps>`
   ${BaseLinkStyles};
 `;
 
 const Link = ({
   children,
-  external,
-  to,
-  className,
-  showUnderline,
+  external = false,
+  href = "",
+  className = "",
+  showUnderline = false,
 }: LinkProps) => {
   if (external) {
     return (
       <ExternalLink
         showUnderline={showUnderline}
         className={className}
-        to={to}
+        href={href}
         target="_blank"
       >
         {children}
@@ -61,21 +57,12 @@ const Link = ({
   }
 
   return (
-    <StyledRouterLink
-      showUnderline={showUnderline}
-      to={to}
-      className={className}
-    >
-      {children}
-    </StyledRouterLink>
+    <NextLink href={href} passHref>
+      <InternalLink className={className} showUnderline={showUnderline}>
+        {children}
+      </InternalLink>
+    </NextLink>
   );
-};
-
-Link.defaultProps = {
-  className: "",
-  to: "/",
-  external: false,
-  showUnderline: false,
 };
 
 export default Link;

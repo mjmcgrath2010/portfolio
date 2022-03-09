@@ -1,17 +1,16 @@
 import { ReactElement } from "react";
 export interface LinkProps {
-  children?: ReactElement | string;
-  external: boolean;
-  to: string;
-  className: string;
-  showUnderline: boolean;
+  children: ReactElement | string;
+  external?: boolean;
+  href?: string;
+  className?: string;
+  showUnderline?: boolean;
 }
 
-export interface LinkElementProps {
-  to: string;
-  className: string;
-  showUnderline: boolean;
-  children?: ReactElement | string;
+export interface StyledLinkProps {
+  children: ReactElement | string;
+  className?: string;
+  showUnderline?: boolean | undefined;
 }
 
 export default LinkProps;

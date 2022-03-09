@@ -7,7 +7,7 @@ import Link from "../Link";
 import useScroll from "../../hooks/useScroll";
 
 interface RouteProps {
-  to: string;
+  href: string;
   external?: boolean;
   name: string;
 }
@@ -17,7 +17,7 @@ interface NavRoutesProps {
 }
 
 interface Scrolled {
-  isScrolled?: boolean;
+  isScrolled?: boolean | undefined;
 }
 const Container = styled(AppBar)<Scrolled>`
   ${({ isScrolled }) =>
@@ -93,8 +93,8 @@ const NavRoutes = ({ routes }: NavRoutesProps) => {
   const { thresholdMet } = useScroll(70);
   return (
     <NavRoutesContainer isScrolled={thresholdMet}>
-      {routes.map(({ to, external, name }: RouteProps) => (
-        <StyledLink key={name} to={to} external={external}>
+      {routes.map(({ href, external, name }: RouteProps) => (
+        <StyledLink key={name} href={href} external={external}>
           {name}
         </StyledLink>
       ))}
@@ -105,19 +105,19 @@ const NavRoutes = ({ routes }: NavRoutesProps) => {
 NavRoutes.defaultProps = {
   routes: [
     {
-      to: "/about",
+      href: "/about",
       name: "About",
     },
     {
-      to: "/projects",
+      href: "/projects",
       name: "Projects",
     },
     {
-      to: "/blog",
+      href: "/blog",
       name: "Blog",
     },
     {
-      to: "/components/index.html",
+      href: "/components/index.html",
       name: "Components",
       external: true,
     },
