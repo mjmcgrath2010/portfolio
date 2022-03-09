@@ -1,4 +1,3 @@
-import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import theme from "../components/theme";
 
@@ -22,11 +21,9 @@ export const parameters = {
 };
 
 const withThemeProvider = (Story, context) => (
-  <BrowserRouter>
-    <ThemeProvider theme={theme}>
-      <Story {...context} />
-    </ThemeProvider>
-  </BrowserRouter>
+  <ThemeProvider theme={theme}>
+    <Story {...context} />
+  </ThemeProvider>
 );
 
 export const decorators = [withThemeProvider];

@@ -117,7 +117,7 @@ NavRoutes.defaultProps = {
       name: "Blog",
     },
     {
-      to: "/components",
+      to: "/components/index.html",
       name: "Components",
       external: true,
     },
