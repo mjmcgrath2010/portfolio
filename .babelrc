@@ -1,4 +1,9 @@
 {
   "presets": ["next/babel"],
-  "plugins": ["styled-components", "inline-react-svg"]
+  "plugins": [
+    "styled-components",
+    "inline-react-svg",
+    "babel-plugin-transform-typescript-metadata",
+    ["@babel/plugin-proposal-decorators", { "legacy": true, "loose" : false  }],
+    ["@babel/plugin-proposal-class-properties", { "loose" : false }]]
 }
