@@ -9,7 +9,7 @@
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o public/components",
-    "test": "jest"
+    "test": "jest  --coverage"
   },
   "dependencies": {
     "@types/styled-components": "^5.1.24",
