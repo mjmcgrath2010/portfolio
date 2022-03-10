@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { getCountries } from "@graphql-client/hooks/useCountries";
+import { getCountries } from "@graphql-client/queries/countries";
 
 const Home: NextPage = ({ countries }: any) => {
   return (
@@ -16,6 +16,8 @@ const Home: NextPage = ({ countries }: any) => {
   );
 };
 
-export const getStaticProps = () => getCountries();
+export const getStaticProps = async () => {
+  return { props: { countries: await (await getCountries()).props.countries } };
+};
 
 export default Home;

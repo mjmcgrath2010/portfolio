@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 import client from "@graphql-client/apollo-client";
 
 export const getCountries = () =>
-  (async function getStaticProps() {
+  (async function () {
     const { data } = await client.query({
       query: gql`
         query Countries {
@@ -17,7 +17,7 @@ export const getCountries = () =>
 
     return {
       props: {
-        countries: data.countries.slice(0, 4),
+        countries: data.countries.slice(0, 20),
       },
     };
   })();

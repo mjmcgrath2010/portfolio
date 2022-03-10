@@ -24,6 +24,7 @@
       "@server/*": ["server/*"],
       "@graphql-server/*": ["server/graphql/*"],
       "@graphql-client/*": ["graphql/*"],
+      "@gql/hooks/*": ["graphql/queries/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "server/graphql/resolvers/HelloWorldResolver.ts"],
