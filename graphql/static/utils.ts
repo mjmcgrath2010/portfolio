@@ -1,7 +1,11 @@
+type QueryProps = {
+  props: Object;
+};
+
 export const mapQueriesToProps = async (queries: any) =>
   await (async () => {
     const data = await queries.reduce(
-      async (acc, queryObj) => {
+      async (acc: QueryProps, queryObj: Function) => {
         const [prop, fn] = Object.entries(queryObj)[0];
         try {
           const { props } = acc;
@@ -15,7 +19,7 @@ export const mapQueriesToProps = async (queries: any) =>
           };
         } catch (e) {
           return {
-            error: e.message,
+            error: "Oops, something went wrong",
           };
         }
       },
