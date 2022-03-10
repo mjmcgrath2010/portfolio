@@ -1,7 +1,8 @@
-import { ApolloClient, InMemoryCache } from "@apollo/client";
+import fetch from "cross-fetch";
+import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: "https://countries.trevorblades.com",
+  link: new HttpLink({ uri: "https://countries.trevorblades.com", fetch }),
   cache: new InMemoryCache(),
 });
 
