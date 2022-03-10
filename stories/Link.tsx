@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "../components/Link";
-import LinkProps from "../components/Link/types";
+import { LinkProps } from "../components/Link/types";
 
 export default {
   title: "Components/Link",
