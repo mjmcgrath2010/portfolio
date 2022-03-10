@@ -12,9 +12,11 @@
     "test": "jest  --coverage"
   },
   "dependencies": {
+    "@apollo/client": "^3.5.10",
     "@types/styled-components": "^5.1.24",
     "apollo-server-micro": "^3.6.3",
     "class-validator": "^0.13.2",
+    "cross-fetch": "^3.1.5",
     "graphql": "^15.3.0",
     "micro": "^9.3.4",
     "next": "12.1.0",

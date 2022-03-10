@@ -22,7 +22,9 @@
       "@pages/*": ["pages/*"],
       "@hooks/*": ["hooks/*"],
       "@server/*": ["server/*"],
-      "@graphql/*": ["server/graphql/*"],
+      "@graphql-server/*": ["server/graphql/*"],
+      "@graphql-client/*": ["graphql/*"],
+      "@gql/hooks/*": ["graphql/static/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "server/graphql/resolvers/HelloWorldResolver.ts"],
