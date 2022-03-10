@@ -1,0 +1,5 @@
+ignore:
+  - "tests/*"             # ignore tests
+  - "stories/*"           # ignore storybook docs
+  - "lib/*"
+  - ".storybook/*"
