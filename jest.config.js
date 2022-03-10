@@ -4,6 +4,8 @@ const jestConfig = {
     "^@components(.*)$": "<rootDir>/components$1",
     "^@pages(.*)$": "<rootDir>/pages$1",
     "^@hooks(.*)$": "<rootDir>/hooks$1",
+    "^@server(.*)$": "<rootDir>/server$1",
+    "^@graphql(.*)$": "<rootDir>/graphql$1",
   },
   testEnvironment: "jsdom",
   transformIgnorePatterns: [
