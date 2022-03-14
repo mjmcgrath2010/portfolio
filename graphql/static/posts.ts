@@ -4,15 +4,13 @@ import client from "@graphql-client/apollo-client";
 export const getCountries = async () => {
   const { data } = await client.query({
     query: gql`
-      query Countries {
-        countries {
-          code
-          name
-          emoji
+      query Posts {
+        posts {
+          _id
         }
       }
     `,
   });
 
-  return data.countries.slice(0, 20);
+  return data.posts;
 };
