@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { getPosts, mapQueriesToProps } from "@graphql-client/static";
 
-const Home: NextPage = () => {
+const Home: NextPage = ({ posts }: any) => {
   return (
     <div>
       <Head>
@@ -11,10 +11,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>Coming soon!</h1>
-      {/* {JSON.stringify(posts)} */}
+      {JSON.stringify(posts)}
     </div>
   );
 };
-// export const getStaticProps = () => mapQueriesToProps([{ posts: getPosts }]);
+export const getStaticProps = () => mapQueriesToProps([{ posts: getPosts }]);
 
 export default Home;
