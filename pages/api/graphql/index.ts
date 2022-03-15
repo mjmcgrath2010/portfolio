@@ -4,7 +4,7 @@ import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-co
 import type { PageConfig } from "next";
 import { buildSchema } from "type-graphql";
 import PostsResolver from "@graphql-server/resolvers/Posts";
-import { MongoClient } from "mongodb";
+import { Db, MongoClient } from "mongodb";
 
 // disable next js from handling this route
 export const config: PageConfig = {
@@ -13,7 +13,7 @@ export const config: PageConfig = {
   },
 };
 
-let db;
+let db: Db;
 
 const apolloServer = new ApolloServer({
   schema: await buildSchema({
@@ -23,13 +23,10 @@ const apolloServer = new ApolloServer({
   context: async () => {
     if (!db) {
       try {
-        const dbClient = new MongoClient(`${process.env.DB_URL}`, {
-          useNewUrlParser: true,
-          useUnifiedTopology: true,
-        });
+        const dbClient = new MongoClient(`${process.env.DB_URL}`, {});
 
         await dbClient.connect();
-        db = dbClient.db("next-graphql"); // database name
+        db = dbClient.db(`${process.env.DB_NAME}`); // database name
         return { db };
       } catch (e) {
         console.log("--->error while connecting with graphql context (db)", e);
