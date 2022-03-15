@@ -20,6 +20,7 @@ const apolloServer = new ApolloServer({
     resolvers: [PostsResolver],
   }),
   plugins: [ApolloServerPluginLandingPageGraphQLPlayground],
+  introspection: true,
   context: async () => {
     if (!db) {
       try {
