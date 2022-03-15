@@ -19,7 +19,9 @@ export const mapQueriesToProps = async (queries: any) =>
           };
         } catch (e) {
           return {
-            error: "Oops, something went wrong",
+            props: {
+              error: "Oops, something went wrong",
+            },
           };
         }
       },

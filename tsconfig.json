@@ -22,6 +22,7 @@
       "@pages/*": ["pages/*"],
       "@hooks/*": ["hooks/*"],
       "@server/*": ["server/*"],
+      "@models/*": ["server/db/models/*"],
       "@graphql-server/*": ["server/graphql/*"],
       "@graphql-client/*": ["graphql/*"],
       "@gql/hooks/*": ["graphql/static/*"],
