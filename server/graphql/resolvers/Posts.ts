@@ -1,11 +1,21 @@
-import { Query, Resolver } from "type-graphql";
+import { Query, Resolver, Ctx } from "type-graphql";
+import { Context } from "@apollo/client";
 import { PostType } from "../types/Post";
 
 @Resolver()
 class PostsResolver {
   @Query(() => [PostType])
-  posts() {
-    return [{ _id: "1234", title: "h2l12", description: "afsfa" }];
+  async posts(@Ctx() ctx: Context) {
+    try {
+      const { db } = ctx;
+      const collection = db.collection("posts");
+      const posts = await collection.find({}).toArray();
+
+      return posts;
+    } catch (e) {
+      console.log(e);
+      return [];
+    }
   }
 }
 
