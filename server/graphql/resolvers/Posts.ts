@@ -1,6 +1,6 @@
 import { Query, Resolver, Ctx } from "type-graphql";
 import { Context } from "@apollo/client";
-import { PostType } from "../types/Post";
+import { PostType } from "../types";
 
 @Resolver()
 class PostsResolver {
