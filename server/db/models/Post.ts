@@ -1,7 +1,7 @@
 import mongoose, { Schema, model } from "mongoose";
 import { PostType } from "../../graphql/types/Post";
 
-const PostSchema = new Schema<PostType>({
+const Post = new Schema<PostType>({
   title: {
     type: String,
   },
@@ -10,6 +10,4 @@ const PostSchema = new Schema<PostType>({
   },
 });
 
-const Post = model<PostType>("Post", PostSchema);
-
-export default mongoose.connection.models.Post || Post;
+export default Post;

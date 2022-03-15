@@ -8,8 +8,7 @@ class PostsResolver {
   async posts(@Ctx() ctx: Context) {
     try {
       const { db } = ctx;
-      const posts = await db.collection("posts").find({}).toArray();
-
+      const posts = await db.models.Post.find({});
       return posts;
     } catch (e) {
       console.log(e);
