@@ -1,4 +1,4 @@
-import mongoose, { Schema, model } from "mongoose";
+import { Schema } from "mongoose";
 import { PostType } from "../../graphql/types/Post";
 
 const Post = new Schema<PostType>({

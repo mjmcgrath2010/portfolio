@@ -3,7 +3,7 @@ import { ObjectType, Field, ID } from "type-graphql";
 @ObjectType()
 export class PostType {
   @Field((type) => ID)
-  _id!: string;
+  readonly _id!: string;
 
   @Field()
   title!: string;
