@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { getPosts, mapQueriesToProps } from "@graphql-client/static";
+import { getPosts, mapQueriesToProps } from "@graphql/client/queries";
 
 const Home: NextPage = ({ posts }: any) => {
   return (

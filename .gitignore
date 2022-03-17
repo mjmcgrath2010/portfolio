@@ -17,6 +17,7 @@
 /build
 /public/components
 /coverage
+.vscode
 
 # misc
 .DS_Store
@@ -33,6 +34,7 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+.history
 
 # vercel
 .vercel

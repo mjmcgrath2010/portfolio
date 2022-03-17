@@ -3,7 +3,7 @@ import { ApolloServer } from "apollo-server-micro";
 import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
 import type { PageConfig } from "next";
 import { buildSchema } from "type-graphql";
-import PostsResolver from "@graphql-server/resolvers/Posts";
+import PostsResolver from "@graphql/server/resolvers/Posts";
 import connectDb from "../../../server/db/config/index";
 
 import * as models from "@server/db/models";

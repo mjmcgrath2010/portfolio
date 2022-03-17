@@ -6,8 +6,9 @@ const jestConfig = {
     "^@hooks(.*)$": "<rootDir>/hooks$1",
     "^@server(.*)$": "<rootDir>/server$1",
     "^@models(.*)$": "<rootDir>/server/db/models$1",
-    "^@graphql-server(.*)$": "<rootDir>/server/graphql$1",
-    "^@graphql-client(.*)$": "<rootDir>/graphql$1",
+    "^@models$": "<rootDir>/server/db/models",
+    "^@graphql/server(.*)$": "<rootDir>/server/graphql$1",
+    "^@graphql/client(.*)$": "<rootDir>/graphql$1",
   },
   testEnvironment: "jsdom",
   transformIgnorePatterns: [

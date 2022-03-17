@@ -1,5 +1,5 @@
 import { Schema } from "mongoose";
-import { PostType } from "@graphql-server/types";
+import { PostType } from "@graphql/server/types";
 
 const Post = new Schema<PostType>({
   title: {
