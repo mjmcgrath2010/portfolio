@@ -4,9 +4,8 @@ import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-co
 import type { PageConfig } from "next";
 import { buildSchema } from "type-graphql";
 import PostsResolver from "@graphql/server/resolvers/Posts";
-import connectDb from "../../../server/db/config/index";
+import connectDb from "@server/db/config/index";
 
-import * as models from "@server/db/models";
 import { ObjectId } from "mongodb";
 import { ObjectIdScalar } from "@server/graphql/scalars/ObjectId";
 import { TypegooseMiddleware } from "@server/graphql/middleware/typegoose";
@@ -18,23 +17,32 @@ export const config: PageConfig = {
   },
 };
 
-const apolloServer = new ApolloServer({
-  schema: await buildSchema({
-    resolvers: [PostsResolver],
-    scalarsMap: [{ type: ObjectId, scalar: ObjectIdScalar }],
-    globalMiddlewares: [TypegooseMiddleware],
-  }),
-  plugins: [ApolloServerPluginLandingPageGraphQLPlayground],
-  context: async () => {
-    try {
-      const db = await connectDb();
-      return { db };
-    } catch (e) {
-      console.log("--->error while connecting with graphql context (db)", e);
-    }
-  },
-});
+const startServer = async () => {
+  try {
+    const apolloServer = new ApolloServer({
+      schema: await buildSchema({
+        resolvers: [PostsResolver],
+        scalarsMap: [{ type: ObjectId, scalar: ObjectIdScalar }],
+        globalMiddlewares: [TypegooseMiddleware],
+      }),
+      plugins: [ApolloServerPluginLandingPageGraphQLPlayground],
+      context: async () => {
+        try {
+          const db = await connectDb();
+          return { db };
+        } catch (e) {
+          console.log(
+            "--->error while connecting with graphql context (db)",
+            e
+          );
+        }
+      },
+    });
+    await apolloServer.start();
+    return apolloServer.createHandler({ path: "/api/graphql" });
+  } catch (err) {
+    return Promise.reject(err);
+  }
+};
 
-await apolloServer.start();
-
-export default apolloServer.createHandler({ path: "/api/graphql" });
+export default await startServer();

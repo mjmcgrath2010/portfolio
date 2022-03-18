@@ -1,6 +1,12 @@
-import { ObjectType, Field, ID } from "type-graphql";
+import { ObjectType, Field } from "type-graphql";
 import { getModelForClass, prop } from "@typegoose/typegoose";
 import { ObjectId } from "mongodb";
+
+export interface PostType {
+  _id: ObjectId;
+  title: string;
+  description: string;
+}
 
 @ObjectType()
 export class Post {

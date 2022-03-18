@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import * as models from "@models/index";
+import * as models from "@models";
 
 const MongoURL = process.env.DB_URL;
 const dbName = process.env.DB_NAME;
