@@ -7,6 +7,8 @@ export const getPosts = async () => {
       query Posts {
         posts {
           _id
+          title
+          description
         }
       }
     `,
