@@ -1,5 +1,5 @@
 import { Schema } from "mongoose";
-import { Post as PostType } from "@server/graphql/schema";
+import { PostType } from "@server/graphql/schema";
 import { ObjectId } from "mongodb";
 
 const Post = new Schema<PostType>({

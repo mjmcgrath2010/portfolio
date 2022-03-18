@@ -3,7 +3,7 @@ import { getModelForClass, prop } from "@typegoose/typegoose";
 import { ObjectId } from "mongodb";
 
 @ObjectType()
-export class Post {
+export class PostType {
   @prop()
   @Field()
   public _id!: ObjectId;
@@ -17,4 +17,4 @@ export class Post {
   public description!: string;
 }
 
-export const PostModel = getModelForClass(Post);
+export const PostModel = getModelForClass(PostType);

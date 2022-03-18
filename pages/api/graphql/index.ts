@@ -6,7 +6,6 @@ import { buildSchema } from "type-graphql";
 import PostsResolver from "@graphql/server/resolvers/Posts";
 import connectDb from "../../../server/db/config/index";
 
-import * as models from "@server/db/models";
 import { ObjectId } from "mongodb";
 import { ObjectIdScalar } from "@server/graphql/scalars/ObjectId";
 import { TypegooseMiddleware } from "@server/graphql/middleware/typegoose";
