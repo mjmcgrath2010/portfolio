@@ -1,7 +1,7 @@
 import { Schema } from "mongoose";
-import { PostType } from "@graphql/server/types";
+import { PostModel } from "@server/graphql/schema";
 
-const Post = new Schema<PostType>({
+const Post = new Schema<PostModel>({
   title: {
     type: String,
   },
