@@ -1,15 +1,16 @@
 import { Query, Resolver, Ctx } from "type-graphql";
 import { Context } from "@apollo/client";
 
-import { PostModel } from "../schema/Post";
+import { Post } from "../schema/Post";
 
-@Resolver()
+@Resolver(Post)
 class PostsResolver {
-  @Query(() => [PostModel])
+  @Query(() => [Post])
   async posts(@Ctx() ctx: Context) {
     try {
       const { db } = ctx;
-      const posts = await db.models.PostModel.find({}).exec();
+      const posts = await db.models.Post.find({}).exec();
+
       console.log(posts);
       return posts;
     } catch (e) {

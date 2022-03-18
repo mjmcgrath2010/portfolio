@@ -3,17 +3,18 @@ import { getModelForClass, prop } from "@typegoose/typegoose";
 import { ObjectId } from "mongodb";
 
 @ObjectType()
-class Post {
-  @prop({})
-  readonly _id!: ObjectId;
-
+export class Post {
+  @prop()
   @Field()
-  prop({});
-  title!: string;
+  public _id!: ObjectId;
 
-  @Field({ nullable: true })
-  prop({});
-  description!: string;
+  @prop()
+  @Field()
+  public title!: string;
+
+  @prop()
+  @Field()
+  public description!: string;
 }
 
 export const PostModel = getModelForClass(Post);

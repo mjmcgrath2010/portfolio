@@ -1,7 +1,11 @@
 import { Schema } from "mongoose";
-import { PostModel } from "@server/graphql/schema";
+import { Post as PostType } from "@server/graphql/schema";
+import { ObjectId } from "mongodb";
 
-const Post = new Schema<PostModel>({
+const Post = new Schema<PostType>({
+  _id: {
+    type: ObjectId,
+  },
   title: {
     type: String,
   },
