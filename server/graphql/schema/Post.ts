@@ -1,4 +1,4 @@
-import { ObjectType, Field } from "type-graphql";
+import { ObjectType, Field, InputType } from "type-graphql";
 import { getModelForClass, prop } from "@typegoose/typegoose";
 import { ObjectId } from "mongodb";
 
@@ -8,11 +8,20 @@ export interface PostType {
   description: string;
 }
 
+@InputType()
+export class AddPostInput implements Partial<PostType> {
+  @Field()
+  public title!: string;
+
+  @Field()
+  public description!: string;
+}
+
 @ObjectType()
 export class Post {
   @prop()
   @Field()
-  public _id!: ObjectId;
+  public _id?: ObjectId;
 
   @prop()
   @Field()
