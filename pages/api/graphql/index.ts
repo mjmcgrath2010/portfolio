@@ -29,7 +29,9 @@ const startServer = async () => {
           // RESOLVER ARRAY
         ],
         scalarsMap: [{ type: ObjectId, scalar: ObjectIdScalar }],
-        globalMiddlewares: [TypegooseMiddleware],
+        globalMiddlewares: [
+          process.env.NODE_ENV !== "production" && TypegooseMiddleware,
+        ].filter(Boolean),
       }),
       plugins: [ApolloServerPluginLandingPageGraphQLPlayground],
       context: async () => {
