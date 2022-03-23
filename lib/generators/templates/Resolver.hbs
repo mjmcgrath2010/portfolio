@@ -22,7 +22,7 @@ class {{properCase name}}sResolver {
     try {
       const { db } = ctx;
       const {{camelCase name}} = await db.models.{{properCase name}}.findOne({ _id: data._id }).exec();
-      return{{camelCase name}};
+      return {{camelCase name}};
     } catch (e) {
       console.log(e);
       return {};

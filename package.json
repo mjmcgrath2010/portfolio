@@ -9,7 +9,8 @@
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o public/components",
-    "test": "jest  --coverage"
+    "test": "jest  --coverage",
+    "generate": "plop --plopfile ./lib/generators/index.js"
   },
   "dependencies": {
     "@apollo/client": "^3.5.10",

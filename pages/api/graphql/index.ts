@@ -4,6 +4,7 @@ import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-co
 import type { PageConfig } from "next";
 import { buildSchema } from "type-graphql";
 import PostsResolver from "@graphql/server/resolvers/Posts";
+import UsersResolver from "@graphql/server/resolvers/User";
 import connectDb from "@server/db/config/index";
 
 import { ObjectId } from "mongodb";
@@ -21,7 +22,7 @@ const startServer = async () => {
   try {
     const apolloServer = new ApolloServer({
       schema: await buildSchema({
-        resolvers: [PostsResolver],
+        resolvers: [PostsResolver, UsersResolver],
         scalarsMap: [{ type: ObjectId, scalar: ObjectIdScalar }],
         globalMiddlewares: [TypegooseMiddleware],
       }),
