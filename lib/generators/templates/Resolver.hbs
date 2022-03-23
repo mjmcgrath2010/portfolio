@@ -1,0 +1,60 @@
+import { Query, Resolver, Ctx, Mutation, Arg } from "type-graphql";
+import { Context } from "@apollo/client";
+
+import { {{properCase name}}, Add{{properCase name}}Input, {{properCase name}}ByIdInput, Update{{properCase name}}Input } from "@schema";
+
+@Resolver({{properCase name}})
+class {{properCase name}}sResolver {
+  @Query(() => [{{properCase name}}])
+  async all{{properCase name}}s(@Ctx() ctx: Context) {
+    try {
+      const { db } = ctx;
+      const {{camelCase name}}s = await db.models.{{properCase name}}.find({}).exec();
+      return {{camelCase name}}s;
+    } catch (e) {
+      console.log(e);
+      return [];
+    }
+  }
+
+  @Query(() => {{properCase name}})
+  async get{{properCase name}}(@Arg("data") data: {{properCase name}}ByIdInput, @Ctx() ctx: Context) {
+    try {
+      const { db } = ctx;
+      const {{properCase name}} = await db.models.{{properCase name}}.findOne({ _id: data._id }).exec();
+      return {{properCase name}};
+    } catch (e) {
+      console.log(e);
+      return {};
+    }
+  }
+
+  @Mutation(() => {{properCase name}})
+  async add{{properCase name}}(@Arg("data") data: Add{{properCase name}}Input, @Ctx() ctx: Context) {
+    try {
+      const { db } = ctx;
+      const {{properCase name}} = new db.models.{{properCase name}}(data);
+      await {{properCase name}}.save();
+
+      return {{properCase name}};
+    } catch (e) {
+      console.log(e);
+      return {};
+    }
+  }
+
+  @Mutation(() => {{properCase name}})
+  async update{{properCase name}}(@Arg("data") data: Update{{properCase name}}Input, @Ctx() ctx: Context) {
+    try {
+      const { db } = ctx;
+      const { _id, ...update } = data;
+      await db.models.{{properCase name}}.findByIdAndUpdate(_id, update);
+      return await db.models.{{properCase name}}.findById(_id);
+    } catch (e) {
+      console.log(e);
+      return {};
+    }
+  }
+}
+
+export default {{properCase name}}sResolver;

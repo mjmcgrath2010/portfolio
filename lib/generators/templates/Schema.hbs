@@ -1,0 +1,42 @@
+import { ObjectType, Field, InputType } from "type-graphql";
+import { getModelForClass, prop } from "@typegoose/typegoose";
+import { ObjectId } from "mongodb";
+
+export interface {{properCase name}}Type {
+  _id: ObjectId;
+  name: string;
+}
+
+@InputType()
+export class {{properCase name}}ByIdInput implements Partial<{{properCase name}}Type> {
+  @Field()
+  public _id!: ObjectId;
+}
+
+@InputType()
+export class Add{{properCase name}}Input implements Partial<{{properCase name}}Type> {
+  @Field()
+  public name!: string;
+}
+
+@InputType()
+export class Update{{properCase name}}Input implements Partial<{{properCase name}}Type> {
+  @Field()
+  public _id!: ObjectId;
+
+  @Field()
+  public name!: string;
+}
+
+@ObjectType()
+export class {{properCase name}} {
+  @prop()
+  @Field()
+  public _id!: ObjectId;
+
+  @prop()
+  @Field()
+  public name!: string;
+}
+
+export const {{properCase name}}Model = getModelForClass({{properCase name}});

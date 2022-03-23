@@ -1,0 +1,13 @@
+import { Schema } from "mongoose";
+import { {{properCase name}}Type } from "@schema";
+
+const {{properCase name}} = new Schema<{{properCase name}}Type>(
+  {
+    name: {
+      type: String,
+    },
+  },
+  { timestamps: true }
+);
+
+export default {{properCase name}};
