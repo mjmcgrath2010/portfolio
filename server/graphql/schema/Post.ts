@@ -9,6 +9,12 @@ export interface PostType {
 }
 
 @InputType()
+export class PostByIdInput implements Partial<PostType> {
+  @Field()
+  public _id!: ObjectId;
+}
+
+@InputType()
 export class AddPostInput implements Partial<PostType> {
   @Field()
   public title!: string;
