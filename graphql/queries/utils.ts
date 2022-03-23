@@ -10,7 +10,6 @@ export const mapQueriesToProps = async (queries: any) =>
         try {
           const { props } = acc;
           const data = await fn();
-          console.log(data);
           return {
             props: {
               ...props,
