@@ -5,14 +5,16 @@ export const getPosts = async () => {
   const { data } = await client.query({
     query: gql`
       query Posts {
-        posts {
+        allPosts {
           _id
           title
           description
+          updatedAt
+          createdAt
         }
       }
     `,
   });
 
-  return data.posts;
+  return data.allPosts;
 };
