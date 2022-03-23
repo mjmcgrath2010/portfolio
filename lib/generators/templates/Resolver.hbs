@@ -21,8 +21,8 @@ class {{properCase name}}sResolver {
   async get{{properCase name}}(@Arg("data") data: {{properCase name}}ByIdInput, @Ctx() ctx: Context) {
     try {
       const { db } = ctx;
-      const {{properCase name}} = await db.models.{{properCase name}}.findOne({ _id: data._id }).exec();
-      return {{properCase name}};
+      const {{camelCase name}} = await db.models.{{properCase name}}.findOne({ _id: data._id }).exec();
+      return{{camelCase name}};
     } catch (e) {
       console.log(e);
       return {};
@@ -33,10 +33,10 @@ class {{properCase name}}sResolver {
   async add{{properCase name}}(@Arg("data") data: Add{{properCase name}}Input, @Ctx() ctx: Context) {
     try {
       const { db } = ctx;
-      const {{properCase name}} = new db.models.{{properCase name}}(data);
-      await {{properCase name}}.save();
+      const {{camelCase name}} = new db.models.{{properCase name}}(data);
+      await {{camelCase name}}.save();
 
-      return {{properCase name}};
+      return {{camelCase name}};
     } catch (e) {
       console.log(e);
       return {};
