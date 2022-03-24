@@ -10,6 +10,7 @@ const jestConfig = {
     "^@schema$": "<rootDir>/server/graphql/schema/index.ts",
     "^@graphql/server(.*)$": "<rootDir>/server/graphql$1",
     "^@graphql/client(.*)$": "<rootDir>/client/graphql$1",
+    "^@gql/client$": "<rootDir>/client/graphql/apollo-client/index.ts",
     "^@gql/queries$": "<rootDir>/client/graphql/queries/index.ts",
   },
   testEnvironment: "jsdom",

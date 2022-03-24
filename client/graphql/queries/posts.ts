@@ -1,5 +1,5 @@
 import { gql } from "@apollo/client";
-import client from "@graphql/client/apollo-client";
+import client from "@gql/client";
 
 export const getPosts = async () => {
   const { data } = await client.query({

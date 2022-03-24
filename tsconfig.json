@@ -27,6 +27,7 @@
       "@schema": ["server/graphql/schema/index.ts"],
       "@graphql/server/*": ["server/graphql/*"],
       "@graphql/client/*": ["client/graphql/*"],
+      "@gql/client": ["client/graphql/apollo-client/index.ts"],
       "@gql/queries": ["client/graphql/queries/index.ts"]
     }
   },
