@@ -5,7 +5,7 @@ import NavBarProps, { LogoProps } from "./types";
 import AppBar from "../AppBar";
 import Logo from "../../public/assets/branding/logo.svg";
 import Link from "../Link";
-import useScroll from "@hooks/useScroll";
+import useScroll from "../../client/hooks/useScroll";
 
 interface RouteProps {
   href: string;
