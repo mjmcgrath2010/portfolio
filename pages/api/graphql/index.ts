@@ -2,8 +2,8 @@ import "reflect-metadata";
 import { ApolloServer } from "apollo-server-micro";
 import type { PageConfig } from "next";
 import { buildSchema } from "type-graphql";
-import PostsResolver from "@graphql/server/resolvers/Posts";
-import UsersResolver from "@graphql/server/resolvers/User";
+import PostsResolver from "@gql/server/resolvers/Posts";
+import UsersResolver from "@gql/server/resolvers/User";
 // RESOLVER IMPORTS
 import connectDb from "@server/db/config/index";
 
