@@ -13,10 +13,18 @@ const Home: NextPage = ({ posts }: any) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>Coming soon!</h1>
-      <>
-        Not signed in <br />
-        <button onClick={() => signIn()}>Sign in</button>
-      </>
+
+      {session ? (
+        <>
+          Logged in <br />
+          <button onClick={() => signOut()}>Sign Out</button>
+        </>
+      ) : (
+        <>
+          Not signed in <br />
+          <button onClick={() => signIn()}>Sign in</button>
+        </>
+      )}
     </div>
   );
 };
