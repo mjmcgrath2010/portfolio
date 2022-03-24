@@ -1,6 +1,9 @@
 import "reflect-metadata";
 import { ApolloServer } from "apollo-server-micro";
-import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
+import {
+  ApolloServerPluginLandingPageGraphQLPlayground,
+  ApolloServerPluginLandingPageDisabled,
+} from "apollo-server-core";
 import type { PageConfig } from "next";
 import { buildSchema } from "type-graphql";
 import PostsResolver from "@graphql/server/resolvers/Posts";
@@ -19,6 +22,12 @@ export const config: PageConfig = {
   },
 };
 
+const plugins: any = [ApolloServerPluginLandingPageDisabled()];
+
+if (process.env.NODE_ENV !== "production") {
+  plugins.push(ApolloServerPluginLandingPageGraphQLPlayground);
+}
+
 const startServer = async () => {
   try {
     const apolloServer = new ApolloServer({
@@ -31,7 +40,7 @@ const startServer = async () => {
         scalarsMap: [{ type: ObjectId, scalar: ObjectIdScalar }],
         globalMiddlewares: [TypegooseMiddleware],
       }),
-      plugins: [ApolloServerPluginLandingPageGraphQLPlayground],
+      plugins: plugins,
       context: async () => {
         try {
           const db = await connectDb();
@@ -45,7 +54,10 @@ const startServer = async () => {
       },
     });
     await apolloServer.start();
-    return apolloServer.createHandler({ path: "/api/graphql" });
+    return apolloServer.createHandler({
+      path: "/api/graphql",
+      disableHealthCheck: true,
+    });
   } catch (err) {
     return Promise.reject(err);
   }
