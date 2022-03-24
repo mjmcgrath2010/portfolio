@@ -1,9 +1,5 @@
 import "reflect-metadata";
 import { ApolloServer } from "apollo-server-micro";
-import {
-  ApolloServerPluginLandingPageGraphQLPlayground,
-  ApolloServerPluginLandingPageDisabled,
-} from "apollo-server-core";
 import type { PageConfig } from "next";
 import { buildSchema } from "type-graphql";
 import PostsResolver from "@graphql/server/resolvers/Posts";
