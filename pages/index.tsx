@@ -1,8 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useSession, signIn, signOut } from "next-auth/react";
 import { getPosts, mapQueriesToProps } from "@gql/queries";
 
 const Home: NextPage = ({ posts }: any) => {
+  const { data: session } = useSession();
   return (
     <div>
       <Head>
@@ -11,7 +13,10 @@ const Home: NextPage = ({ posts }: any) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>Coming soon!</h1>
-      {JSON.stringify(posts)}
+      <>
+        Not signed in <br />
+        <button onClick={() => signIn()}>Sign in</button>
+      </>
     </div>
   );
 };
