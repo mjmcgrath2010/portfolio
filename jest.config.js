@@ -3,13 +3,14 @@ const jestConfig = {
   moduleNameMapper: {
     "^@components(.*)$": "<rootDir>/components$1",
     "^@pages(.*)$": "<rootDir>/pages$1",
-    "^@hooks(.*)$": "<rootDir>/hooks$1",
+    "^@hooks(.*)$": "<rootDir>/client/hooks$1",
     "^@server(.*)$": "<rootDir>/server$1",
     "^@models(.*)$": "<rootDir>/server/db/models$1",
     "^@models$": "<rootDir>/server/db/models/index.ts",
     "^@schema$": "<rootDir>/server/graphql/schema/index.ts",
     "^@graphql/server(.*)$": "<rootDir>/server/graphql$1",
-    "^@graphql/client(.*)$": "<rootDir>/graphql$1",
+    "^@graphql/client(.*)$": "<rootDir>/client/graphql$1",
+    "^@gql/queries$": "<rootDir>/client/graphql/queries/index.ts",
   },
   testEnvironment: "jsdom",
   transformIgnorePatterns: [

@@ -20,14 +20,14 @@
     "paths": {
       "@components/*": ["components/*"],
       "@pages/*": ["pages/*"],
-      "@hooks/*": ["hooks/*"],
+      "@hooks/*": ["client/hooks/*"],
       "@server/*": ["server/*"],
       "@models/*": ["server/db/models/*"],
       "@models": ["server/db/models/index.ts"],
       "@schema": ["server/graphql/schema/index.ts"],
       "@graphql/server/*": ["server/graphql/*"],
-      "@graphql/client/*": ["graphql/*"],
-      "@gql/hooks/*": ["graphql/queries/*"]
+      "@graphql/client/*": ["client/graphql/*"],
+      "@gql/queries": ["client/graphql/queries/index.ts"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
