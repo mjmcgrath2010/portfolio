@@ -17,6 +17,10 @@ const User = new Schema<UserType>(
       type: String,
       required: true,
     },
+    admin: {
+      type: Boolean,
+      default: false,
+    },
   },
   { timestamps: true }
 );

@@ -7,6 +7,7 @@ export interface UserType {
   name: string;
   username: string;
   password: string;
+  admin: boolean;
 }
 
 @InputType()
@@ -44,6 +45,10 @@ export class User {
   @prop()
   @Field()
   public _id!: ObjectId;
+
+  @prop()
+  @Field()
+  public admin!: Boolean;
 
   @prop()
   @Field()
