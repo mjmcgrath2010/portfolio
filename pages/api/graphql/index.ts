@@ -64,7 +64,7 @@ const startServer = async () => {
       }),
       context: async () => {
         try {
-          const db = await connectDb();
+          const db = connectDb();
           return { db };
         } catch (e) {
           console.log(
