@@ -7,7 +7,8 @@ import { useQuery } from "@apollo/client";
 
 const Home: NextPage = () => {
   const { data: session } = useSession();
-  const { data: { allPosts } = {}, error, loading } = useQuery(AllPosts);
+  const { data, error, loading } = useQuery(AllPosts);
+
   return (
     <div>
       <Head>
@@ -30,6 +31,7 @@ const Home: NextPage = () => {
     </div>
   );
 };
+
 //export const getStaticProps = () => mapQueriesToProps([{ posts: getPosts }]);
 
 export default Home;

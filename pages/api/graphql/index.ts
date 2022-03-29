@@ -74,6 +74,7 @@ const startServer = async () => {
         try {
           const { user } = req;
           const db = connectDb();
+
           return { db, user };
         } catch (e) {
           console.log(
