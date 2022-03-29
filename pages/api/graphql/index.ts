@@ -62,7 +62,7 @@ const allowCors =
 
 const startServer = async () => {
   const customAuthChecker: AuthChecker<any> = ({ context }) => {
-    return !!context.user; // or false if access is denied
+    return !!context.user;
   };
   try {
     const apolloServer = new ApolloServer({
