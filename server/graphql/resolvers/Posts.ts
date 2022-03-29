@@ -5,7 +5,6 @@ import { Post, AddPostInput, PostByIdInput, UpdatePostInput } from "@schema";
 
 @Resolver(Post)
 class PostsResolver {
-  @Authorized()
   @Query(() => [Post])
   async allPosts(@Ctx() ctx: Context) {
     try {
@@ -30,6 +29,7 @@ class PostsResolver {
     }
   }
 
+  @Authorized()
   @Mutation(() => Post)
   async addPost(@Arg("data") data: AddPostInput, @Ctx() ctx: Context) {
     try {
@@ -44,6 +44,7 @@ class PostsResolver {
     }
   }
 
+  @Authorized()
   @Mutation(() => Post)
   async updatePost(@Arg("data") data: UpdatePostInput, @Ctx() ctx: Context) {
     try {
