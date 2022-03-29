@@ -3,10 +3,9 @@ import { ApolloServer } from "apollo-server-micro";
 import type { NextApiRequest, PageConfig } from "next";
 import { AuthChecker, buildSchema, ResolverData } from "type-graphql";
 import PostsResolver from "@gql/server/resolvers/Posts";
-import UsersResolver from "@gql/server/resolvers/User";
 // RESOLVER IMPORTS
-import connectDb from "@server/db/config/index";
 
+import connectDb from "@server/db/config/index";
 import { ObjectId } from "mongodb";
 import { ObjectIdScalar } from "@server/graphql/scalars/ObjectId";
 import { TypegooseMiddleware } from "@server/graphql/middleware/typegoose";
@@ -69,7 +68,6 @@ const startServer = async () => {
       schema: await buildSchema({
         resolvers: [
           PostsResolver,
-          UsersResolver,
           // RESOLVER ARRAY
         ],
         scalarsMap: [{ type: ObjectId, scalar: ObjectIdScalar }],
