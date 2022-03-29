@@ -2,10 +2,13 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useSession, signIn, signOut } from "next-auth/react";
 
-import { getPosts, mapQueriesToProps } from "@gql/queries";
+import { getPosts, mapQueriesToProps, AllPosts } from "@gql/queries";
+import { useQuery } from "@apollo/client";
 
-const Home: NextPage = ({ posts }: any) => {
+const Home: NextPage = () => {
   const { data: session } = useSession();
+  const { data: { allPosts } = {}, error, loading } = useQuery(AllPosts);
+  console.log(loading, allPosts);
   return (
     <div>
       <Head>
@@ -28,6 +31,6 @@ const Home: NextPage = ({ posts }: any) => {
     </div>
   );
 };
-export const getStaticProps = () => mapQueriesToProps([{ posts: getPosts }]);
+//export const getStaticProps = () => mapQueriesToProps([{ posts: getPosts }]);
 
 export default Home;
