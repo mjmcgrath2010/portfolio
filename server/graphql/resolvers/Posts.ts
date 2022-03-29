@@ -1,10 +1,11 @@
-import { Query, Resolver, Ctx, Mutation, Arg } from "type-graphql";
+import { Query, Resolver, Ctx, Mutation, Arg, Authorized } from "type-graphql";
 import { Context } from "@apollo/client";
 
 import { Post, AddPostInput, PostByIdInput, UpdatePostInput } from "@schema";
 
 @Resolver(Post)
 class PostsResolver {
+  @Authorized()
   @Query(() => [Post])
   async allPosts(@Ctx() ctx: Context) {
     try {
