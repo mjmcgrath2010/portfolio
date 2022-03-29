@@ -8,7 +8,6 @@ import { useQuery } from "@apollo/client";
 const Home: NextPage = () => {
   const { data: session } = useSession();
   const { data: { allPosts } = {}, error, loading } = useQuery(AllPosts);
-  console.log(loading, allPosts);
   return (
     <div>
       <Head>
