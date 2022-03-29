@@ -1,7 +1,7 @@
 import "reflect-metadata";
 import { ApolloServer } from "apollo-server-micro";
 import type { NextApiRequest, PageConfig } from "next";
-import { buildSchema } from "type-graphql";
+import { AuthChecker, buildSchema, ResolverData } from "type-graphql";
 import PostsResolver from "@gql/server/resolvers/Posts";
 import UsersResolver from "@gql/server/resolvers/User";
 // RESOLVER IMPORTS
@@ -11,6 +11,8 @@ import { ObjectId } from "mongodb";
 import { ObjectIdScalar } from "@server/graphql/scalars/ObjectId";
 import { TypegooseMiddleware } from "@server/graphql/middleware/typegoose";
 import { getSession } from "next-auth/react";
+import { User } from "next-auth";
+import { ContextType } from "react";
 
 // disable next js from handling this route
 export const config: PageConfig = {
@@ -59,6 +61,9 @@ const allowCors =
   };
 
 const startServer = async () => {
+  const customAuthChecker: AuthChecker<any> = ({ context }) => {
+    return !!context.user;
+  };
   try {
     const apolloServer = new ApolloServer({
       schema: await buildSchema({
@@ -69,6 +74,7 @@ const startServer = async () => {
         ],
         scalarsMap: [{ type: ObjectId, scalar: ObjectIdScalar }],
         globalMiddlewares: [TypegooseMiddleware],
+        authChecker: customAuthChecker,
       }),
       context: async ({ req }) => {
         try {

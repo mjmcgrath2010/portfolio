@@ -1,4 +1,4 @@
-import { Query, Resolver, Ctx, Mutation, Arg } from "type-graphql";
+import { Query, Resolver, Ctx, Mutation, Arg, Authorized } from "type-graphql";
 import { Context } from "@apollo/client";
 
 import { Post, AddPostInput, PostByIdInput, UpdatePostInput } from "@schema";
@@ -29,6 +29,7 @@ class PostsResolver {
     }
   }
 
+  @Authorized()
   @Mutation(() => Post)
   async addPost(@Arg("data") data: AddPostInput, @Ctx() ctx: Context) {
     try {
@@ -43,6 +44,7 @@ class PostsResolver {
     }
   }
 
+  @Authorized()
   @Mutation(() => Post)
   async updatePost(@Arg("data") data: UpdatePostInput, @Ctx() ctx: Context) {
     try {

@@ -1,3 +1,7 @@
+/*
+ * Example usage:
+ *   export const getStaticProps = () => mapQueriesToProps([{ posts: getPosts }]);
+ */
 type QueryProps = {
   props: Object;
 };
