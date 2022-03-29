@@ -65,7 +65,6 @@ const startServer = async () => {
     return !!context.user; // or false if access is denied
   };
   try {
-    console.log("hi");
     const apolloServer = new ApolloServer({
       schema: await buildSchema({
         resolvers: [
