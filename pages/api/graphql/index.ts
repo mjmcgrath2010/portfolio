@@ -1,6 +1,6 @@
 import "reflect-metadata";
 import { ApolloServer } from "apollo-server-micro";
-import type { PageConfig } from "next";
+import type { NextApiRequest, PageConfig } from "next";
 import { buildSchema } from "type-graphql";
 import PostsResolver from "@gql/server/resolvers/Posts";
 import UsersResolver from "@gql/server/resolvers/User";
@@ -10,6 +10,7 @@ import connectDb from "@server/db/config/index";
 import { ObjectId } from "mongodb";
 import { ObjectIdScalar } from "@server/graphql/scalars/ObjectId";
 import { TypegooseMiddleware } from "@server/graphql/middleware/typegoose";
+import { getSession } from "next-auth/react";
 
 // disable next js from handling this route
 export const config: PageConfig = {
@@ -18,10 +19,15 @@ export const config: PageConfig = {
   },
 };
 
+interface APIRequest extends NextApiRequest {
+  method: string;
+  user: object | undefined;
+}
+
 const allowCors =
   (fn: any) =>
   async (
-    req: { method: string },
+    req: APIRequest,
     res: {
       setHeader: (arg0: string, arg1: string | boolean) => void;
       status: (arg0: number) => {
@@ -47,6 +53,8 @@ const allowCors =
       res.status(200).end();
       return;
     }
+    const session = await getSession({ req });
+    req.user = session?.user;
     return await fn(req, res);
   };
 
@@ -62,10 +70,12 @@ const startServer = async () => {
         scalarsMap: [{ type: ObjectId, scalar: ObjectIdScalar }],
         globalMiddlewares: [TypegooseMiddleware],
       }),
-      context: async () => {
+      context: async ({ req }) => {
         try {
+          const { user } = req;
           const db = connectDb();
-          return { db };
+
+          return { db, user };
         } catch (e) {
           console.log(
             "--->error while connecting with graphql context (db)",

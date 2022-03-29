@@ -2,16 +2,13 @@ import mongoose from "mongoose";
 import * as models from "@models";
 
 const MongoURL = process.env.DB_URL;
-const dbName = process.env.DB_NAME;
 
 const connectDb = () => {
   if (global.mongoConnection) {
     return global.mongoConnection;
   }
   try {
-    const conn = mongoose.createConnection(`${MongoURL}`, {
-      dbName,
-    });
+    const conn = mongoose.createConnection(`${MongoURL}`);
     Object.entries(models).forEach(([name, schema]: any) => {
       conn.model(name, schema);
     });

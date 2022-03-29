@@ -16,7 +16,6 @@ const nextConfig = {
   reactStrictMode: true,
   env: {
     DB_URL: process.env.DB_URL,
-    DB_NAME: process.env.DB_NAME,
   },
   ...webpackConfig,
 };

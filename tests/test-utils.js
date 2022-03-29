@@ -3,6 +3,8 @@ import React from "react";
 import { render } from "@testing-library/react";
 import { ThemeProvider } from "styled-components";
 import { ApolloProvider } from "@apollo/client";
+import { SessionProvider } from "next-auth/react";
+
 import theme from "@components/theme";
 import client from "@gql/client";
 
@@ -10,9 +12,11 @@ import client from "@gql/client";
 // (ReduxProvider, ThemeProvider, etc)
 const Providers = ({ children }) => {
   return (
-    <ApolloProvider client={client}>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    </ApolloProvider>
+    <SessionProvider session={{}}>
+      <ApolloProvider client={client}>
+        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      </ApolloProvider>
+    </SessionProvider>
   );
 };
 
