@@ -13,6 +13,7 @@ const BUTTON_ICON_MAP = {
   bold: <span className="material-icons">format_bold</span>,
   italic: <span className="material-icons">format_italic</span>,
   underline: <span className="material-icons">format_underlined</span>,
+  code: <span className="material-icons">code</span>,
   left: <span className="material-icons">format_align_left</span>,
   center: <span className="material-icons">format_align_center</span>,
   right: <span className="material-icons">format_align_right</span>,
@@ -20,7 +21,7 @@ const BUTTON_ICON_MAP = {
   "numbered-list": <span className="material-icons">format_list_numbered</span>,
 };
 
-const textStyleButtons = ["bold", "italic", "underline"];
+const textStyleButtons = ["bold", "italic", "underline", "code"];
 
 const alignmentButtons = ["left", "center", "right"];
 
