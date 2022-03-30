@@ -3,7 +3,9 @@ import styled from "styled-components";
 import AppBar from "../AppBar";
 import ToolbarButtons from "./ToolbarButtons";
 
-const Container = styled(AppBar)``;
+const Container = styled(AppBar)`
+  display: flex;
+`;
 
 const EditorToolBar = ({
   toggleBlock,
