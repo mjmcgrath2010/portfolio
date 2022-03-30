@@ -18,9 +18,9 @@ const Typography = styled.span.attrs(({ as }) => ({ as }))`
 
 const Heading = styled.span.attrs(({ as }) => ({ as }))``;
 
-const NumberedList = styled.ul``;
+const NumberedList = styled.ol``;
 
-const BulletedList = styled.ol``;
+const BulletedList = styled.ul``;
 
 const ListItem = styled.li``;
 

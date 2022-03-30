@@ -10,14 +10,14 @@ const ButtonIcon = styled.button`
 `;
 
 const BUTTON_ICON_MAP = {
-  bold: <span className="material-icons">pie_chart</span>,
-  italic: <span className="material-icons">pie_chart</span>,
-  underline: <span className="material-icons">pie_chart</span>,
-  left: <span className="material-icons">pie_chart</span>,
-  center: <span className="material-icons">pie_chart</span>,
-  right: <span className="material-icons">pie_chart</span>,
-  "bulleted-list": <span className="material-icons">pie_chart</span>,
-  "numbered-list": <span className="material-icons">pie_chart</span>,
+  bold: <span className="material-icons">format_bold</span>,
+  italic: <span className="material-icons">format_italic</span>,
+  underline: <span className="material-icons">format_underlined</span>,
+  left: <span className="material-icons">format_align_left</span>,
+  center: <span className="material-icons">format_align_center</span>,
+  right: <span className="material-icons">format_align_right</span>,
+  "bulleted-list": <span className="material-icons">format_list_bulleted</span>,
+  "numbered-list": <span className="material-icons">format_list_numbered</span>,
 };
 
 const textStyleButtons = ["bold", "italic", "underline"];
