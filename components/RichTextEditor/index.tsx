@@ -2,11 +2,19 @@ import React, { useState, useCallback } from "react";
 import { createEditor } from "slate";
 import { Slate, Editable, withReact } from "slate-react";
 import { Descendant, Transforms, Element as SlateElement, Editor } from "slate";
+import styled from "styled-components";
 
 import RichTextEditorProps from "./types";
 import EditorToolBar from "./EditorToolbar";
 import Element from "./Element";
 import Leaf from "./Leaf";
+
+const Content = styled.div`
+  position: relative;
+  padding: 90px 24px 24px;
+  height: 100%;
+  min-height: 500px;
+`;
 
 const RichTextEditor = ({ onChange }: RichTextEditorProps) => {
   const [editor] = useState(() => withReact(createEditor()));
@@ -97,7 +105,9 @@ const RichTextEditor = ({ onChange }: RichTextEditorProps) => {
         isBlockActive={isBlockActive}
         isMarkActive={isMarkActive}
       />
-      <Editable renderElement={renderElement} renderLeaf={renderLeaf} />
+      <Content>
+        <Editable renderElement={renderElement} renderLeaf={renderLeaf} />
+      </Content>
     </Slate>
   );
 };

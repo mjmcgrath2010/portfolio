@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import type { NextPage } from "next";
 
@@ -7,12 +7,16 @@ import { useSession } from "next-auth/react";
 import RichTextEditor from "@components/RichTextEditor";
 
 const Container = styled.div`
-  background: blue;
   position: relative;
   height: 100%;
+  background: ${({ theme }) => theme.colors.white_200};
+  color: ${({ theme }) => theme.palette.text.dark};
 `;
 const Admin: NextPage = () => {
   const { data: session } = useSession();
+  const [body, setBody] = useState("");
+
+  console.log(body);
 
   if (!session) {
     return <h1>Please Sign in</h1>;
@@ -25,7 +29,7 @@ const Admin: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container>
-        <RichTextEditor />
+        <RichTextEditor onChange={(update: any) => setBody(update)} />
       </Container>
     </div>
   );

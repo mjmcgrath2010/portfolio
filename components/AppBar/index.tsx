@@ -10,6 +10,7 @@ const AppBarContainer = styled.div`
   width: 100%;
   background: ${({ theme }) => theme.colors.white_200};
   box-shadow: ${({ theme }) => theme.shadows.main};
+  z-index: 1000;
 `;
 
 const Pusher = styled.div`

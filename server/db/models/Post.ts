@@ -9,6 +9,9 @@ const Post = new Schema<PostType>(
     description: {
       type: String,
     },
+    body: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
