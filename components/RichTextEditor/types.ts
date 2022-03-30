@@ -9,6 +9,12 @@ export interface LeafProps {
   leaf: object;
 }
 
+export interface ElementProps {
+  element: CustomElement;
+  attributes: object;
+  children: CustomText[];
+}
+
 export interface EditorToolBarProps {
   toggleBlock: Function;
   toggleMark: Function;

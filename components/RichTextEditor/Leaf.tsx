@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { LeafProps } from "./types";
 
-const LeafContainer = styled.span.attrs(({ code, theme }) => ({
+const LeafContainer = styled.span.attrs(({ code, theme }: any): any => ({
   fontFamily: code ? theme.fontFamilies.code : undefined,
 }))`
   font-weight: ${({ bold }) => (bold ? "bold" : "regular")};

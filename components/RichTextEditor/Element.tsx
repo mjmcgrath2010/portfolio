@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { ElementProps } from "./types";
 
-const Typography = styled.span.attrs(({ as }) => ({ as }))`
+const Typography = styled.span.attrs(({ as }: any) => ({ as }))<any>`
   h1 {
     font-size: 28px;
   }
@@ -16,7 +17,7 @@ const Typography = styled.span.attrs(({ as }) => ({ as }))`
   }
 `;
 
-const Heading = styled.span.attrs(({ as }) => ({ as }))``;
+const Heading = styled.span.attrs(({ as }: any) => ({ as }))<any>``;
 
 const NumberedList = styled.ol``;
 
@@ -27,7 +28,7 @@ const ListItem = styled.li``;
 const BlockQuote = styled.blockquote``;
 
 // eslint-disable-next-line react/prop-types
-const Element = ({ attributes, children, element: { type } }) => {
+const Element = ({ attributes, children, element: { type } }: ElementProps) => {
   switch (type) {
     case "block-quote":
       return <BlockQuote {...attributes}>{children}</BlockQuote>;

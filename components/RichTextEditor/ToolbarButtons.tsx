@@ -5,14 +5,13 @@ import { useSlate } from "slate-react";
 
 import "material-icons/iconfont/material-icons.css";
 import { EditorToolBarProps } from "./types";
-import { Descendant } from "slate";
 
 interface ButtonProps extends ReactElement, DefaultTheme {
   active: boolean;
   onMouseDown: Function;
 }
 
-const ButtonIcon = styled.button<ButtonProps>`
+const ButtonIcon = styled.button<any>`
   grid-column: span 1;
   ${({ active }) =>
     active &&
@@ -22,7 +21,7 @@ const ButtonIcon = styled.button<ButtonProps>`
     `}
 `;
 
-const BUTTON_ICON_MAP = {
+const BUTTON_ICON_MAP: any = {
   bold: <span className="material-icons">format_bold</span>,
   italic: <span className="material-icons">format_italic</span>,
   underline: <span className="material-icons">format_underlined</span>,
