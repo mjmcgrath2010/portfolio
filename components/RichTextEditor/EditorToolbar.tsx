@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import AppBar from "../AppBar";
 import ToolbarButtons from "./ToolbarButtons";
+import { EditorToolBarProps } from "./types";
 
 const Container = styled(AppBar)`
   display: flex;
@@ -15,7 +16,7 @@ const EditorToolBar = ({
   toggleMark,
   isBlockActive,
   isMarkActive,
-}) => (
+}: EditorToolBarProps) => (
   <Container>
     <ToolbarButtons
       toggleBlock={toggleBlock}

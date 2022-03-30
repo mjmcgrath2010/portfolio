@@ -1,37 +1,14 @@
 import React, { useState, useCallback } from "react";
-// Import the Slate editor factory.
 import { createEditor } from "slate";
-
-// Import the Slate components and React plugin.
 import { Slate, Editable, withReact } from "slate-react";
+import { Descendant, Transforms, Element as SlateElement, Editor } from "slate";
 
 import RichTextEditorProps from "./types";
-
-// TypeScript users only add this code
-import {
-  BaseEditor,
-  Descendant,
-  Transforms,
-  Element as SlateElement,
-  Editor,
-} from "slate";
-import { ReactEditor } from "slate-react";
 import EditorToolBar from "./EditorToolbar";
 import Element from "./Element";
 import Leaf from "./Leaf";
 
-type CustomElement = { type: "paragraph"; children: CustomText[] };
-type CustomText = { text: string };
-
-declare module "slate" {
-  interface CustomTypes {
-    Editor: BaseEditor & ReactEditor;
-    Element: CustomElement;
-    Text: CustomText;
-  }
-}
-
-const RichTextEditor = (props: RichTextEditorProps) => {
+const RichTextEditor = ({ onChange }: RichTextEditorProps) => {
   const [editor] = useState(() => withReact(createEditor()));
   const [value, setValue] = useState<Descendant[]>([
     {
@@ -53,7 +30,7 @@ const RichTextEditor = (props: RichTextEditorProps) => {
 
   const LIST_TYPES = ["numbered-list", "bulleted-list"];
 
-  const isBlockActive = (slate, format) => {
+  const isBlockActive = (slate: Editor, format: string) => {
     const { selection } = slate || {};
     if (!selection) return false;
 
@@ -66,13 +43,13 @@ const RichTextEditor = (props: RichTextEditorProps) => {
     return !!match;
   };
 
-  const isMarkActive = (slate, format, val = true) => {
-    const marks = Editor.marks(slate);
+  const isMarkActive = (slate: Editor, format: string, val = true) => {
+    const marks: any = Editor.marks(slate);
     return marks ? marks[format] === val : false;
   };
 
   // eslint-disable-next-line no-unused-vars
-  const toggleBlock = (slate, format) => {
+  const toggleBlock = (slate: Editor, format: string) => {
     const isActive = isBlockActive(slate, format);
     const isList = LIST_TYPES.includes(format);
 
@@ -97,7 +74,7 @@ const RichTextEditor = (props: RichTextEditorProps) => {
     }
   };
 
-  const toggleMark = (slate, format, val = true) => {
+  const toggleMark = (slate: Editor, format: string, val = true) => {
     const isActive = isMarkActive(slate, format);
 
     if (isActive) {
@@ -107,12 +84,13 @@ const RichTextEditor = (props: RichTextEditorProps) => {
     }
   };
 
+  const handleChange = (update: Descendant[]) => {
+    setValue(update);
+    onChange(update);
+  };
+
   return (
-    <Slate
-      editor={editor}
-      value={value}
-      onChange={(newValue) => setValue(newValue)}
-    >
+    <Slate editor={editor} value={value} onChange={handleChange}>
       <EditorToolBar
         toggleBlock={toggleBlock}
         toggleMark={toggleMark}
@@ -124,6 +102,8 @@ const RichTextEditor = (props: RichTextEditorProps) => {
   );
 };
 
-RichTextEditor.defaultProps = {};
+RichTextEditor.defaultProps = {
+  onChange: () => {},
+};
 
 export default RichTextEditor;

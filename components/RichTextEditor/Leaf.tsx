@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { LeafProps } from "./types";
 
 const LeafContainer = styled.span.attrs(({ code, theme }) => ({
   fontFamily: code ? theme.fontFamilies.code : undefined,
@@ -20,7 +21,7 @@ const LeafContainer = styled.span.attrs(({ code, theme }) => ({
   min-width: ${({ code }) => (code ? "60%" : "inherit")};
 `;
 
-const Leaf = ({ attributes, children, leaf }) => (
+const Leaf = ({ attributes, children, leaf }: LeafProps) => (
   <LeafContainer {...attributes} {...leaf}>
     {children}
   </LeafContainer>

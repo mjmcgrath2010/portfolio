@@ -1,12 +1,24 @@
-import React from "react";
-import styled from "styled-components";
+import React, { ReactElement } from "react";
+import styled, { css, DefaultTheme } from "styled-components";
 
 import { useSlate } from "slate-react";
 
 import "material-icons/iconfont/material-icons.css";
+import { EditorToolBarProps } from "./types";
 
-const ButtonIcon = styled.button`
+interface ButtonProps extends ReactElement, DefaultTheme {
+  active: boolean;
+  onMouseDown: Function;
+}
+
+const ButtonIcon = styled.button<ButtonProps>`
   grid-column: span 1;
+  ${({ active }) =>
+    active &&
+    css`
+      background: black;
+      color: white;
+    `}
 `;
 
 const BUTTON_ICON_MAP = {
@@ -32,7 +44,7 @@ const ToolbarButtons = ({
   toggleMark,
   isBlockActive,
   isMarkActive,
-}) => {
+}: EditorToolBarProps) => {
   const editor = useSlate();
   const handleToggle = (type, val) => (e) => {
     e.preventDefault();
@@ -61,7 +73,7 @@ const ToolbarButtons = ({
         </ButtonIcon>
       ))}
 
-      {alignmentButtons.map((button) => (
+      {alignmentButtons.map((button: string) => (
         <ButtonIcon
           active={isMarkActive(editor, "textAlign", button)}
           onMouseDown={handleToggle("textAlign", button)}
