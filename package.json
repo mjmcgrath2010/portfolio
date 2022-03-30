@@ -25,6 +25,7 @@
     "graphql": "^15.3.0",
     "graphql-tools": "^8.2.0",
     "jsonwebtoken": "^8.5.1",
+    "material-icons": "^1.10.8",
     "micro": "^9.3.4",
     "mongodb": "^4.4.1",
     "mongoose": "^6.2.6",
