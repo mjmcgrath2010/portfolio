@@ -5,6 +5,9 @@ import ToolbarButtons from "./ToolbarButtons";
 
 const Container = styled(AppBar)`
   display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
 
 const EditorToolBar = ({
