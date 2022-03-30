@@ -5,6 +5,7 @@ import { useSlate } from "slate-react";
 
 import "material-icons/iconfont/material-icons.css";
 import { EditorToolBarProps } from "./types";
+import { Descendant } from "slate";
 
 interface ButtonProps extends ReactElement, DefaultTheme {
   active: boolean;
@@ -46,7 +47,7 @@ const ToolbarButtons = ({
   isMarkActive,
 }: EditorToolBarProps) => {
   const editor = useSlate();
-  const handleToggle = (type, val) => (e) => {
+  const handleToggle = (type: string, val?: any) => (e: MouseEvent) => {
     e.preventDefault();
     listButtons.forEach((button) => {
       if (isBlockActive(editor, button)) {
@@ -55,7 +56,7 @@ const ToolbarButtons = ({
     });
     toggleMark(editor, type, val);
   };
-  const handleBlockToggle = (type, val) => (e) => {
+  const handleBlockToggle = (type: string, val?: any) => (e: MouseEvent) => {
     e.preventDefault();
     editor.removeMark("textAlign");
     toggleBlock(editor, type, val);
