@@ -19,12 +19,4 @@ const Leaf = ({ attributes, children, leaf }) => (
   </LeafContainer>
 );
 
-Leaf.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  attributes: PropTypes.object.isRequired,
-  children: PropTypes.node.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  leaf: PropTypes.object.isRequired,
-};
-
 export default Leaf;
