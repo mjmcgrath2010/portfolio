@@ -5,6 +5,9 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useSession } from "next-auth/react";
 import RichTextEditor from "@components/RichTextEditor";
+import { useMutation } from "@apollo/client";
+import { AddNewPost } from "client/graphql/mutations";
+import Button from "@components/Button";
 
 const Container = styled.div`
   position: relative;
@@ -15,8 +18,19 @@ const Container = styled.div`
 const Admin: NextPage = () => {
   const { data: session } = useSession();
   const [body, setBody] = useState("");
+  const [addPost, { data, error, loading }] = useMutation(AddNewPost);
 
-  console.log(body);
+  const handleCreateNewPost = () => {
+    addPost({
+      variables: {
+        data: {
+          body: JSON.stringify(body),
+          title: "Hello World",
+          description: "World",
+        },
+      },
+    });
+  };
 
   if (!session) {
     return <h1>Please Sign in</h1>;
@@ -31,6 +45,7 @@ const Admin: NextPage = () => {
       <Container>
         <RichTextEditor onChange={(update: any) => setBody(update)} />
       </Container>
+      <Button onClick={handleCreateNewPost}>Create New Post</Button>
     </div>
   );
 };
