@@ -2,6 +2,7 @@ import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 import connectDb from "@server/db/config";
+import path from "path";
 
 const db = connectDb().client;
 
@@ -14,4 +15,8 @@ export default NextAuth({
     }),
     // ...add more providers here
   ],
+  theme: {
+    colorScheme: "light",
+    logo: "/assets/branding/logo.svg",
+  },
 });
