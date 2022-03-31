@@ -1,4 +1,4 @@
-import React, { EventHandler, MouseEventHandler } from "react";
+import React from "react";
 import styled from "styled-components";
 import InputProps from "./types";
 
@@ -9,7 +9,7 @@ const Input = ({ onChange, name }: InputProps) => {
   };
   return (
     <>
-      <TextInput onChange={handleChange} />
+      <TextInput id={name} onChange={handleChange} />
     </>
   );
 };
