@@ -8,6 +8,7 @@ import RichTextEditor from "@components/RichTextEditor";
 import { useMutation } from "@apollo/client";
 import { AddNewPost } from "client/graphql/mutations";
 import Button from "@components/Button";
+import Input from "@components/Input";
 
 const Container = styled.div`
   position: relative;
@@ -18,6 +19,7 @@ const Container = styled.div`
 const Admin: NextPage = () => {
   const { data: session } = useSession();
   const [body, setBody] = useState("");
+  const [title, setTitle] = useState("");
   const [addPost, { data, error, loading }] = useMutation(AddNewPost);
 
   const handleCreateNewPost = () => {
@@ -42,10 +44,11 @@ const Admin: NextPage = () => {
         <meta name="description" content="Admin" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Button onClick={handleCreateNewPost}>Create New Post</Button>
+      <Input id="title" name="title" onChange={setTitle} />
       <Container>
         <RichTextEditor onChange={(update: any) => setBody(update)} />
       </Container>
-      <Button onClick={handleCreateNewPost}>Create New Post</Button>
     </div>
   );
 };
