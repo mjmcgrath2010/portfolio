@@ -9,6 +9,7 @@ const jestConfig = {
     "^@models(.*)$": "<rootDir>/server/db/models$1",
     "^@models$": "<rootDir>/server/db/models/index.ts",
     "^@schema$": "<rootDir>/server/graphql/schema/index.ts",
+    "^@test/utils$": "<rootDir>/tests/test-utils.tsx",
     "^@gql/server(.*)$": "<rootDir>/server/graphql$1",
     "^@gql/client$": "<rootDir>/client/graphql/apollo-client/index.ts",
     "^@gql/queries$": "<rootDir>/client/graphql/queries/index.ts",
