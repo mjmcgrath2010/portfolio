@@ -1,9 +1,10 @@
 // test-utils.js
-import React from "react";
+import React, { ReactElement } from "react";
 import { render } from "@testing-library/react";
 import { ThemeProvider } from "styled-components";
 import { ApolloProvider } from "@apollo/client";
-import { SessionProvider, Session } from "next-auth/react";
+import { SessionProvider } from "next-auth/react";
+import { Session } from "next-auth";
 
 import theme from "@components/theme";
 import client from "@gql/client";
@@ -25,7 +26,7 @@ const Providers = ({ children }: any) => {
   );
 };
 
-const customRender = (ui, options = {}) =>
+const customRender = (ui: ReactElement, options = {}) =>
   render(ui, { wrapper: Providers, ...options });
 
 // re-export everything
