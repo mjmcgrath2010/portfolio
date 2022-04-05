@@ -1,5 +1,7 @@
+import React from "react";
 import type { NextPage } from "next";
 import styled from "styled-components";
+
 import { AppLayout } from "@layouts";
 import Grid from "@components/Grid";
 

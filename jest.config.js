@@ -7,6 +7,7 @@ const jestConfig = {
     "^@hooks(.*)$": "<rootDir>/client/hooks$1",
     "^@server(.*)$": "<rootDir>/server$1",
     "^@models(.*)$": "<rootDir>/server/db/models$1",
+    "^@pages(.*)$": "<rootDir>/pages$1",
     "^@models$": "<rootDir>/server/db/models/index.ts",
     "^@layouts$": "<rootDir>/layouts/index.ts",
     "^@schema$": "<rootDir>/server/graphql/schema/index.ts",

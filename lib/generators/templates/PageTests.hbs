@@ -1,0 +1,11 @@
+import {{properCase name}} from '@pages/{{pathCase name}}';
+
+import { render, screen } from "@test/utils";
+
+describe('<{{properCase name}} />', () => {
+  it("matches the snapshot", () => {
+    const view = render(<{{properCase name}} />);
+
+    expect(view).toMatchSnapshot();
+  });
+});
