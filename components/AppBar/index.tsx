@@ -17,7 +17,7 @@ const Pusher = styled.div`
   display: block;
   width: 100%;
   height: 0;
-  margin: 70px 0;
+  margin: 35px 0 0;
 `;
 
 const ContentContainer = styled.div`

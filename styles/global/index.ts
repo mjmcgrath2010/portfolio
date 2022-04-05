@@ -5,9 +5,9 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: ${({ theme }) => theme.fontFamilies.sans_1};
-    background: #282c34;
-    color: #FFF;
-    padding: ${({ theme }) => theme.spacing.lg}
+    background:${({ theme }) => theme.colors.white_200};
+    padding: ${({ theme }) => theme.spacing.lg};
+    color: ${({ theme }) => theme.palette.text.dark};
  }
 `;
 

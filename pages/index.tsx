@@ -1,16 +1,11 @@
 import type { NextPage } from "next";
-import Head from "next/head";
+import AppLayout from "@layouts/public/AppLayout";
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <Head>
-        <title>Mike McGrath - Software Engineer</title>
-        <meta name="description" content="Personal Portfolio and Blog" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <AppLayout>
       <h1>Coming soon!</h1>
-    </div>
+    </AppLayout>
   );
 };
 
