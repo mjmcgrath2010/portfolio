@@ -1,16 +1,16 @@
-
-import React from 'react';
-import Input from '../components/Input';
+import React from "react";
+import Input from "../components/Input";
+import InputProps from "../components/Input/types";
 
 export default {
-  title: 'Components/Input',
+  title: "Components/Input",
   component: Input,
   argTypes: {},
-  parameters: {}
+  parameters: {},
 };
 
-export const DefaultStory = ({ ...rest }) => <Input {...rest} />;
+export const DefaultStory = ({ ...rest }: InputProps) => <Input {...rest} />;
 
 DefaultStory.args = {};
 
-DefaultStory.storyName = 'Input - Default Story';
+DefaultStory.storyName = "Input - Default Story";
