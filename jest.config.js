@@ -8,6 +8,7 @@ const jestConfig = {
     "^@server(.*)$": "<rootDir>/server$1",
     "^@models(.*)$": "<rootDir>/server/db/models$1",
     "^@models$": "<rootDir>/server/db/models/index.ts",
+    "^@layouts$": "<rootDir>/layouts/index.ts",
     "^@schema$": "<rootDir>/server/graphql/schema/index.ts",
     "^@test/utils$": "<rootDir>/tests/test-utils.tsx",
     "^@gql/server(.*)$": "<rootDir>/server/graphql$1",

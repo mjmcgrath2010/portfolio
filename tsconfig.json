@@ -25,6 +25,7 @@
       "@server/*": ["server/*"],
       "@models/*": ["server/db/models/*"],
       "@models": ["server/db/models/index.ts"],
+      "@layouts": ["layouts/index.ts"],
       "@schema": ["server/graphql/schema/index.ts"],
       "@test/utils": ["tests/test-utils.tsx"],
       "@gql/server/*": ["server/graphql/*"],
