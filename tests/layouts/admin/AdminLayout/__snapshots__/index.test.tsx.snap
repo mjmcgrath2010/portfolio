@@ -4,21 +4,9 @@ exports[`<AdminLayout /> matches the snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
-    <div>
-      <div>
-        <h1>
-          AdminLayout Component
-        </h1>
-      </div>
-    </div>
+    <div />
   </body>,
-  "container": <div>
-    <div>
-      <h1>
-        AdminLayout Component
-      </h1>
-    </div>
-  </div>,
+  "container": <div />,
   "debug": [Function],
   "findAllByAltText": [Function],
   "findAllByDisplayValue": [Function],
