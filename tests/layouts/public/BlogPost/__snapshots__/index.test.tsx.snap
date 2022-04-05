@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ProjectPage /> matches the snapshot 1`] = `
+exports[`<BlogPost /> matches the snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": .c0 {
@@ -157,7 +157,7 @@ Object {
 }
 
 .c14 {
-  grid-column: span 1;
+  grid-column: span 12;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -257,7 +257,7 @@ Object {
           class="c14"
         >
           <h1>
-            ProjectPage Layout
+            Coming soon!
           </h1>
         </div>
       </div>
@@ -417,7 +417,7 @@ Object {
 }
 
 .c14 {
-  grid-column: span 1;
+  grid-column: span 12;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -516,7 +516,7 @@ Object {
         class="c14"
       >
         <h1>
-          ProjectPage Layout
+          Coming soon!
         </h1>
       </div>
     </div>

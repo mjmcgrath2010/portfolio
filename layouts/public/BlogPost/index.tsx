@@ -4,9 +4,9 @@ import styled from "styled-components";
 import { AppLayout } from "@layouts";
 import Grid from "@components/Grid";
 
-import {{properCase name}}Props from './types';
+import BlogPostProps from './types';
 
-const {{properCase name}} = (props: {{properCase name}}Props) => (
+const BlogPost = (props: BlogPostProps) => (
   <AppLayout>
     <Grid>
       <Grid.Item mobile={12} justifySelf="center">
@@ -16,6 +16,6 @@ const {{properCase name}} = (props: {{properCase name}}Props) => (
   </AppLayout>
 );
 
-{{properCase name}}.defaultProps = {};
+BlogPost.defaultProps = {};
 
-export default {{properCase name}};
+export default BlogPost;
