@@ -1,6 +1,6 @@
 import RichTextEditor from "@components/RichTextEditor";
 
-import { render, screen } from "../test-utils";
+import { render, screen } from "@test/utils";
 
 describe("<RichTextEditor />", () => {
   it("has no tests", () => {

@@ -1,0 +1,21 @@
+import React from 'react';
+import styled from "styled-components";
+
+import { AdminLayout } from "@layouts";
+import Grid from "@components/Grid";
+
+import {{properCase name}}Props from './types';
+
+const {{properCase name}} = (props: {{properCase name}}Props) => (
+  <AdminLayout>
+    <Grid>
+      <Grid.Item mobile={12} justifySelf="center">
+         <h1>{{properCase name}} Layout</h1>
+      </Grid.Item>
+    </Grid>
+  </AdminLayout>
+);
+
+{{properCase name}}.defaultProps = {};
+
+export default {{properCase name}};

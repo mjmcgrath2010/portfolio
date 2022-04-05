@@ -1,6 +1,6 @@
 import Input from "@components/Input";
 
-import { render } from "../test-utils";
+import { render } from "@test/utils";
 
 describe("<Input />", () => {
   it("matches the snapshot", () => {

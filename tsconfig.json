@@ -19,12 +19,15 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["components/*"],
+      "@layouts/*": ["layouts/*"],
       "@pages/*": ["pages/*"],
       "@hooks/*": ["client/hooks/*"],
       "@server/*": ["server/*"],
       "@models/*": ["server/db/models/*"],
       "@models": ["server/db/models/index.ts"],
+      "@layouts": ["layouts/index.ts"],
       "@schema": ["server/graphql/schema/index.ts"],
+      "@test/utils": ["tests/test-utils.tsx"],
       "@gql/server/*": ["server/graphql/*"],
       "@gql/client": ["client/graphql/apollo-client/index.ts"],
       "@gql/queries": ["client/graphql/queries/index.ts"]
