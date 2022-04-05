@@ -15,7 +15,7 @@ const LeafContainer = styled.span.attrs(({ code, theme }: any): any => ({
   position: relative;
   display: block;
   background: ${({ code, theme }) => (code ? theme.colors.gray_200 : "none")};
-  width: fit-content;
+  width: ${({ code }) => (code ? "fit-content" : "100%")};
   padding: ${({ code }) => (code ? "8px" : "inherit")};
   margin: ${({ code }) => (code ? "0 auto" : "inherit")};
   min-width: ${({ code }) => (code ? "60%" : "inherit")};

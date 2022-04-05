@@ -6,10 +6,10 @@ export interface PostType {
   _id: ObjectId;
   title: string;
   description: string;
+  body: string;
   updatedAt: string;
   createdAt: string;
 }
-
 @InputType()
 export class PostByIdInput implements Partial<PostType> {
   @Field()
@@ -23,6 +23,9 @@ export class AddPostInput implements Partial<PostType> {
 
   @Field()
   public description!: string;
+
+  @Field()
+  public body!: string;
 }
 
 @InputType()
@@ -31,10 +34,13 @@ export class UpdatePostInput implements Partial<PostType> {
   public _id!: ObjectId;
 
   @Field()
-  public title!: string;
+  public title?: string;
 
   @Field()
-  public description!: string;
+  public description?: string;
+
+  @Field()
+  public body?: string;
 }
 
 @ObjectType()
@@ -50,6 +56,10 @@ export class Post {
   @prop()
   @Field()
   public description!: string;
+
+  @prop()
+  @Field()
+  public body!: string;
 
   @prop()
   @Field()
