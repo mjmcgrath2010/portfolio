@@ -5,7 +5,7 @@ import NavBar from "@components/NavBar";
 
 import AppLayoutProps from "./types";
 
-const AppLayout = ({ children }: AppLayoutProps) => (
+const AppLayout = ({ children, className }: AppLayoutProps) => (
   <>
     <Head>
       <title>Mike McGrath - Software Engineer</title>

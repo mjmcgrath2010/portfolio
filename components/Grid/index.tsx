@@ -48,6 +48,7 @@ const GridContainer = styled.div<GridProps>`
   align-items: ${({ alignItems }) => alignItems};
   justify-content: ${({ justifyContent }) => justifyContent};
   justify-items: ${({ justifyItems }) => justifyItems};
+  padding: ${({ theme }) => theme.spacing.lg};
 `;
 
 const Grid = ({
