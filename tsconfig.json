@@ -19,6 +19,7 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["components/*"],
+      "@layouts/*": ["layouts/*"],
       "@pages/*": ["pages/*"],
       "@hooks/*": ["client/hooks/*"],
       "@server/*": ["server/*"],
