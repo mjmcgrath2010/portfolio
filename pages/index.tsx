@@ -37,6 +37,8 @@ const LogoContainer = styled.div`
 const ContentContainer = styled.div`
   z-index: 2;
   min-height: 800px;
+  background: ${({ theme }) => theme.colors.gray_200};
+  position: relative;
 `;
 
 const Home: NextPage = () => {
