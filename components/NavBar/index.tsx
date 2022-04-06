@@ -31,17 +31,18 @@ const Container = styled(AppBar)<Scrolled>`
 
 const StyledLogo = styled(Logo)<Scrolled>`
   cursor: pointer;
-  color: ${({ theme }) => theme.palette.primary.main};
+  color: ${({ theme }) => theme.palette.text.light};
   width: 200px;
-  &:hover {
-    color: ${({ theme }) => theme.palette.primary.hover};
-  }
 
   ${({ isScrolled }) =>
-    !isScrolled &&
+    isScrolled &&
     css`
-      color: ${({ theme }) => theme.palette.text.light};
+      color: ${({ theme }) => theme.palette.info.dark};
     `}
+
+  &:hover {
+    color: ${({ theme }) => theme.palette.info.light};
+  }
 `;
 const NavBarContainer = styled.div`
   width: 100%;
@@ -66,13 +67,15 @@ const NavBarLogoContainer = styled.div<Scrolled>`
 `;
 
 const StyledLink = styled(Link)`
-  color: ${({ theme }) => theme.palette.secondary.main};
-  &:hover {
-    color: ${({ theme }) => theme.palette.secondary.hover};
-  }
+  color: ${({ theme }) => theme.palette.text.light};
 
   &:visited {
-    color: ${({ theme }) => theme.palette.secondary.active};
+    color: ${({ theme }) => theme.palette.info.light};
+  }
+
+  &:hover {
+    color: ${({ theme }) => theme.palette.text.light};
+    text-decoration: underline;
   }
 `;
 
@@ -83,16 +86,17 @@ const NavRoutesContainer = styled.div<Scrolled>`
   gap: ${({ theme }) => theme.spacing.lg};
 
   ${({ isScrolled }) =>
-    !isScrolled &&
+    isScrolled &&
     css`
       ${StyledLink} {
         color: ${({ theme }) => theme.palette.text.light};
-        &:hover {
-          color: ${({ theme }) => theme.palette.primary.light};
-        }
 
         &:visited {
-          color: ${({ theme }) => theme.palette.primary.light};
+          color: ${({ theme }) => theme.palette.info.dark};
+        }
+
+        &:hover {
+          color: ${({ theme }) => theme.palette.text.dark};
         }
       }
     `}
