@@ -5,6 +5,8 @@ import styled from "styled-components";
 import { AppLayout } from "@layouts";
 import Grid from "@components/Grid";
 import AnimatedLogo from "@components/AnimatedLogo";
+import Section from "@components/Section";
+import Typography from "@components/Typography";
 
 const HeroContainer = styled.div`
   position: relative;
@@ -57,12 +59,37 @@ const Home: NextPage = () => {
         </Grid>
       </HeroContainer>
       <ContentContainer>
-        <Grid>
-          <Grid.Item mobile={12}>Experience</Grid.Item>
-          <Grid.Item mobile={12}>My Work</Grid.Item>
-          <Grid.Item mobile={12}>Featured Posts</Grid.Item>
-          <Grid.Item mobile={12}>Drop me a line</Grid.Item>
-        </Grid>
+        <Section>
+          <Grid>
+            <Grid.Item mobile={12}>
+              <Typography fontStyle="heading2">Experience</Typography>
+            </Grid.Item>
+          </Grid>
+        </Section>
+
+        <Section>
+          <Grid>
+            <Grid.Item mobile={12}>
+              <Typography fontStyle="heading2">Skills</Typography>
+            </Grid.Item>
+          </Grid>
+        </Section>
+
+        <Section>
+          <Grid>
+            <Grid.Item mobile={12}>
+              <Typography fontStyle="heading2">Featured Blog Posts</Typography>
+            </Grid.Item>
+          </Grid>
+        </Section>
+
+        <Section>
+          <Grid>
+            <Grid.Item mobile={12}>
+              <Typography fontStyle="heading2">Drop me a line</Typography>
+            </Grid.Item>
+          </Grid>
+        </Section>
       </ContentContainer>
     </AppLayout>
   );

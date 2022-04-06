@@ -13,6 +13,8 @@ export const DefaultStory = ({ ...rest }: TypographyProps) => (
   <Typography {...rest} />
 );
 
-DefaultStory.args = {};
+DefaultStory.args = {
+  children: "Typography Component",
+};
 
 DefaultStory.storyName = "Typography - Default Story";

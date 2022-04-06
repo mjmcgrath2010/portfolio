@@ -4,7 +4,8 @@ import SectionProps from "./types";
 
 const Container = styled.div<SectionProps>`
   padding: ${({ theme }) => theme.spacing.md};
-  background: ${({ theme, color }) => theme.palette.background[color]};
+  background: ${({ theme, color = "light" }) =>
+    theme.palette.background[color]};
   min-height: 300px;
   margin: 0;
   width: 100%;
