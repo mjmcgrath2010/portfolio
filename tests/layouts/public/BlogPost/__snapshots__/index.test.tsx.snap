@@ -220,7 +220,6 @@ Object {
                 class="c5 c6"
                 fill="none"
                 href="/"
-                role="button"
                 viewBox="0 0 616 66"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -491,7 +490,6 @@ Object {
               class="c5 c6"
               fill="none"
               href="/"
-              role="button"
               viewBox="0 0 616 66"
               xmlns="http://www.w3.org/2000/svg"
             >
