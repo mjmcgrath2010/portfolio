@@ -37,6 +37,10 @@ const StyledLogo = styled(Logo)<Scrolled>`
   &:hover {
     color: ${({ theme }) => theme.palette.primary.main};
   }
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    flex-direction: column;
+  }
 `;
 
 const NavBarContainer = styled.div`
@@ -103,6 +107,10 @@ const NavRoutesContainer = styled.div<Scrolled>`
         }
       }
     `}
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    flex-direction: column;
+  }
 `;
 
 const NavRoutes = ({ routes }: NavRoutesProps) => {

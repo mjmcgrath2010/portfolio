@@ -186,6 +186,22 @@ Object {
   padding: 24px;
 }
 
+@media screen and (max-width:767px) {
+  .c6 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .c7 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
 <body>
     <div>
       <div
@@ -440,6 +456,22 @@ Object {
   justify-content: space-between;
   justify-items: start;
   padding: 24px;
+}
+
+@media screen and (max-width:767px) {
+  .c6 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .c7 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 
 <div>
