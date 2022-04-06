@@ -10,7 +10,11 @@ export default {
   parameters: {},
 };
 
-export const DefaultStory = ({ ...rest }: CardProps) => <Card {...rest} />;
+export const DefaultStory = () => (
+  <Card>
+    <Card.Image />
+  </Card>
+);
 
 DefaultStory.args = {
   children: "Hello Card",
