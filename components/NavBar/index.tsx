@@ -34,12 +34,11 @@ const StyledLogo = styled(Logo)<Scrolled>`
   color: ${({ theme }) => theme.palette.text.dark};
   width: 200px;
 
-  ${({ isScrolled }) =>
-    isScrolled &&
-    css`
-      color: ${({ theme }) => theme.palette.info.dark};
-    `}
+  &:hover {
+    color: ${({ theme }) => theme.palette.primary.main};
+  }
 `;
+
 const NavBarContainer = styled.div`
   width: 100%;
   height: 100%;
@@ -58,19 +57,27 @@ const NavBarLogoContainer = styled.div<Scrolled>`
     css`
       ${StyledLogo} {
         color: ${({ theme }) => theme.palette.text.light};
+
+        &:visited {
+          color: ${({ theme }) => theme.palette.info.light};
+        }
+
+        &:hover {
+          color: ${({ theme }) => theme.palette.info.light};
+        }
       }
     `}
 `;
 
 const StyledLink = styled(Link)`
-  color: ${({ theme }) => theme.palette.text.light};
+  color: ${({ theme }) => theme.palette.text.dark};
 
   &:visited {
-    color: ${({ theme }) => theme.palette.info.light};
+    color: ${({ theme }) => theme.palette.info.dark};
   }
 
   &:hover {
-    color: ${({ theme }) => theme.palette.text.light};
+    color: ${({ theme }) => theme.palette.primary.main};
     text-decoration: underline;
   }
 `;
@@ -82,17 +89,17 @@ const NavRoutesContainer = styled.div<Scrolled>`
   gap: ${({ theme }) => theme.spacing.lg};
 
   ${({ isScrolled }) =>
-    isScrolled &&
+    !isScrolled &&
     css`
       ${StyledLink} {
         color: ${({ theme }) => theme.palette.text.light};
 
         &:visited {
-          color: ${({ theme }) => theme.palette.info.dark};
+          color: ${({ theme }) => theme.palette.info.light};
         }
 
         &:hover {
-          color: ${({ theme }) => theme.palette.text.dark};
+          color: ${({ theme }) => theme.palette.primary.light};
         }
       }
     `}

@@ -28,7 +28,7 @@ Object {
   height: 100%;
 }
 
-.c10 {
+.c11 {
   color: rgb(76,86,179);
   cursor: pointer;
   font-size: 16px;
@@ -37,14 +37,14 @@ Object {
   text-decoration: none;
 }
 
-.c10:hover {
+.c11:hover {
   color: rgb(122,130,199);
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c10:active,
-.c10:visited {
+.c11:active,
+.c11:visited {
   color: rgb(59,67,140);
 }
 
@@ -79,6 +79,10 @@ Object {
   width: 200px;
 }
 
+.c6:hover {
+  color: rgb(207,109,35);
+}
+
 .c3 {
   width: 100%;
   height: 100%;
@@ -105,16 +109,24 @@ Object {
   color: #fbfbfb;
 }
 
-.c9 {
-  color: #fbfbfb;
-}
-
-.c9:visited {
+.c4 .c5:visited {
   color: rgb(159,165,215);
 }
 
-.c9:hover {
-  color: #fbfbfb;
+.c4 .c5:hover {
+  color: rgb(159,165,215);
+}
+
+.c10 {
+  color: rgb(80,73,73);
+}
+
+.c10:visited {
+  color: rgb(59,67,140);
+}
+
+.c10:hover {
+  color: rgb(207,109,35);
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -134,7 +146,19 @@ Object {
   gap: 24px;
 }
 
-.c12 {
+.c7 .c9 {
+  color: #fbfbfb;
+}
+
+.c7 .c9:visited {
+  color: rgb(159,165,215);
+}
+
+.c7 .c9:hover {
+  color: rgb(228,151,93);
+}
+
+.c13 {
   grid-column: span 12;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
@@ -142,7 +166,7 @@ Object {
   justify-self: center;
 }
 
-.c11 {
+.c12 {
   display: grid;
   gap: 16px;
   grid-template-rows: auto;
@@ -194,25 +218,25 @@ Object {
               class="c7"
             >
               <a
-                class="c8 c9"
+                class="c8 c9 c10"
                 href="/about"
               >
                 About
               </a>
               <a
-                class="c8 c9"
+                class="c8 c9 c10"
                 href="/projects"
               >
                 Projects
               </a>
               <a
-                class="c8 c9"
+                class="c8 c9 c10"
                 href="/blog"
               >
                 Blog
               </a>
               <a
-                class="c10 c9"
+                class="c11 c9 c10"
                 href="/components/index.html"
                 target="_blank"
               >
@@ -223,10 +247,10 @@ Object {
         </div>
       </div>
       <div
-        class="c11"
+        class="c12"
       >
         <div
-          class="c12"
+          class="c13"
         >
           <h1>
             ProjectsId Page
@@ -260,7 +284,7 @@ Object {
   height: 100%;
 }
 
-.c10 {
+.c11 {
   color: rgb(76,86,179);
   cursor: pointer;
   font-size: 16px;
@@ -269,14 +293,14 @@ Object {
   text-decoration: none;
 }
 
-.c10:hover {
+.c11:hover {
   color: rgb(122,130,199);
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c10:active,
-.c10:visited {
+.c11:active,
+.c11:visited {
   color: rgb(59,67,140);
 }
 
@@ -311,6 +335,10 @@ Object {
   width: 200px;
 }
 
+.c6:hover {
+  color: rgb(207,109,35);
+}
+
 .c3 {
   width: 100%;
   height: 100%;
@@ -337,16 +365,24 @@ Object {
   color: #fbfbfb;
 }
 
-.c9 {
-  color: #fbfbfb;
-}
-
-.c9:visited {
+.c4 .c5:visited {
   color: rgb(159,165,215);
 }
 
-.c9:hover {
-  color: #fbfbfb;
+.c4 .c5:hover {
+  color: rgb(159,165,215);
+}
+
+.c10 {
+  color: rgb(80,73,73);
+}
+
+.c10:visited {
+  color: rgb(59,67,140);
+}
+
+.c10:hover {
+  color: rgb(207,109,35);
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -366,7 +402,19 @@ Object {
   gap: 24px;
 }
 
-.c12 {
+.c7 .c9 {
+  color: #fbfbfb;
+}
+
+.c7 .c9:visited {
+  color: rgb(159,165,215);
+}
+
+.c7 .c9:hover {
+  color: rgb(228,151,93);
+}
+
+.c13 {
   grid-column: span 12;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
@@ -374,7 +422,7 @@ Object {
   justify-self: center;
 }
 
-.c11 {
+.c12 {
   display: grid;
   gap: 16px;
   grid-template-rows: auto;
@@ -425,25 +473,25 @@ Object {
             class="c7"
           >
             <a
-              class="c8 c9"
+              class="c8 c9 c10"
               href="/about"
             >
               About
             </a>
             <a
-              class="c8 c9"
+              class="c8 c9 c10"
               href="/projects"
             >
               Projects
             </a>
             <a
-              class="c8 c9"
+              class="c8 c9 c10"
               href="/blog"
             >
               Blog
             </a>
             <a
-              class="c10 c9"
+              class="c11 c9 c10"
               href="/components/index.html"
               target="_blank"
             >
@@ -454,10 +502,10 @@ Object {
       </div>
     </div>
     <div
-      class="c11"
+      class="c12"
     >
       <div
-        class="c12"
+        class="c13"
       >
         <h1>
           ProjectsId Page
