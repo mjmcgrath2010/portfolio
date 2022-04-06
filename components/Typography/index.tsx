@@ -1,12 +1,13 @@
 import React from "react";
-import styled, { css, DefaultTheme } from "styled-components";
+import styled, { css } from "styled-components";
 
 import TypographyProps from "./types";
-import fontSizes from "../theme/typography/fontSizes";
 
 const Text = styled.span.attrs(({ as }: TypographyProps) => ({ as }))`
-  ${({ theme, color, as }: DefaultTheme | TypographyProps) => {
-    const fontColor = theme.palette.text[color] || theme.palette[color].main;
+  ${({ theme, color, as }: any) => {
+    const fontColor = !!["dark", "light"].includes(color)
+      ? theme.palette.text[color]
+      : theme.palette[color].main;
     const BaseStyles = css`
       color: ${fontColor};
     `;
