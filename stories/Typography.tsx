@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React from "react";
 import Typography from "../components/Typography";
 import TypographyProps from "../components/Typography/types";

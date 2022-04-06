@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React from "react";
 import Input from "../components/Input";
 import InputProps from "../components/Input/types";

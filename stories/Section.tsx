@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React from "react";
 import Section from "../components/Section";
 import SectionProps from "../components/Section/types";

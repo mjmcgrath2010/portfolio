@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React from "react";
 import Card from "../components/Card";
 import CardProps from "../components/Card/types";

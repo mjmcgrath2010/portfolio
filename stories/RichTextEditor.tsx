@@ -1,16 +1,17 @@
+/* eslint-disable import/no-anonymous-default-export */
 
-import React from 'react';
-import RichTextEditor from '../components/RichTextEditor';
+import React from "react";
+import RichTextEditor from "../components/RichTextEditor";
 
 export default {
-  title: 'Components/RichTextEditor',
+  title: "Components/RichTextEditor",
   component: RichTextEditor,
   argTypes: {},
-  parameters: {}
+  parameters: {},
 };
 
 export const DefaultStory = ({ ...rest }) => <RichTextEditor {...rest} />;
 
 DefaultStory.args = {};
 
-DefaultStory.storyName = 'RichTextEditor - Default Story';
+DefaultStory.storyName = "RichTextEditor - Default Story";

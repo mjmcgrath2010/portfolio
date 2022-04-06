@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React from "react";
 import Link from "../components/Link";
 import { LinkProps } from "../components/Link/types";
