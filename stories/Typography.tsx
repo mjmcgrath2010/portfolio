@@ -1,16 +1,18 @@
-
-import React from 'react';
-import Typography from '../components/Typography';
+import React from "react";
+import Typography from "../components/Typography";
+import TypographyProps from "../components/Typography/types";
 
 export default {
-  title: 'Components/Typography',
+  title: "Components/Typography",
   component: Typography,
   argTypes: {},
-  parameters: {}
+  parameters: {},
 };
 
-export const DefaultStory = ({ ...rest }) => <Typography {...rest} />;
+export const DefaultStory = ({ ...rest }: TypographyProps) => (
+  <Typography {...rest} />
+);
 
 DefaultStory.args = {};
 
-DefaultStory.storyName = 'Typography - Default Story';
+DefaultStory.storyName = "Typography - Default Story";
