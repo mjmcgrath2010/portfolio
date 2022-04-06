@@ -12,8 +12,9 @@ const HeroContainer = styled.div`
   width: 100%;
   min-height: 100vh;
   padding-top: 70px;
-  background: url("/assets/images/homepage-background.jpg") center;
+  background: url("/assets/images/homepage-background.jpg") center repeat;
   background-size: cover;
+  background-attachment: fixed;
   color: ${({ theme }) => theme.palette.text.light};
 `;
 
@@ -23,7 +24,7 @@ const Home: NextPage = () => {
       <HeroContainer>
         <Grid>
           <Grid.Item mobile={12} justifySelf="center">
-            <h1>Coming soon!</h1>
+            <h1>Under construction, check back soon!</h1>
           </Grid.Item>
         </Grid>
       </HeroContainer>
