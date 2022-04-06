@@ -1,6 +1,7 @@
 import { DefaultTheme } from "styled-components";
 
 import animations from "./animations";
+import breakpoints from "./breakpoints";
 import colors from "./colors";
 import palette from "./palette";
 import typography from "./typography";
@@ -11,6 +12,7 @@ import variants from "./variants";
 const theme: DefaultTheme = {
   ...typography,
   animations,
+  breakpoints,
   borderRadius: "5px",
   colors,
   palette,

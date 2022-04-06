@@ -21,6 +21,11 @@ declare module "styled-components" {
       slideIn: FlattenInterpolation;
     };
     borderRadius: string;
+    breakpoints: {
+      mobile: string;
+      tablet: string;
+      desktop: string;
+    };
     fontFamilies: {
       sans_1: string;
       sans_2: string;
