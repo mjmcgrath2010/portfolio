@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import { AppLayout } from "@layouts";
 import Grid from "@components/Grid";
+import AnimatedLogo from "@components/AnimatedLogo";
 
 const HeroContainer = styled.div`
   position: relative;
@@ -18,6 +19,12 @@ const HeroContainer = styled.div`
   color: ${({ theme }) => theme.palette.text.light};
 `;
 
+const LogoContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top: ${({ theme }) => theme.spacing.xl};
+`;
+
 const ContentContainer = styled.div`
   z-index: 200;
   min-height: 800px;
@@ -29,6 +36,9 @@ const Home: NextPage = () => {
       <HeroContainer>
         <Grid>
           <Grid.Item mobile={12} justifySelf="center">
+            <LogoContainer>
+              <AnimatedLogo />
+            </LogoContainer>
             <h1>Under construction, check back soon!</h1>
           </Grid.Item>
         </Grid>
