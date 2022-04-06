@@ -1,16 +1,18 @@
-
-import React from 'react';
-import Card from '../components/Card';
+import React from "react";
+import Card from "../components/Card";
+import CardProps from "../components/Card/types";
 
 export default {
-  title: 'Components/Card',
+  title: "Components/Card",
   component: Card,
   argTypes: {},
-  parameters: {}
+  parameters: {},
 };
 
-export const DefaultStory = ({ ...rest }) => <Card {...rest} />;
+export const DefaultStory = ({ ...rest }: CardProps) => <Card {...rest} />;
 
-DefaultStory.args = {};
+DefaultStory.args = {
+  children: "Hello Card",
+};
 
-DefaultStory.storyName = 'Card - Default Story';
+DefaultStory.storyName = "Card - Default Story";

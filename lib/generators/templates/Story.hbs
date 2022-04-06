@@ -1,6 +1,7 @@
 
 import React from 'react';
 import {{properCase name}} from '../components/{{properCase name}}';
+import {{properCase name}}Props from "../components/{{properCase name}}/types";
 
 export default {
   title: 'Components/{{properCase name}}',
@@ -9,7 +10,7 @@ export default {
   parameters: {}
 };
 
-export const DefaultStory = ({ ...rest }) => <{{properCase name}} {...rest} />;
+export const DefaultStory = ({ ...rest }: {{properCase name}}Props) => <{{properCase name}} {...rest} />;
 
 DefaultStory.args = {};
 

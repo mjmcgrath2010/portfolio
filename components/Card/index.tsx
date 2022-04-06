@@ -5,11 +5,7 @@ import CardProps from "./types";
 
 const Container = styled.div``;
 
-const Card = (props: CardProps) => (
-  <Container>
-    <h1>Card Component</h1>
-  </Container>
-);
+const Card = ({ children }: CardProps) => <Container>{children}</Container>;
 
 Card.defaultProps = {};
 

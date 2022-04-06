@@ -7,21 +7,13 @@ Object {
     <div>
       <div
         class=""
-      >
-        <h1>
-          Card Component
-        </h1>
-      </div>
+      />
     </div>
   </body>,
   "container": <div>
     <div
       class=""
-    >
-      <h1>
-        Card Component
-      </h1>
-    </div>
+    />
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
