@@ -12,28 +12,21 @@ Object {
 
 .c1 path.M,
 .c1 path.Left-Caret {
-  -webkit-transform: translateX(190px);
-  -ms-transform: translateX(190px);
-  transform: translateX(190px);
-  -webkit-animation: jfrume 3s ease-out forwards;
-  animation: jfrume 3s ease-out forwards;
+  -webkit-animation: hkiHcO 3s ease-out forwards;
+  animation: hkiHcO 3s ease-out forwards;
 }
 
-.c1 path.M2,
 .c1 path.Closing-Bracket,
 .c1 path.Right-Caret {
-  -webkit-transform: translateX(-190px);
-  -ms-transform: translateX(-190px);
-  transform: translateX(-190px);
-  -webkit-animation: bMmKtT 3s ease-out forwards;
-  animation: bMmKtT 3s ease-out forwards;
+  -webkit-animation: bwzmU 3s ease-out forwards;
+  animation: bwzmU 3s ease-out forwards;
 }
 
 .c1 path.I,
 .c1 path.K,
 .c1 path.E {
-  -webkit-animation: feQTRz 3s ease-out forwards;
-  animation: feQTRz 3s ease-out forwards;
+  -webkit-animation: glWcH 3s ease-out forwards;
+  animation: glWcH 3s ease-out forwards;
 }
 
 .c1 path.C,
@@ -42,8 +35,8 @@ Object {
 .c1 path.A,
 .c1 path.T,
 .c1 path.H {
-  -webkit-animation: uyGrr 3s ease-out forwards;
-  animation: uyGrr 3s ease-out forwards;
+  -webkit-animation: glWcH 3s ease-out forwards;
+  animation: glWcH 3s ease-out forwards;
 }
 
 <body>
@@ -131,28 +124,21 @@ Object {
 
 .c1 path.M,
 .c1 path.Left-Caret {
-  -webkit-transform: translateX(190px);
-  -ms-transform: translateX(190px);
-  transform: translateX(190px);
-  -webkit-animation: jfrume 3s ease-out forwards;
-  animation: jfrume 3s ease-out forwards;
+  -webkit-animation: hkiHcO 3s ease-out forwards;
+  animation: hkiHcO 3s ease-out forwards;
 }
 
-.c1 path.M2,
 .c1 path.Closing-Bracket,
 .c1 path.Right-Caret {
-  -webkit-transform: translateX(-190px);
-  -ms-transform: translateX(-190px);
-  transform: translateX(-190px);
-  -webkit-animation: bMmKtT 3s ease-out forwards;
-  animation: bMmKtT 3s ease-out forwards;
+  -webkit-animation: bwzmU 3s ease-out forwards;
+  animation: bwzmU 3s ease-out forwards;
 }
 
 .c1 path.I,
 .c1 path.K,
 .c1 path.E {
-  -webkit-animation: feQTRz 3s ease-out forwards;
-  animation: feQTRz 3s ease-out forwards;
+  -webkit-animation: glWcH 3s ease-out forwards;
+  animation: glWcH 3s ease-out forwards;
 }
 
 .c1 path.C,
@@ -161,8 +147,8 @@ Object {
 .c1 path.A,
 .c1 path.T,
 .c1 path.H {
-  -webkit-animation: uyGrr 3s ease-out forwards;
-  animation: uyGrr 3s ease-out forwards;
+  -webkit-animation: glWcH 3s ease-out forwards;
+  animation: glWcH 3s ease-out forwards;
 }
 
 <div>
