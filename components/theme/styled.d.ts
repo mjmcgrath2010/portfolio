@@ -29,6 +29,7 @@ declare module "styled-components" {
     fontFamilies: {
       sans_1: string;
       sans_2: string;
+      serif: string;
       code: string;
     };
     fontSizes: {

@@ -5,7 +5,7 @@ import TypographyProps from "./types";
 
 const Text = styled.span.attrs(({ as }: TypographyProps) => ({ as }))`
   ${({ theme, color, as }: any) => {
-    const fontColor = !!["dark", "light"].includes(color)
+    const fontColor = ["dark", "light"].includes(color)
       ? theme.palette.text[color]
       : theme.palette[color].main;
     const BaseStyles = css`
@@ -30,11 +30,13 @@ const Text = styled.span.attrs(({ as }: TypographyProps) => ({ as }))`
         `;
       case "quote":
         return css`
-          ${BaseHeadingStyles};
+          font-family: ${({ theme }) => theme.fontFamilies.serif};
           font-size: ${({ theme }) => theme.fontSizes.md};
+          font-style: italic;
         `;
-      case "subtitle":
+      case "subtle":
         return css`
+          font-family: ${({ theme }) => theme.fontFamilies.sans_2};
           font-size: ${({ theme }) => theme.fontSizes.sm};
         `;
       case "body":
