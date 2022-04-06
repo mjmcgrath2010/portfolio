@@ -31,7 +31,7 @@ const Container = styled(AppBar)<Scrolled>`
 
 const StyledLogo = styled(Logo)<Scrolled>`
   cursor: pointer;
-  color: ${({ theme }) => theme.palette.text.light};
+  color: ${({ theme }) => theme.palette.text.dark};
   width: 200px;
 
   ${({ isScrolled }) =>
@@ -39,10 +39,6 @@ const StyledLogo = styled(Logo)<Scrolled>`
     css`
       color: ${({ theme }) => theme.palette.info.dark};
     `}
-
-  &:hover {
-    color: ${({ theme }) => theme.palette.info.light};
-  }
 `;
 const NavBarContainer = styled.div`
   width: 100%;
@@ -143,9 +139,7 @@ const NavBarLogo = ({ className }: LogoProps) => {
   return (
     <NavBarLogoContainer isScrolled={thresholdMet} className={className}>
       <NextLink href="/" passHref>
-        <a>
-          <StyledLogo role="button" />
-        </a>
+        <StyledLogo role="button" />
       </NextLink>
     </NavBarLogoContainer>
   );
