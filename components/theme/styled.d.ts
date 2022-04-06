@@ -29,6 +29,7 @@ declare module "styled-components" {
     fontFamilies: {
       sans_1: string;
       sans_2: string;
+      serif: string;
       code: string;
     };
     fontSizes: {
@@ -154,6 +155,11 @@ declare module "styled-components" {
     };
     palette: {
       accent: IPalette;
+      background: {
+        accent: string;
+        dark: string;
+        light: string;
+      };
       disabled: string;
       error: IPalette;
       info: IPalette;

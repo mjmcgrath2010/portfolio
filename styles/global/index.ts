@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
     background:${({ theme }) => theme.colors.white_200};
     color: ${({ theme }) => theme.palette.text.light};
     background: url("/assets/images/default-background.jpg") center;
-    background-position: cover;
+    background-size: cover;
  }
 `;
 

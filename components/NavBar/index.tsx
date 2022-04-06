@@ -1,4 +1,4 @@
-import React, { MouseEvent } from "react";
+import React, { FC, forwardRef } from "react";
 import styled, { css } from "styled-components";
 import NextLink from "next/link";
 import NavBarProps, { LogoProps } from "./types";
@@ -29,7 +29,7 @@ const Container = styled(AppBar)<Scrolled>`
     `}
 `;
 
-const StyledLogo = styled(Logo)<Scrolled>`
+const StyledLogo = styled(Logo)`
   cursor: pointer;
   color: ${({ theme }) => theme.palette.text.dark};
   width: 200px;
@@ -148,13 +148,19 @@ NavRoutes.defaultProps = {
   ],
 };
 
+const NavLogo = React.forwardRef((props, ref) => (
+  <StyledLogo href={ref} {...props} />
+));
+
+NavLogo.displayName = "NavLogo";
+
 const NavBarLogo = ({ className }: LogoProps) => {
   const { thresholdMet } = useScroll(70);
 
   return (
     <NavBarLogoContainer isScrolled={thresholdMet} className={className}>
       <NextLink href="/" passHref>
-        <StyledLogo role="button" />
+        <NavLogo />
       </NextLink>
     </NavBarLogoContainer>
   );

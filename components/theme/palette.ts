@@ -14,7 +14,12 @@ const palette = {
     light: colors.beige_400,
     main: colors.beige_700,
   },
-  disabled: "",
+  background: {
+    accent: colors.indigo_300,
+    dark: colors.blue_900,
+    light: colors.gray_100,
+  },
+  disabled: colors.gray_400,
   error: {
     active: colors.red_800,
     contrastText: {

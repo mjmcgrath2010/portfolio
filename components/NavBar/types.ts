@@ -7,6 +7,7 @@ interface NavBarProps {
 
 export interface LogoProps {
   className?: string;
+  role?: string;
 }
 
 export default NavBarProps;
