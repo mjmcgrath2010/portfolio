@@ -11,12 +11,15 @@ const Container = styled.div<SectionProps>`
   overflow-x: hidden;
 `;
 
-const Section = ({ children, color }: SectionProps) => (
-  <Container color={color}>{children}</Container>
+const Section = ({ children, className, color }: SectionProps) => (
+  <Container className={className} color={color}>
+    {children}
+  </Container>
 );
 
 Section.defaultProps = {
   color: "light",
+  className: "",
 };
 
 export default Section;
