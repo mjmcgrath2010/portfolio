@@ -35,10 +35,10 @@ const Home: NextPage = () => {
       </HeroContainer>
       <ContentContainer>
         <Grid>
-          <Grid.Item mobile={12}>About Me</Grid.Item>
-          <Grid.Item mobile={12}>Featured Posts</Grid.Item>
           <Grid.Item mobile={12}>Experience</Grid.Item>
-          <Grid.Item mobile={12}>Contact Me</Grid.Item>
+          <Grid.Item mobile={12}>My Work</Grid.Item>
+          <Grid.Item mobile={12}>Featured Posts</Grid.Item>
+          <Grid.Item mobile={12}>Drop me a line</Grid.Item>
         </Grid>
       </ContentContainer>
     </AppLayout>
