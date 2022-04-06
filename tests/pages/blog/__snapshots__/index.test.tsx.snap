@@ -36,7 +36,7 @@ Object {
 }
 
 .c11 {
-  color: #4251d9;
+  color: rgb(76,86,179);
   cursor: pointer;
   font-size: 16px;
   font-family: 'Titillium Web',sans-serif;
@@ -45,18 +45,18 @@ Object {
 }
 
 .c11:hover {
-  color: #828ce6;
+  color: rgb(122,130,199);
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 .c11:active,
 .c11:visited {
-  color: #2230ab;
+  color: rgb(59,67,140);
 }
 
 .c8 {
-  color: #4251d9;
+  color: rgb(76,86,179);
   cursor: pointer;
   font-size: 16px;
   font-family: 'Titillium Web',sans-serif;
@@ -65,14 +65,14 @@ Object {
 }
 
 .c8:hover {
-  color: #828ce6;
+  color: rgb(122,130,199);
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 .c8:active,
 .c8:visited {
-  color: #2230ab;
+  color: rgb(59,67,140);
 }
 
 .c1 {
@@ -82,13 +82,13 @@ Object {
 
 .c6 {
   cursor: pointer;
-  color: #dc7a2f;
+  color: rgb(207,109,35);
   width: 200px;
   color: #fbfbfb;
 }
 
 .c6:hover {
-  color: #e7a572;
+  color: rgb(228,151,93);
 }
 
 .c3 {
@@ -118,15 +118,15 @@ Object {
 }
 
 .c10 {
-  color: #8500e4;
+  color: rgb(138,0,236);
 }
 
 .c10:hover {
-  color: #c471ff;
+  color: rgb(185,87,255);
 }
 
 .c10:visited {
-  color: #6500ad;
+  color: rgb(110,0,188);
 }
 
 .c7 {
@@ -149,11 +149,11 @@ Object {
 }
 
 .c7 .c9:hover {
-  color: #e7a572;
+  color: rgb(228,151,93);
 }
 
 .c7 .c9:visited {
-  color: #e7a572;
+  color: rgb(228,151,93);
 }
 
 .c14 {
@@ -296,7 +296,7 @@ Object {
 }
 
 .c11 {
-  color: #4251d9;
+  color: rgb(76,86,179);
   cursor: pointer;
   font-size: 16px;
   font-family: 'Titillium Web',sans-serif;
@@ -305,18 +305,18 @@ Object {
 }
 
 .c11:hover {
-  color: #828ce6;
+  color: rgb(122,130,199);
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 .c11:active,
 .c11:visited {
-  color: #2230ab;
+  color: rgb(59,67,140);
 }
 
 .c8 {
-  color: #4251d9;
+  color: rgb(76,86,179);
   cursor: pointer;
   font-size: 16px;
   font-family: 'Titillium Web',sans-serif;
@@ -325,14 +325,14 @@ Object {
 }
 
 .c8:hover {
-  color: #828ce6;
+  color: rgb(122,130,199);
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 .c8:active,
 .c8:visited {
-  color: #2230ab;
+  color: rgb(59,67,140);
 }
 
 .c1 {
@@ -342,13 +342,13 @@ Object {
 
 .c6 {
   cursor: pointer;
-  color: #dc7a2f;
+  color: rgb(207,109,35);
   width: 200px;
   color: #fbfbfb;
 }
 
 .c6:hover {
-  color: #e7a572;
+  color: rgb(228,151,93);
 }
 
 .c3 {
@@ -378,15 +378,15 @@ Object {
 }
 
 .c10 {
-  color: #8500e4;
+  color: rgb(138,0,236);
 }
 
 .c10:hover {
-  color: #c471ff;
+  color: rgb(185,87,255);
 }
 
 .c10:visited {
-  color: #6500ad;
+  color: rgb(110,0,188);
 }
 
 .c7 {
@@ -409,11 +409,11 @@ Object {
 }
 
 .c7 .c9:hover {
-  color: #e7a572;
+  color: rgb(228,151,93);
 }
 
 .c7 .c9:visited {
-  color: #e7a572;
+  color: rgb(228,151,93);
 }
 
 .c14 {

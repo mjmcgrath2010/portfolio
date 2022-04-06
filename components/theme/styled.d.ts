@@ -34,6 +34,7 @@ declare module "styled-components" {
       xl: string;
     };
     colors: {
+      black_50: string;
       black_100: string;
       black_200: string;
       black_300: string;
@@ -42,7 +43,9 @@ declare module "styled-components" {
       black_600: string;
       black_700: string;
       black_800: string;
+      black_900: string;
 
+      blue_50: string;
       blue_100: string;
       blue_200: string;
       blue_300: string;
@@ -51,7 +54,9 @@ declare module "styled-components" {
       blue_600: string;
       blue_700: string;
       blue_800: string;
+      blue_900: string;
 
+      beige_50: string;
       beige_100: string;
       beige_200: string;
       beige_300: string;
@@ -60,7 +65,9 @@ declare module "styled-components" {
       beige_600: string;
       beige_700: string;
       beige_800: string;
+      beige_900: string;
 
+      green_50: string;
       green_100: string;
       green_200: string;
       green_300: string;
@@ -69,7 +76,9 @@ declare module "styled-components" {
       green_600: string;
       green_700: string;
       green_800: string;
+      green_900: string;
 
+      gray_50: string;
       gray_100: string;
       gray_200: string;
       gray_300: string;
@@ -78,7 +87,9 @@ declare module "styled-components" {
       gray_600: string;
       gray_700: string;
       gray_800: string;
+      gray_900: string;
 
+      indigo_50: string;
       indigo_100: string;
       indigo_200: string;
       indigo_300: string;
@@ -87,7 +98,9 @@ declare module "styled-components" {
       indigo_600: string;
       indigo_700: string;
       indigo_800: string;
+      indigo_900: string;
 
+      orange_50: string;
       orange_100: string;
       orange_200: string;
       orange_300: string;
@@ -96,7 +109,9 @@ declare module "styled-components" {
       orange_600: string;
       orange_700: string;
       orange_800: string;
+      orange_900: string;
 
+      red_50: string;
       red_100: string;
       red_200: string;
       red_300: string;
@@ -105,7 +120,9 @@ declare module "styled-components" {
       red_600: string;
       red_700: string;
       red_800: string;
+      red_900: string;
 
+      violet_50: string;
       violet_100: string;
       violet_200: string;
       violet_300: string;
@@ -114,10 +131,12 @@ declare module "styled-components" {
       violet_600: string;
       violet_700: string;
       violet_800: string;
+      violet_900: string;
 
       white_100: string;
       white_200: string;
 
+      yellow_50: string;
       yellow_100: string;
       yellow_200: string;
       yellow_300: string;
@@ -126,6 +145,7 @@ declare module "styled-components" {
       yellow_600: string;
       yellow_700: string;
       yellow_800: string;
+      yellow_900: string;
     };
     palette: {
       accent: IPalette;
