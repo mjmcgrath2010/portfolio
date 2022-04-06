@@ -17,6 +17,7 @@ const HeroContainer = styled.div`
   background-size: cover;
   background-attachment: fixed;
   color: ${({ theme }) => theme.palette.text.light};
+  z-index: 1;
 `;
 
 const HeroTextContainer = styled.div`
@@ -34,7 +35,7 @@ const LogoContainer = styled.div`
 `;
 
 const ContentContainer = styled.div`
-  z-index: 200;
+  z-index: 2;
   min-height: 800px;
 `;
 
