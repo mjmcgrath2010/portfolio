@@ -155,6 +155,11 @@ declare module "styled-components" {
     };
     palette: {
       accent: IPalette;
+      background: {
+        accent: string;
+        dark: string;
+        light: string;
+      };
       disabled: string;
       error: IPalette;
       info: IPalette;
