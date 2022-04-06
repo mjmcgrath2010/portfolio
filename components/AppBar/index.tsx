@@ -13,13 +13,6 @@ const AppBarContainer = styled.div`
   z-index: 1000;
 `;
 
-const Pusher = styled.div`
-  display: block;
-  width: 100%;
-  height: 0;
-  margin: 35px 0 0;
-`;
-
 const ContentContainer = styled.div`
   display: flex;
   padding: ${({ theme }) => `0 ${theme.spacing.lg}`};
@@ -33,7 +26,6 @@ const AppBar = ({ children, className }: AppBarProps) => (
     <AppBarContainer className={className}>
       <ContentContainer>{children}</ContentContainer>
     </AppBarContainer>
-    <Pusher />
   </>
 );
 
