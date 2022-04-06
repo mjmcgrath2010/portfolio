@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 
 interface AppLayoutProps {
-  children: ReactElement;
+  children: ReactElement | ReactElement[];
   className?: string;
 }
 
