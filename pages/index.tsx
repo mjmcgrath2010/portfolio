@@ -11,12 +11,20 @@ const HeroContainer = styled.div`
   display: block;
   width: 100%;
   height: 100vh;
-  padding-top: 70px;
+  padding-top: 20vh;
   margin-top: 0;
   background: url("/assets/images/homepage-background.jpg") center repeat;
   background-size: cover;
   background-attachment: fixed;
   color: ${({ theme }) => theme.palette.text.light};
+`;
+
+const HeroTextContainer = styled.div`
+  width: 100%;
+  position: fixed;
+  height: fit-content;
+  left: 0;
+  text-align: center;
 `;
 
 const LogoContainer = styled.div`
@@ -36,10 +44,12 @@ const Home: NextPage = () => {
       <HeroContainer>
         <Grid>
           <Grid.Item mobile={12} justifySelf="center">
-            <LogoContainer>
-              <AnimatedLogo />
-            </LogoContainer>
-            <h1>Under construction, check back soon!</h1>
+            <HeroTextContainer>
+              <LogoContainer>
+                <AnimatedLogo />
+              </LogoContainer>
+              <h1>Under construction, check back soon!</h1>
+            </HeroTextContainer>
           </Grid.Item>
         </Grid>
       </HeroContainer>
