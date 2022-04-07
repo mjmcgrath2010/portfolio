@@ -4,6 +4,7 @@ import Head from "next/head";
 import NavBar from "@components/NavBar";
 
 import AppLayoutProps from "./types";
+import Footer from "./Footer";
 
 const AppLayout = ({ children, className }: AppLayoutProps) => (
   <>
@@ -17,6 +18,7 @@ const AppLayout = ({ children, className }: AppLayoutProps) => (
       <NavBar.Routes />
     </NavBar>
     {children}
+    <Footer />
   </>
 );
 

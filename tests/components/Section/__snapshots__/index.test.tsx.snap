@@ -5,7 +5,7 @@ Object {
   "asFragment": [Function],
   "baseElement": .c0 {
   padding: 16px;
-  background: rgb(239,239,239);
+  background: rgb(223,223,223);
   min-height: 300px;
   margin: 0;
   width: 100%;
@@ -24,7 +24,7 @@ Object {
   </body>,
   "container": .c0 {
   padding: 16px;
-  background: rgb(239,239,239);
+  background: rgb(223,223,223);
   min-height: 300px;
   margin: 0;
   width: 100%;

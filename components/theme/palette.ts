@@ -15,9 +15,9 @@ const palette = {
     main: colors.beige_700,
   },
   background: {
-    accent: colors.indigo_300,
-    dark: colors.blue_900,
-    light: colors.gray_100,
+    accent: colors.blue_800,
+    dark: colors.black_900,
+    light: colors.gray_200,
   },
   disabled: colors.gray_400,
   error: {

@@ -67,10 +67,12 @@ const Home: NextPage = () => {
           </Grid>
         </Section>
 
-        <Section>
+        <Section color="accent">
           <Grid>
             <Grid.Item mobile={12}>
-              <Typography fontStyle="heading2">Skills</Typography>
+              <Typography color="light" fontStyle="heading2">
+                Skills
+              </Typography>
             </Grid.Item>
           </Grid>
         </Section>
@@ -83,10 +85,12 @@ const Home: NextPage = () => {
           </Grid>
         </Section>
 
-        <Section>
+        <Section color="accent">
           <Grid>
             <Grid.Item mobile={12}>
-              <Typography fontStyle="heading2">Drop me a line</Typography>
+              <Typography color="light" fontStyle="heading2">
+                Drop me a line
+              </Typography>
             </Grid.Item>
           </Grid>
         </Section>
