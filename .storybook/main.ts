@@ -1,7 +1,7 @@
 module.exports = {
   stories: ["../stories/**/*.stories.mdx", "../stories/**/*.@(js|jsx|ts|tsx)"],
   typescript: {
-    check: true,
+    check: false,
     checkOptions: {},
     reactDocgen: "react-docgen-typescript",
     reactDocgenTypescriptOptions: {
