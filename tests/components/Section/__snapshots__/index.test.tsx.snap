@@ -17,7 +17,9 @@ Object {
       <div
         class="c0"
         color="light"
-      />
+      >
+        hi
+      </div>
     </div>
   </body>,
   "container": .c0 {
@@ -33,7 +35,9 @@ Object {
     <div
       class="c0"
       color="light"
-    />
+    >
+      hi
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
