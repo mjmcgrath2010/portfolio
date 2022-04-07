@@ -175,6 +175,14 @@ Object {
   justify-self: center;
 }
 
+.c16 {
+  grid-column: span 12;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  justify-self: stretch;
+}
+
 .c12 {
   display: grid;
   gap: 16px;
@@ -193,6 +201,52 @@ Object {
   justify-content: space-between;
   justify-items: start;
   padding: 24px;
+}
+
+.c15 {
+  display: grid;
+  gap: 16px;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(12,1fr);
+  -webkit-align-content: start;
+  -ms-flex-line-pack: start;
+  align-content: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  justify-items: start;
+  padding: 24px;
+}
+
+.c18 {
+  color: #fbfbfb;
+  padding: 0;
+  margin: 0;
+  font-family: 'Titillium Web',sans-serif;
+  font-size: 16px;
+}
+
+.c17 {
+  display: block;
+  position: relative;
+  margin: 16px auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 @media screen and (max-width:767px) {
@@ -285,7 +339,33 @@ Object {
         class="c14"
         color="dark"
       >
-        Footer
+        <div
+          class="c15"
+        >
+          <div
+            class="c16"
+          >
+            <div
+              class="c17"
+            >
+              <p
+                class="c18"
+                color="light"
+                font-style="body"
+              >
+                Built with ♥️ in Boston, MA
+              </p>
+              <p
+                class="c18"
+                color="light"
+                font-style="body"
+              >
+                Mike McGrath, © 
+                2022
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>,
@@ -461,6 +541,14 @@ Object {
   justify-self: center;
 }
 
+.c16 {
+  grid-column: span 12;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  justify-self: stretch;
+}
+
 .c12 {
   display: grid;
   gap: 16px;
@@ -479,6 +567,52 @@ Object {
   justify-content: space-between;
   justify-items: start;
   padding: 24px;
+}
+
+.c15 {
+  display: grid;
+  gap: 16px;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(12,1fr);
+  -webkit-align-content: start;
+  -ms-flex-line-pack: start;
+  align-content: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  justify-items: start;
+  padding: 24px;
+}
+
+.c18 {
+  color: #fbfbfb;
+  padding: 0;
+  margin: 0;
+  font-family: 'Titillium Web',sans-serif;
+  font-size: 16px;
+}
+
+.c17 {
+  display: block;
+  position: relative;
+  margin: 16px auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 @media screen and (max-width:767px) {
@@ -570,7 +704,33 @@ Object {
       class="c14"
       color="dark"
     >
-      Footer
+      <div
+        class="c15"
+      >
+        <div
+          class="c16"
+        >
+          <div
+            class="c17"
+          >
+            <p
+              class="c18"
+              color="light"
+              font-style="body"
+            >
+              Built with ♥️ in Boston, MA
+            </p>
+            <p
+              class="c18"
+              color="light"
+              font-style="body"
+            >
+              Mike McGrath, © 
+              2022
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>,
   "debug": [Function],
