@@ -7,6 +7,7 @@ interface CardProps {
 
 export interface CardImageProps {
   src: string;
+  title: string;
 }
 
 export default CardProps;

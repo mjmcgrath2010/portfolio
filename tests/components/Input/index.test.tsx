@@ -1,3 +1,4 @@
+import React from "react";
 import Input from "@components/Input";
 
 import { render } from "@test/utils";

@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 
 interface SectionProps {
-  children: ReactElement | ReactElement[];
+  children: ReactElement | ReactElement[] | string;
   className?: string;
   color?: "light" | "dark" | "accent";
 }

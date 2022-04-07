@@ -1,7 +1,11 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from "react";
+import styled from "styled-components";
 import Card from "../components/Card";
-import CardProps from "../components/Card/types";
+
+const Container = styled.div`
+  max-width: 200px;
+`;
 
 export default {
   title: "Components/Card",
@@ -11,13 +15,15 @@ export default {
 };
 
 export const DefaultStory = () => (
-  <Card>
-    <Card.Image />
-  </Card>
+  <Container>
+    <Card>
+      <Card.Image
+        title="Example Featured Text"
+        src="https://via.placeholder.com/150"
+      />
+    </Card>
+  </Container>
 );
-
-DefaultStory.args = {
-  children: "Hello Card",
-};
+DefaultStory.args = {};
 
 DefaultStory.storyName = "Card - Default Story";

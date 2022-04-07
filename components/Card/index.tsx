@@ -1,4 +1,5 @@
 import React from "react";
+import Typography from "../Typography";
 import styled from "styled-components";
 
 import CardProps, { CardImageProps } from "./types";
@@ -13,18 +14,39 @@ const Container = styled.div`
   margin: 0 auto;
   display: flex;
   flex-flow: column wrap;
+  border-radius: ${({ theme }) => theme.borderRadius};
 `;
 
-const StyledCardImage = styled.div<CardImageProps>`
-  width: 100%;
-  height: 200px;
-  background: url(${({ src }) => src}) center;
-  background-size: cover;
+const ImageContainer = styled.div`
+  background: ${({ src }: { src: string }) =>
+    `linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(${src}) center`};
+  height: 50%;
+  min-height: 150px;
+  filter: grayscale(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  padding: ${({ theme }) => theme.spacing.md};
+  text-align: center;
+
+  &:hover {
+    background: ${({ src }: { src: string }) =>
+      `linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(${src}) center`};
+    cursor: pointer;
+  }
 `;
 
-const CardImage = ({ src }: CardImageProps) => <StyledCardImage src={src} />;
+const CardImage = ({ src, title }: CardImageProps) => (
+  <ImageContainer src={src}>
+    <Typography fontStyle="body" color="light">
+      {title}
+    </Typography>
+  </ImageContainer>
+);
 
 CardImage.defaultProps = {
+  title: "Card Example",
   src: "https://via.placeholder.com/150",
 };
 
