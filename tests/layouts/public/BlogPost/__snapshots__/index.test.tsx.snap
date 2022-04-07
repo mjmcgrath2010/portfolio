@@ -158,12 +158,29 @@ Object {
   color: rgb(228,151,93);
 }
 
+.c14 {
+  padding: 16px;
+  background: rgb(30,20,10);
+  min-height: 300px;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .c13 {
   grid-column: span 12;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
   justify-self: center;
+}
+
+.c17 {
+  grid-column: span 12;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  justify-self: stretch;
 }
 
 .c12 {
@@ -184,6 +201,47 @@ Object {
   justify-content: space-between;
   justify-items: start;
   padding: 24px;
+}
+
+.c16 {
+  display: grid;
+  gap: 16px;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(12,1fr);
+  -webkit-align-content: start;
+  -ms-flex-line-pack: start;
+  align-content: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  justify-items: start;
+  padding: 24px;
+}
+
+.c19 {
+  color: #fbfbfb;
+  padding: 0;
+  margin: 0;
+  font-family: 'Titillium Web',sans-serif;
+  font-size: 16px;
+}
+
+.c15 {
+  height: 200px;
+}
+
+.c18 {
+  display: block;
+  position: relative;
+  margin: 16px auto;
+  text-align: center;
+  width: 100%;
+  padding-top: 188px;
 }
 
 @media screen and (max-width:767px) {
@@ -270,6 +328,38 @@ Object {
           <h1>
             Coming soon!
           </h1>
+        </div>
+      </div>
+      <div
+        class="c14 c15"
+        color="dark"
+      >
+        <div
+          class="c16"
+        >
+          <div
+            class="c17"
+          >
+            <div
+              class="c18"
+            >
+              <p
+                class="c19"
+                color="light"
+                font-style="body"
+              >
+                Built with ♥️ in Boston, MA
+              </p>
+              <p
+                class="c19"
+                color="light"
+                font-style="body"
+              >
+                Mike McGrath, © 
+                2022
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -429,12 +519,29 @@ Object {
   color: rgb(228,151,93);
 }
 
+.c14 {
+  padding: 16px;
+  background: rgb(30,20,10);
+  min-height: 300px;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .c13 {
   grid-column: span 12;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
   justify-self: center;
+}
+
+.c17 {
+  grid-column: span 12;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  justify-self: stretch;
 }
 
 .c12 {
@@ -455,6 +562,47 @@ Object {
   justify-content: space-between;
   justify-items: start;
   padding: 24px;
+}
+
+.c16 {
+  display: grid;
+  gap: 16px;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(12,1fr);
+  -webkit-align-content: start;
+  -ms-flex-line-pack: start;
+  align-content: start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  justify-items: start;
+  padding: 24px;
+}
+
+.c19 {
+  color: #fbfbfb;
+  padding: 0;
+  margin: 0;
+  font-family: 'Titillium Web',sans-serif;
+  font-size: 16px;
+}
+
+.c15 {
+  height: 200px;
+}
+
+.c18 {
+  display: block;
+  position: relative;
+  margin: 16px auto;
+  text-align: center;
+  width: 100%;
+  padding-top: 188px;
 }
 
 @media screen and (max-width:767px) {
@@ -540,6 +688,38 @@ Object {
         <h1>
           Coming soon!
         </h1>
+      </div>
+    </div>
+    <div
+      class="c14 c15"
+      color="dark"
+    >
+      <div
+        class="c16"
+      >
+        <div
+          class="c17"
+        >
+          <div
+            class="c18"
+          >
+            <p
+              class="c19"
+              color="light"
+              font-style="body"
+            >
+              Built with ♥️ in Boston, MA
+            </p>
+            <p
+              class="c19"
+              color="light"
+              font-style="body"
+            >
+              Mike McGrath, © 
+              2022
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>,

@@ -10,7 +10,7 @@ const black = {
   black_600: "rgb(116, 106, 106)",
   black_700: "rgb(102, 93, 93)",
   black_800: "rgb(80, 73, 73)",
-  black_900: "rgb(66, 60, 60)",
+  black_900: "rgb(30, 20, 10)",
 };
 
 const blue = {
