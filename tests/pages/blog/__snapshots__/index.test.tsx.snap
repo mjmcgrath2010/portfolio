@@ -175,7 +175,7 @@ Object {
   justify-self: center;
 }
 
-.c16 {
+.c17 {
   grid-column: span 12;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
@@ -203,7 +203,7 @@ Object {
   padding: 24px;
 }
 
-.c15 {
+.c16 {
   display: grid;
   gap: 16px;
   grid-template-rows: auto;
@@ -223,7 +223,7 @@ Object {
   padding: 24px;
 }
 
-.c18 {
+.c19 {
   color: #fbfbfb;
   padding: 0;
   margin: 0;
@@ -231,22 +231,17 @@ Object {
   font-size: 16px;
 }
 
-.c17 {
+.c15 {
+  height: 200px;
+}
+
+.c18 {
   display: block;
   position: relative;
   margin: 16px auto;
   text-align: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: column nowrap;
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  width: 100%;
+  padding-top: 188px;
 }
 
 @media screen and (max-width:767px) {
@@ -336,27 +331,27 @@ Object {
         </div>
       </div>
       <div
-        class="c14"
+        class="c14 c15"
         color="dark"
       >
         <div
-          class="c15"
+          class="c16"
         >
           <div
-            class="c16"
+            class="c17"
           >
             <div
-              class="c17"
+              class="c18"
             >
               <p
-                class="c18"
+                class="c19"
                 color="light"
                 font-style="body"
               >
                 Built with ♥️ in Boston, MA
               </p>
               <p
-                class="c18"
+                class="c19"
                 color="light"
                 font-style="body"
               >
@@ -541,7 +536,7 @@ Object {
   justify-self: center;
 }
 
-.c16 {
+.c17 {
   grid-column: span 12;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
@@ -569,7 +564,7 @@ Object {
   padding: 24px;
 }
 
-.c15 {
+.c16 {
   display: grid;
   gap: 16px;
   grid-template-rows: auto;
@@ -589,7 +584,7 @@ Object {
   padding: 24px;
 }
 
-.c18 {
+.c19 {
   color: #fbfbfb;
   padding: 0;
   margin: 0;
@@ -597,22 +592,17 @@ Object {
   font-size: 16px;
 }
 
-.c17 {
+.c15 {
+  height: 200px;
+}
+
+.c18 {
   display: block;
   position: relative;
   margin: 16px auto;
   text-align: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: column nowrap;
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  width: 100%;
+  padding-top: 188px;
 }
 
 @media screen and (max-width:767px) {
@@ -701,27 +691,27 @@ Object {
       </div>
     </div>
     <div
-      class="c14"
+      class="c14 c15"
       color="dark"
     >
       <div
-        class="c15"
+        class="c16"
       >
         <div
-          class="c16"
+          class="c17"
         >
           <div
-            class="c17"
+            class="c18"
           >
             <p
-              class="c18"
+              class="c19"
               color="light"
               font-style="body"
             >
               Built with ♥️ in Boston, MA
             </p>
             <p
-              class="c18"
+              class="c19"
               color="light"
               font-style="body"
             >

@@ -62,7 +62,7 @@ const Home: NextPage = () => {
         <Section>
           <Grid>
             <Grid.Item mobile={12}>
-              <Typography fontStyle="heading2">Experience</Typography>
+              <Typography fontStyle="heading2">Work Experience</Typography>
             </Grid.Item>
           </Grid>
         </Section>
@@ -71,7 +71,7 @@ const Home: NextPage = () => {
           <Grid>
             <Grid.Item mobile={12}>
               <Typography color="light" fontStyle="heading2">
-                Skills
+                Featured Projects
               </Typography>
             </Grid.Item>
           </Grid>

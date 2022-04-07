@@ -5,19 +5,22 @@ import Grid from "@components/Grid";
 import dayjs from "dayjs";
 import Typography from "@components/Typography";
 
+const FooterContainer = styled(Section)`
+  height: 200px;
+`;
+
 const CreditContainer = styled.div`
   display: block;
   position: relative;
   margin: ${({ theme }) => theme.spacing.md} auto;
   text-align: center;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-end;
+  width: 100%;
+  padding-top: 188px;
 `;
 
 const Footer = () => {
   return (
-    <Section color="dark">
+    <FooterContainer color="dark">
       <Grid justifyContent="center" alignItems="center">
         <Grid.Item mobile={12}>
           <CreditContainer>
@@ -30,7 +33,7 @@ const Footer = () => {
           </CreditContainer>
         </Grid.Item>
       </Grid>
-    </Section>
+    </FooterContainer>
   );
 };
 
