@@ -3,7 +3,7 @@ import { ReactElement } from "react";
 interface TypographyProps {
   fontStyle?: "heading1" | "heading2" | "quote" | "subtle" | "body" | "code";
   color?: "light" | "dark";
-  children: string | ReactElement | ReactElement[];
+  children: string | ReactElement | ReactElement[] | string[];
   state?: "error" | "success" | "info" | "warning";
 }
 
