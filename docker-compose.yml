@@ -3,7 +3,7 @@ version: "3.3"
 services:
   # Development Proxy
   nginx:
-    image: nginx:1.17.10
+    image: nginx:latest
     container_name: nginx
     depends_on:
       - portfolio
@@ -15,7 +15,7 @@ services:
       - ./reverse_proxy/nginx.conf:/home/app/etc/nginx/nginx.conf
       - ./templates:/home/app/etc/nginx/templates
     ports:
-      - 80:80
+      - 8000:80
 
   # Component Libray
   components:

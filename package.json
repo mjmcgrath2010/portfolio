@@ -7,7 +7,7 @@
     "build": "yarn build-storybook && next build",
     "start": "next start",
     "lint": "next lint",
-    "storybook": "start-storybook -p 3001 --no-manager-cache -h dev.mmcgrath.com -s components",
+    "storybook": "start-storybook -p 3001 --no-manager-cache -h mmcgrath.test -s components",
     "build-storybook": "build-storybook -o public/components",
     "test": "jest  --coverage",
     "generate": "plop --plopfile ./lib/generators/index.js"
