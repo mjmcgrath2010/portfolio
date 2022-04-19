@@ -25,8 +25,8 @@ services:
     command: yarn storybook
     container_name: components
     environment:
-      - NGINX_HOST=dev.mmcgrath.test/components
-      - NGINX_PORT=3001
+      - NGINX_HOST=mmcgrath.test
+      - NGINX_PATH=components
     ports:
       - 3001:3001
     restart: on-failure
@@ -42,7 +42,7 @@ services:
     command: yarn dev
     container_name: portfolio
     environment:
-      - NGINX_HOST=dev.mmcgrath.test
+      - NGINX_HOST=mmcgrath.test
       - NGINX_PORT=3000
     ports:
       - 3000:3000
