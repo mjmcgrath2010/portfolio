@@ -14,7 +14,7 @@ const Container = styled(AspectRatio.Root)<ImageContainerProps>`
 
 const StyledImage = styled.img`
   height: 100%;
-  width: ;
+  width: auto;
   margin: 0;
   padding: 0;
   border-radius: ${({ theme }) => theme.borderRadius};
