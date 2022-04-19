@@ -1,4 +1,4 @@
-FROM node:16
+FROM node:16.13.0
 
 # Create app directory
 RUN mkdir -p /app
@@ -12,9 +12,8 @@ RUN yarn install
 # Copying source files
 COPY . .
 
-# Building app
-RUN yarn build
+# Expose ports for dev
 EXPOSE 3000
+EXPOSE 3001
 
-# Running the app
-CMD ["yarn", "dev"]
+CMD []
