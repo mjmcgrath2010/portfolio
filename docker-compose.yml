@@ -9,9 +9,8 @@ services:
     command: yarn storybook
     container_name: components
     environment:
-      - VIRTUAL_HOST=mmcgrath.test
+      - VIRTUAL_HOST=components.mmcgrath.test
       - VIRTUAL_PORT=3001
-      - VIRTUAL_PATH=/components
     ports:
       - 3001
     volumes:
@@ -29,7 +28,6 @@ services:
     environment:
       - VIRTUAL_HOST=mmcgrath.test
       - VIRTUAL_PORT=3000
-      - VIRTUAL_PATH=/
     ports:
       - 3000
     volumes:
