@@ -8,8 +8,12 @@ services:
       dockerfile: Dockerfile
     command: yarn storybook
     container_name: components
+    environment:
+      - VIRTUAL_HOST=mmcgrath.test
+      - VIRTUAL_PORT=3001
+      - VIRTUAL_PATH=/components
     ports:
-      - 3001:3001
+      - 3001
     volumes:
       - .:/home/app
       - /node_modules
@@ -22,9 +26,21 @@ services:
       dockerfile: Dockerfile
     command: yarn dev
     container_name: portfolio
+    environment:
+      - VIRTUAL_HOST=mmcgrath.test
+      - VIRTUAL_PORT=3000
+      - VIRTUAL_PATH=/
     ports:
-      - 3000:3000
+      - 3000
     volumes:
       - .:/home/app
       - /node_modules
       - /.next
+
+volumes:
+  components:
+  portfolio:
+
+networks:
+  default:
+    name: mmdev
