@@ -1,0 +1,57 @@
+version: "3.9"
+
+services:
+  # Component Libray
+  components:
+    build: .
+    command: yarn storybook
+    container_name: components
+    environment:
+      - VIRTUAL_HOST=mmcgrath.test
+      - VIRTUAL_PATH=/components
+      - VIRTUAL_PORT=3001
+      - VIRTUAL_DEST=/
+    ports:
+      - 3001
+    volumes:
+      - .:/home/app
+      - /node_modules
+      - /.storybook
+
+  # NextJS Portfolio
+  portfolio:
+    build: .
+    command: yarn dev
+    container_name: portfolio
+    environment:
+      - VIRTUAL_HOST=mmcgrath.test
+      - VIRTUAL_PATH=/
+      - VIRTUAL_PORT=3000
+    ports:
+      - 3000
+    volumes:
+      - .:/home/app
+      - /node_modules
+      - /.next
+
+  nginx-proxy:
+    build:
+      context: ./nginx-proxy/
+      dockerfile: Dockerfile
+    container_name: nginx-proxy
+    depends_on:
+      - components
+      - portfolio
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+
+volumes:
+  components:
+  portfolio:
+
+networks:
+  default:
+    name: mmdev
