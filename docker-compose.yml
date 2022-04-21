@@ -6,11 +6,11 @@ services:
     build: .
     command: yarn storybook
     container_name: components
-    restart: always
     environment:
-      - VIRTUAL_HOST=components.mmcgrath.test
-      - VIRTUAL_PATH=/
+      - VIRTUAL_HOST=mmcgrath.test
+      - VIRTUAL_PATH=/components
       - VIRTUAL_PORT=3001
+      - VIRTUAL_DEST=/
     ports:
       - 3001
     volumes:
@@ -23,9 +23,9 @@ services:
     build: .
     command: yarn dev
     container_name: portfolio
-    restart: always
     environment:
       - VIRTUAL_HOST=mmcgrath.test
+      - VIRTUAL_PATH=/
       - VIRTUAL_PORT=3000
     ports:
       - 3000
@@ -42,7 +42,6 @@ services:
     depends_on:
       - components
       - portfolio
-    restart: always
     ports:
       - "80:80"
       - "443:443"
