@@ -3,13 +3,13 @@ version: "3.9"
 services:
   # Component Libray
   components:
-    build:
-      context: ./
-      dockerfile: Dockerfile
+    build: .
     command: yarn storybook
     container_name: components
+    restart: always
     environment:
       - VIRTUAL_HOST=components.mmcgrath.test
+      - VIRTUAL_PATH=/
       - VIRTUAL_PORT=3001
     ports:
       - 3001
@@ -20,11 +20,10 @@ services:
 
   # NextJS Portfolio
   portfolio:
-    build:
-      context: ./
-      dockerfile: Dockerfile
+    build: .
     command: yarn dev
     container_name: portfolio
+    restart: always
     environment:
       - VIRTUAL_HOST=mmcgrath.test
       - VIRTUAL_PORT=3000
@@ -34,6 +33,21 @@ services:
       - .:/home/app
       - /node_modules
       - /.next
+
+  nginx-proxy:
+    build:
+      context: ./nginx-proxy/
+      dockerfile: Dockerfile
+    container_name: nginx-proxy
+    depends_on:
+      - components
+      - portfolio
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
 
 volumes:
   components:

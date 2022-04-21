@@ -7,7 +7,7 @@
     "build": "yarn build-storybook && next build",
     "start": "next start",
     "lint": "next lint",
-    "storybook": "start-storybook -p 3001",
+    "storybook": "start-storybook -p 3001 --quiet",
     "build-storybook": "build-storybook -o public/components",
     "test": "jest  --coverage",
     "generate": "plop --plopfile ./lib/generators/index.js"
