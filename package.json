@@ -1,5 +1,5 @@
 {
-  "name": "mmdev2",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "build": "yarn build-storybook && next build",
     "start": "next start",
     "lint": "next lint",
-    "storybook": "start-storybook -p 3001 --no-manager-cache -h mmcgrath.test -s components",
+    "storybook": "start-storybook -p 3001 --no-manager-cache",
     "build-storybook": "build-storybook -o public/components",
     "test": "jest  --coverage",
     "generate": "plop --plopfile ./lib/generators/index.js"

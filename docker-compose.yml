@@ -1,53 +1,30 @@
-version: "3.3"
+version: "3.9"
 
 services:
-  # Development Proxy
-  nginx:
-    image: nginx:latest
-    container_name: nginx
-    depends_on:
-      - portfolio
-      - components
-    environment:
-      - NGINX_HOST=mmcgrath.test
-      - NGINX_PORT=80
-    volumes:
-      - ./reverse_proxy/nginx.conf:/home/app/etc/nginx/nginx.conf
-      - ./templates:/home/app/etc/nginx/templates
-    ports:
-      - 8000:80
-
   # Component Libray
   components:
     build:
       context: ./
-      dockerfile: .dockerdev/components/Dockerfile
+      dockerfile: Dockerfile
     command: yarn storybook
     container_name: components
-    environment:
-      - NGINX_HOST=mmcgrath.test
-      - NGINX_PATH=components
     ports:
       - 3001:3001
-    restart: on-failure
     volumes:
-      - .:/home/app/components
-      - /home/app/node_modules
-      - /home/app/.storybook
+      - .:/home/app
+      - /node_modules
+      - /.storybook
+
   # NextJS Portfolio
   portfolio:
     build:
       context: ./
-      dockerfile: .dockerdev/next_app/Dockerfile
+      dockerfile: Dockerfile
     command: yarn dev
     container_name: portfolio
-    environment:
-      - NGINX_HOST=mmcgrath.test
-      - NGINX_PORT=3000
     ports:
       - 3000:3000
-    restart: on-failure
     volumes:
       - .:/home/app
-      - /home/app/node_modules
-      - /home/app/.next
+      - /node_modules
+      - /.next

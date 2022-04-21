@@ -13,11 +13,9 @@ USER node
 # Installing dependencies
 COPY package*.json .
 COPY yarn.lock .
-RUN yarn install --frozen-lockfile
-
-RUN yarn build
+RUN yarn install
 
 # Expose Ports
-EXPOSE 8000
+EXPOSE 3000 3001
 
 CMD []
