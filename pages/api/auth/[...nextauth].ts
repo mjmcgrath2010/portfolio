@@ -4,7 +4,7 @@ import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 import connectDb from "@server/db/config";
 import path from "path";
 
-const db = connectDb().client;
+const db = await connectDb().client;
 
 export default NextAuth({
   adapter: MongoDBAdapter(db),
