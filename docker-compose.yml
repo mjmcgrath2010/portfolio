@@ -7,7 +7,7 @@ services:
     command: yarn storybook
     container_name: components
     environment:
-      - VIRTUAL_HOST=mmcgrath.test
+      - VIRTUAL_HOST=mmcgrath.io
       - VIRTUAL_PATH=/components
       - VIRTUAL_PORT=3001
       - VIRTUAL_DEST=/
@@ -24,7 +24,7 @@ services:
     command: yarn dev
     container_name: portfolio
     environment:
-      - VIRTUAL_HOST=mmcgrath.test
+      - VIRTUAL_HOST=mmcgrath.io
       - VIRTUAL_PATH=/
       - VIRTUAL_PORT=3000
     ports:
