@@ -3,6 +3,7 @@ import { ApolloServer } from "apollo-server-micro";
 import type { NextApiRequest, PageConfig } from "next";
 import { AuthChecker, buildSchema, ResolverData } from "type-graphql";
 import PostsResolver from "@gql/server/resolvers/Posts";
+import TagsResolver from '@gql/server/resolvers/Tag';
 // RESOLVER IMPORTS
 
 import connectDb from "@server/db/config/index";
@@ -68,7 +69,8 @@ const startServer = async () => {
       schema: await buildSchema({
         resolvers: [
           PostsResolver,
-          // RESOLVER ARRAY
+          	TagsResolver,
+// RESOLVER ARRAY
         ],
         scalarsMap: [{ type: ObjectId, scalar: ObjectIdScalar }],
         globalMiddlewares: [TypegooseMiddleware],

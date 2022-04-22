@@ -12,6 +12,12 @@ const Post = new Schema<PostType>(
     body: {
       type: String,
     },
+    featuredImage: {
+      type: String,
+    },
+    tags: {
+      type: [{ type: Schema.Types.ObjectId, ref: "tags" }],
+    },
   },
   { timestamps: true }
 );

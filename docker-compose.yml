@@ -21,14 +21,14 @@ services:
   # NextJS Portfolio
   portfolio:
     build: .
-    command: yarn dev
+    command: yarn dev -p 443
     container_name: portfolio
     environment:
       - VIRTUAL_HOST=mmcgrath.io
       - VIRTUAL_PATH=/
-      - VIRTUAL_PORT=3000
+      - VIRTUAL_PORT=443
     ports:
-      - 3000
+      - 443
     volumes:
       - .:/home/app
       - /node_modules
@@ -47,6 +47,7 @@ services:
       - "443:443"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./nginx-proxy/certs:/etc/nginx/certs
 
 volumes:
   components:
