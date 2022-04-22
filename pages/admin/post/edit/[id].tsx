@@ -1,13 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useSession } from "next-auth/react";
+import { getPost, mapQueriesToProps } from "@gql/queries";
 
-const Admin: NextPage = () => {
-  const { data: session } = useSession();
-
-  if (!session) {
-    return <h1>Please Sign in</h1>;
-  }
+const Admin: NextPage = ({ post, ...rest }: any) => {
+  console.log(post);
   return (
     <div>
       <Head>
@@ -19,5 +15,8 @@ const Admin: NextPage = () => {
     </div>
   );
 };
+
+export const getServerSideProps = async () =>
+  mapQueriesToProps([{ post: getPost("6244f1b3a01862e1a4ba500c") }]);
 
 export default Admin;

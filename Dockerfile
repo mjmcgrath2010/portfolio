@@ -15,6 +15,6 @@ COPY package*.json .
 COPY yarn.lock .
 RUN yarn install
 
-EXPOSE 80 8080 3001 3000
+EXPOSE 443 3001 3000
 
 CMD []
