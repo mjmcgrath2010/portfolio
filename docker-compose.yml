@@ -34,6 +34,16 @@ services:
       - /node_modules
       - /.next
 
+  # Datbase
+  mongo-container:
+    image: mongo:latest
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=MyPa$$w0rd
+    ports:
+      - "27017:27017"
+    command: mongod
+
   nginx-proxy:
     build:
       context: ./nginx-proxy/
