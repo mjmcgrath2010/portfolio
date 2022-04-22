@@ -6,7 +6,9 @@ export interface PostType {
   _id: ObjectId;
   title: string;
   description: string;
+  featuredImage: string;
   body: string;
+  tags: string[];
   updatedAt: string;
   createdAt: string;
 }
@@ -26,6 +28,12 @@ export class AddPostInput implements Partial<PostType> {
 
   @Field()
   public body!: string;
+
+  @Field()
+  public featuredImage?: string;
+
+  @Field()
+  public tags?: string[];
 }
 
 @InputType()
@@ -41,6 +49,12 @@ export class UpdatePostInput implements Partial<PostType> {
 
   @Field()
   public body?: string;
+
+  @Field()
+  public featuredImage?: string;
+
+  @Field()
+  public tags?: string[];
 }
 
 @ObjectType()
@@ -60,6 +74,14 @@ export class Post {
   @prop()
   @Field()
   public body!: string;
+
+  @prop()
+  @Field()
+  public featuredImage?: string;
+
+  @prop()
+  @Field()
+  public tags?: string[];
 
   @prop()
   @Field()
