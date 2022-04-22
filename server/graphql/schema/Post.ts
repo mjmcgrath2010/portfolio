@@ -1,6 +1,7 @@
 import { ObjectType, Field, InputType } from "type-graphql";
 import { getModelForClass, prop } from "@typegoose/typegoose";
 import { ObjectId } from "mongodb";
+import { TagByIdInput } from "@schema";
 
 export interface PostType {
   _id: ObjectId;
@@ -8,10 +9,11 @@ export interface PostType {
   description: string;
   featuredImage: string;
   body: string;
-  tags: string[];
+  tags: ObjectId[];
   updatedAt: string;
   createdAt: string;
 }
+
 @InputType()
 export class PostByIdInput implements Partial<PostType> {
   @Field()
@@ -31,9 +33,6 @@ export class AddPostInput implements Partial<PostType> {
 
   @Field()
   public featuredImage?: string;
-
-  @Field()
-  public tags?: string[];
 }
 
 @InputType()
@@ -52,9 +51,6 @@ export class UpdatePostInput implements Partial<PostType> {
 
   @Field()
   public featuredImage?: string;
-
-  @Field()
-  public tags?: string[];
 }
 
 @ObjectType()
@@ -81,7 +77,7 @@ export class Post {
 
   @prop()
   @Field()
-  public tags?: string[];
+  public tags?: ObjectId;
 
   @prop()
   @Field()

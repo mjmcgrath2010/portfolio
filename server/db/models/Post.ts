@@ -16,7 +16,7 @@ const Post = new Schema<PostType>(
       type: String,
     },
     tags: {
-      type: [{ type: String }],
+      type: [{ type: Schema.Types.ObjectId, ref: "tags" }],
     },
   },
   { timestamps: true }
