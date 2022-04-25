@@ -1,13 +1,12 @@
 import NextAuth, { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
-import connectDb from "@server/db/config";
+import { clientPromise } from "@server/db/config";
 import { NextApiRequest, NextApiResponse } from "next";
 
 function handler(req: NextApiRequest, res: NextApiResponse<any>) {
-  const db = connectDb().client;
   const options: NextAuthOptions = {
-    adapter: MongoDBAdapter(db),
+    adapter: MongoDBAdapter(clientPromise),
     callbacks: {
       async session({ session, token, user }) {
         return session;

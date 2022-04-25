@@ -6,7 +6,7 @@ import PostsResolver from "@gql/server/resolvers/Posts";
 import TagsResolver from "@gql/server/resolvers/Tag";
 // RESOLVER IMPORTS
 
-import connectDb from "@server/db/config/index";
+import { connectDb } from "@server/db/config/index";
 import { ObjectId } from "mongodb";
 import { ObjectIdScalar } from "@server/graphql/scalars/ObjectId";
 import { TypegooseMiddleware } from "@server/graphql/middleware/typegoose";
