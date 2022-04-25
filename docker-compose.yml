@@ -27,6 +27,8 @@ services:
       - VIRTUAL_HOST=mmcgrath.io
       - VIRTUAL_PATH=/
       - VIRTUAL_PORT=443
+      - DHPARAM_GENERATION=false
+      - HTTPS_METHOD=nohttp
     ports:
       - 443
     volumes:
@@ -43,7 +45,6 @@ services:
       - components
       - portfolio
     ports:
-      - "80:80"
       - "443:443"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro

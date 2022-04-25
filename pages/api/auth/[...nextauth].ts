@@ -4,9 +4,10 @@ import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 import connectDb from "@server/db/config";
 import { NextApiRequest, NextApiResponse } from "next";
 
-async function handler(req: NextApiRequest, res: NextApiResponse<any>) {
+function handler(req: NextApiRequest, res: NextApiResponse<any>) {
+  const db = connectDb().client;
   const options: NextAuthOptions = {
-    adapter: await connectDb().client,
+    adapter: MongoDBAdapter(db),
     callbacks: {
       async session({ session, token, user }) {
         return session;
@@ -22,6 +23,15 @@ async function handler(req: NextApiRequest, res: NextApiResponse<any>) {
     theme: {
       colorScheme: "light",
       logo: "/assets/branding/logo.svg",
+    },
+
+    logger: {
+      error(code, metadata) {
+        console.error("$$$$$$$$$$", code, metadata);
+      },
+      warn(code) {
+        console.warn("$$$$$$$$$$", code);
+      },
     },
   };
 
