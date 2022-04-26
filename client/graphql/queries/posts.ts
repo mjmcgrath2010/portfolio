@@ -18,6 +18,7 @@ export const GetPost = gql`
     getPost(data: $data) {
       _id
       title
+      body
       description
       updatedAt
       createdAt

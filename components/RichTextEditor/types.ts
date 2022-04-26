@@ -32,6 +32,7 @@ declare module "slate" {
 
 interface RichTextEditorProps {
   onChange: Function;
+  initialValue: any;
 }
 
 export default RichTextEditorProps;
