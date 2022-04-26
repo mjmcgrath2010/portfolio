@@ -6,8 +6,9 @@ import client from "@gql/client";
 
 import theme from "../components/theme/index";
 import GlobalStyles from "../styles/global";
+import { AppProps } from "next/app";
 
-function MyApp({ Component, pageProps: { session, ...pageProps } }: any) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
     <SessionProvider session={session}>
       <ApolloProvider client={client}>

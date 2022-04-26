@@ -4,7 +4,7 @@ import { Slate, Editable, withReact } from "slate-react";
 import { Descendant, Transforms, Element as SlateElement, Editor } from "slate";
 import styled from "styled-components";
 
-import RichTextEditorProps from "./types";
+import RichTextEditorProps, { ElementProps, LeafProps } from "./types";
 import EditorToolBar from "./EditorToolbar";
 import Element from "./Element";
 import Leaf from "./Leaf";
@@ -20,8 +20,11 @@ const RichTextEditor = ({ onChange, initialValue }: RichTextEditorProps) => {
   const [editor] = useState(() => withReact(createEditor()));
   const [value, setValue] = useState<Descendant[]>(initialValue || []);
 
-  const renderElement = useCallback((props) => <Element {...props} />, []);
-  const renderLeaf = useCallback((props) => <Leaf {...props} />, []);
+  const renderElement = useCallback(
+    (props: ElementProps) => <Element {...props} />,
+    []
+  );
+  const renderLeaf = useCallback((props: LeafProps) => <Leaf {...props} />, []);
 
   // eslint-disable-next-line no-unused-vars
   const HOTKEYS = {

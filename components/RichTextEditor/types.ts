@@ -1,5 +1,6 @@
 import { ReactEditor } from "slate-react";
 import { BaseEditor } from "slate";
+import { ReactChild } from "react";
 
 export type CustomElement = { type: string; children: CustomText[] };
 export type CustomText = { text: string };
@@ -12,7 +13,7 @@ export interface LeafProps {
 export interface ElementProps {
   element: CustomElement;
   attributes: object;
-  children: CustomText[];
+  children: any | CustomText[];
 }
 
 export interface EditorToolBarProps {
