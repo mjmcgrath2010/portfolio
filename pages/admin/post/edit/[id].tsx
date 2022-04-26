@@ -28,7 +28,6 @@ const Admin: NextPage = ({}: any) => {
       </Head>
       <h1>Edit Post: {title} </h1>
       <h4> {description} </h4>
-
       <RichTextEditor initialValue={JSON.parse(body)} />
     </div>
   );
