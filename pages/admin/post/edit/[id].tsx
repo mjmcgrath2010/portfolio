@@ -1,9 +1,18 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { getPost, mapQueriesToProps } from "@gql/queries";
+import { GetPost } from "@gql/queries";
+import { useQuery } from "@apollo/client";
 
-const Admin: NextPage = ({ post, ...rest }: any) => {
-  console.log(post);
+const Admin: NextPage = ({}: any) => {
+  const { data, loading, error } = useQuery(GetPost, {
+    variables: {
+      data: {
+        _id: "6244f1b3a01862e1a4ba500c",
+      },
+    },
+  });
+
+  console.log(data, loading, error);
   return (
     <div>
       <Head>
@@ -11,12 +20,9 @@ const Admin: NextPage = ({ post, ...rest }: any) => {
         <meta name="description" content="Admin" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Admin Panel</h1>
+      <h1>Edit Post:</h1>
     </div>
   );
 };
-
-export const getServerSideProps = async () =>
-  mapQueriesToProps([{ post: getPost("6244f1b3a01862e1a4ba500c") }]);
 
 export default Admin;

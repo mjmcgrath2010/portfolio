@@ -4,7 +4,7 @@ import fetch from "cross-fetch";
 const client = new ApolloClient({
   ssrMode: typeof window === "undefined",
   link: new HttpLink({
-    uri: `${process.env.NEXTAUTH_URL}/api/graphql`,
+    uri: `/api/graphql`,
     fetch,
     fetchOptions: {
       mode: "cors",
