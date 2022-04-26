@@ -3,10 +3,10 @@ import { ApolloServer } from "apollo-server-micro";
 import type { NextApiRequest, PageConfig } from "next";
 import { AuthChecker, buildSchema, ResolverData } from "type-graphql";
 import PostsResolver from "@gql/server/resolvers/Posts";
-import TagsResolver from '@gql/server/resolvers/Tag';
+import TagsResolver from "@gql/server/resolvers/Tag";
 // RESOLVER IMPORTS
 
-import connectDb from "@server/db/config/index";
+import { connectDb } from "@server/db/config/index";
 import { ObjectId } from "mongodb";
 import { ObjectIdScalar } from "@server/graphql/scalars/ObjectId";
 import { TypegooseMiddleware } from "@server/graphql/middleware/typegoose";
@@ -61,6 +61,8 @@ const allowCors =
   };
 
 const startServer = async () => {
+  const db = await connectDb();
+
   const customAuthChecker: AuthChecker<any> = ({ context }) => {
     return !!context.user;
   };
@@ -69,8 +71,8 @@ const startServer = async () => {
       schema: await buildSchema({
         resolvers: [
           PostsResolver,
-          	TagsResolver,
-// RESOLVER ARRAY
+          TagsResolver,
+          // RESOLVER ARRAY
         ],
         scalarsMap: [{ type: ObjectId, scalar: ObjectIdScalar }],
         globalMiddlewares: [TypegooseMiddleware],
@@ -79,7 +81,6 @@ const startServer = async () => {
       context: async ({ req }) => {
         try {
           const { user } = req;
-          const db = connectDb();
 
           return { db, user };
         } catch (e) {

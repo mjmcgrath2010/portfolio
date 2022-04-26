@@ -1,4 +1,4 @@
-if ($http_origin ~* (.*\\.mmcgrath\\.test)) {
+if ($http_origin ~* (.*\\.mmcgrath\\.io)) {
     add_header 'Access-Control-Allow-Origin' "*" always;
     add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS, DELETE, PATCH, PUT';
     add_header 'Access-Control-Allow-Credentials' 'true' always;

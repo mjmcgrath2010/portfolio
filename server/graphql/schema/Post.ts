@@ -15,9 +15,9 @@ export interface PostType {
 }
 
 @InputType()
-export class PostByIdInput implements Partial<PostType> {
+export class PostByIdInput {
   @Field()
-  public _id!: ObjectId;
+  public _id!: string;
 }
 
 @InputType()

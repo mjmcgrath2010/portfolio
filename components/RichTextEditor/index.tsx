@@ -16,14 +16,9 @@ const Content = styled.div`
   min-height: 500px;
 `;
 
-const RichTextEditor = ({ onChange }: RichTextEditorProps) => {
+const RichTextEditor = ({ onChange, initialValue }: RichTextEditorProps) => {
   const [editor] = useState(() => withReact(createEditor()));
-  const [value, setValue] = useState<Descendant[]>([
-    {
-      type: "paragraph",
-      children: [{ text: "A line of text in a paragraph." }],
-    },
-  ]);
+  const [value, setValue] = useState<Descendant[]>(initialValue || []);
 
   const renderElement = useCallback((props) => <Element {...props} />, []);
   const renderLeaf = useCallback((props) => <Leaf {...props} />, []);
