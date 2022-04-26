@@ -17,7 +17,7 @@ Object {
 <body>
     <div>
       <button
-        aria-controls="radix-0"
+        aria-controls="radix-:r0:"
         aria-expanded="false"
         aria-haspopup="dialog"
         class="c0"
@@ -39,7 +39,7 @@ Object {
 
 <div>
     <button
-      aria-controls="radix-0"
+      aria-controls="radix-:r0:"
       aria-expanded="false"
       aria-haspopup="dialog"
       class="c0"
