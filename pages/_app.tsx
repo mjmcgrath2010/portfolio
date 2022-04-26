@@ -1,14 +1,13 @@
 import { ThemeProvider } from "styled-components";
 import { ApolloProvider } from "@apollo/client";
 import { SessionProvider } from "next-auth/react";
-import type { AppProps } from "next/app";
 
 import client from "@gql/client";
 
 import theme from "../components/theme/index";
 import GlobalStyles from "../styles/global";
 
-function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }: any) {
   return (
     <SessionProvider session={session}>
       <ApolloProvider client={client}>
