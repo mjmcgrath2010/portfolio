@@ -18,7 +18,18 @@ const Content = styled.div`
 
 const RichTextEditor = ({ onChange, initialValue }: RichTextEditorProps) => {
   const [editor] = useState(() => withReact(createEditor()));
-  const [value, setValue] = useState<Descendant[]>(initialValue || []);
+  const [value, setValue] = useState<Descendant[]>(
+    initialValue || [
+      {
+        type: "paragraph",
+        children: [
+          {
+            text: "",
+          },
+        ],
+      },
+    ]
+  );
 
   const renderElement = useCallback(
     (props: ElementProps) => <Element {...props} />,
