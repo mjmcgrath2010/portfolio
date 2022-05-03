@@ -6,6 +6,7 @@ import AppBar from "../AppBar";
 import Logo from "../../public/assets/branding/logo.svg";
 import Link from "../Link";
 import useScroll from "../../client/hooks/useScroll";
+import useMediaQuery from "../../client/hooks/useMediaQuery";
 
 interface RouteProps {
   href: string;
@@ -156,6 +157,9 @@ NavLogo.displayName = "NavLogo";
 
 const NavBarLogo = ({ className }: LogoProps) => {
   const { thresholdMet } = useScroll(70);
+  const { size } = useMediaQuery({});
+
+  console.log(size);
 
   return (
     <NavBarLogoContainer isScrolled={thresholdMet} className={className}>
