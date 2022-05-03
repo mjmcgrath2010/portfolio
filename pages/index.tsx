@@ -69,13 +69,17 @@ const Home: NextPage = () => {
         </Grid>
       </HeroContainer>
       <ContentContainer>
-        <Section>
-          <Grid>
+        <Section color="dark">
+          <Grid
+            justifyContent="space-evenly"
+            alignItems="center"
+            alignContent="center"
+          >
             <Grid.Item mobile={12}>
               <Typography fontStyle="heading2">Work Experience</Typography>
             </Grid.Item>
 
-            <Grid.Item mobile={6} tablet={2} desktop={3}>
+            <Grid.Item mobile={12} desktop={4} tablet={6}>
               <WorkLogoContainer>
                 <Image
                   alt="privy-logo"
@@ -84,7 +88,7 @@ const Home: NextPage = () => {
               </WorkLogoContainer>
             </Grid.Item>
 
-            <Grid.Item mobile={6} tablet={2} desktop={3}>
+            <Grid.Item mobile={12} desktop={4} tablet={6}>
               <WorkLogoContainer>
                 <Image
                   alt="attentive-mobile"
@@ -92,7 +96,25 @@ const Home: NextPage = () => {
                 />
               </WorkLogoContainer>
             </Grid.Item>
+
+            <Grid.Item mobile={12} desktop={4} tablet={6}>
+              <WorkLogoContainer>
+                <Image
+                  alt="attentive-mobile"
+                  src="/assets/images/work-logos/hapyak-logo-color.png"
+                />
+              </WorkLogoContainer>
+            </Grid.Item>
           </Grid>
+
+          <Grid.Item mobile={12} desktop={4} tablet={6}>
+            <WorkLogoContainer>
+              <Image
+                alt="attentive-mobile"
+                src="/assets/images/work-logos/tolemi-logo-white.png"
+              />
+            </WorkLogoContainer>
+          </Grid.Item>
         </Section>
 
         <Section color="accent">

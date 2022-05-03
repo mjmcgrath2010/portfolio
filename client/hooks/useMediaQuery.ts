@@ -28,6 +28,7 @@ const useMediaQuery = ({
   }, [setSize, desktop, mobile, tablet]);
 
   useEffect(() => {
+    window.dispatchEvent(new Event("resize"));
     window.addEventListener("resize", setDimension);
     return () => {
       window.removeEventListener("resize", setDimension);
