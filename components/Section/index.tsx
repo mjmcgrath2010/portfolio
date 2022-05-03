@@ -6,7 +6,6 @@ const Container = styled.div<SectionProps>`
   background: ${({ theme, color = "light" }) =>
     theme.palette.background[color]};
   min-height: 300px;
-
   overflow: hidden;
   display: block;
   position: relative;

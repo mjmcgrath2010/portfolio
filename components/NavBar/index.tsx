@@ -46,8 +46,8 @@ const StyledLogo = styled(Logo)`
     flex-direction: column;
   }
 
-  ${({ mobile }) =>
-    mobile &&
+  ${({ mobile, tablet }) =>
+    (mobile || tablet) &&
     css`
       width: 100%;
     `}
@@ -130,8 +130,8 @@ const NavRoutesContainer = styled.div<Scrolled>`
     flex-direction: column;
   }
 
-  ${({ mobile }) =>
-    mobile &&
+  ${({ mobile, tablet }) =>
+    (mobile || tablet) &&
     css`
       display: none;
     `}

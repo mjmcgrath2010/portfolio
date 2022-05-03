@@ -23,8 +23,11 @@ const HeroContainer = styled.div`
   z-index: 1;
 `;
 
-const WorkLogoContainer = styled(Grid)`
-  gap: ${({ theme }) => theme.spacing.xl};
+const WorkLogoContainer = styled(Grid).attrs({
+  alignContent: "center",
+})`
+  column-gap: ${({ theme }) => theme.spacing.xl};
+  row-gap: 84px;
 `;
 
 const ImageContainer = styled(Grid.Item).attrs({
@@ -37,6 +40,7 @@ const ImageContainer = styled(Grid.Item).attrs({
 
 const CompanyLogo = styled(Image)`
   max-width: 350px;
+  cursor: pointer;
 `;
 
 const HeroTextContainer = styled.div`
@@ -55,7 +59,6 @@ const LogoContainer = styled.div`
 
 const ContentContainer = styled.div`
   z-index: 2;
-  min-height: 800px;
   background: ${({ theme }) => theme.colors.gray_200};
   position: relative;
 `;
@@ -76,18 +79,11 @@ const Home: NextPage = () => {
         </Grid>
       </HeroContainer>
       <ContentContainer>
-        <Section color="dark">
+        <Section color="light">
           <Grid.Item mobile={12}>
-            <Typography color="light" fontStyle="heading2">
-              Work Experience
-            </Typography>
+            <Typography fontStyle="heading2">Work Experience</Typography>
           </Grid.Item>
-          <WorkLogoContainer
-            justifyContent="space-evenly"
-            alignItems="center"
-            alignContent="center"
-            justifyItems="center"
-          >
+          <WorkLogoContainer>
             <ImageContainer>
               <CompanyLogo
                 alt="attentive-mobile"
@@ -118,7 +114,7 @@ const Home: NextPage = () => {
           </WorkLogoContainer>
         </Section>
 
-        <Section color="accent">
+        {/* <Section color="accent">
           <Grid>
             <Grid.Item mobile={12}>
               <Typography color="light" fontStyle="heading2">
@@ -144,7 +140,7 @@ const Home: NextPage = () => {
               </Typography>
             </Grid.Item>
           </Grid>
-        </Section>
+        </Section> */}
       </ContentContainer>
     </AppLayout>
   );
