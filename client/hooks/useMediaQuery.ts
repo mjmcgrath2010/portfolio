@@ -11,7 +11,7 @@ const useMediaQuery = ({
   mobile = 640,
   tablet = 768,
 }: Props) => {
-  const [size, setSize] = useState("");
+  const [size, setSize] = useState("mobile");
 
   const setDimension = useCallback(() => {
     if (window.innerWidth <= mobile) {
@@ -35,8 +35,15 @@ const useMediaQuery = ({
     };
   }, [setDimension]);
 
+  const defaultOpts = {
+    desktop: false,
+    mobile: false,
+    tablet: false,
+  };
+
   return {
-    size,
+    ...defaultOpts,
+    ...{ [size]: true },
   };
 };
 

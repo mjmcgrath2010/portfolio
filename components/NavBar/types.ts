@@ -3,7 +3,9 @@ import { ReactElement } from "react";
 interface NavBarProps {
   children: ReactElement | ReactElement[];
   className?: string;
-  size: "desktop" | "tablet" | "mobile";
+  desktop?: boolean | undefined;
+  mobile?: boolean | undefined;
+  tablet?: boolean | undefined;
 }
 
 export interface LogoProps {
