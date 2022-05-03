@@ -22,7 +22,7 @@ const Footer = () => {
   return (
     <FooterContainer color="dark">
       <Grid justifyContent="center" alignItems="center">
-        <Grid.Item mobile={12}>
+        <Grid.Item mobile={12} desktop={12} tablet={12}>
           <CreditContainer>
             <Typography fontStyle="body" color="light">
               Built with ♥️ in Boston, MA

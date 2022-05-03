@@ -168,7 +168,7 @@ Object {
 }
 
 .c13 {
-  grid-column: span undefined;
+  grid-column: span 12;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -176,7 +176,7 @@ Object {
 }
 
 .c17 {
-  grid-column: span undefined;
+  grid-column: span 12;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -262,7 +262,7 @@ Object {
 
 @media screen and (min-width:768px) and (max-width:1023px) {
   .c13 {
-    grid-column: span undefined;
+    grid-column: span 12;
   }
 }
 
@@ -274,7 +274,7 @@ Object {
 
 @media screen and (min-width:768px) and (max-width:1023px) {
   .c17 {
-    grid-column: span undefined;
+    grid-column: span 12;
   }
 }
 
@@ -553,7 +553,7 @@ Object {
 }
 
 .c13 {
-  grid-column: span undefined;
+  grid-column: span 12;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -561,7 +561,7 @@ Object {
 }
 
 .c17 {
-  grid-column: span undefined;
+  grid-column: span 12;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -647,7 +647,7 @@ Object {
 
 @media screen and (min-width:768px) and (max-width:1023px) {
   .c13 {
-    grid-column: span undefined;
+    grid-column: span 12;
   }
 }
 
@@ -659,7 +659,7 @@ Object {
 
 @media screen and (min-width:768px) and (max-width:1023px) {
   .c17 {
-    grid-column: span undefined;
+    grid-column: span 12;
   }
 }
 

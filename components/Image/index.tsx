@@ -19,13 +19,14 @@ const StyledImage = styled.img`
   height: auto;
 `;
 
-const Image = ({ src }: ImageProps) => (
-  <Container>
+const Image = ({ src, className }: ImageProps) => (
+  <Container className={className}>
     <StyledImage src={src} />
   </Container>
 );
 
 Image.defaultProps = {
+  className: "",
   src: "https://via.placeholder.com/150",
 };
 

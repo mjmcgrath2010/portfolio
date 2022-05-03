@@ -7,6 +7,7 @@ export interface ImageContainerProps {
 interface ImageProps {
   src: string | any;
   alt?: string;
+  className?: string;
 }
 
 export default ImageProps;

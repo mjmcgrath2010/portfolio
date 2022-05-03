@@ -33,8 +33,10 @@ const ImageContainer = styled(Grid.Item).attrs({
   mobile: 12,
   desktop: 4,
   tablet: 6,
-})`
-  padding: ${({ theme }) => theme.spacing.xl};
+})``;
+
+const CompanyLogo = styled(Image)`
+  max-width: 350px;
 `;
 
 const HeroTextContainer = styled.div`
@@ -76,7 +78,9 @@ const Home: NextPage = () => {
       <ContentContainer>
         <Section color="dark">
           <Grid.Item mobile={12}>
-            <Typography fontStyle="heading2">Work Experience</Typography>
+            <Typography color="light" fontStyle="heading2">
+              Work Experience
+            </Typography>
           </Grid.Item>
           <WorkLogoContainer
             justifyContent="space-evenly"
@@ -85,28 +89,28 @@ const Home: NextPage = () => {
             justifyItems="center"
           >
             <ImageContainer>
-              <Image
-                alt="privy-logo"
-                src="/assets/images/work-logos/privy-logo-purple.png"
-              />
-            </ImageContainer>
-
-            <ImageContainer>
-              <Image
+              <CompanyLogo
                 alt="attentive-mobile"
                 src="/assets/images/work-logos/attentive-logo-yellow.png"
               />
             </ImageContainer>
 
             <ImageContainer>
-              <Image
+              <CompanyLogo
+                alt="privy-logo"
+                src="/assets/images/work-logos/privy-logo-purple.png"
+              />
+            </ImageContainer>
+
+            <ImageContainer>
+              <CompanyLogo
                 alt="attentive-mobile"
                 src="/assets/images/work-logos/hapyak-logo-color.png"
               />
             </ImageContainer>
 
             <ImageContainer>
-              <Image
+              <CompanyLogo
                 alt="attentive-mobile"
                 src="/assets/images/work-logos/tolemi-logo-white.png"
               />
