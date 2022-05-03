@@ -1,6 +1,5 @@
 import React from "react";
 import type { NextPage } from "next";
-import styled from "styled-components";
 
 import { AppLayout } from "@layouts";
 import Grid from "@components/Grid";
@@ -10,7 +9,7 @@ const About: NextPage = () => (
   <AppLayout>
     <Grid>
       <Grid.Item mobile={12} justifySelf="center">
-        <h1>About Page</h1>
+        <h1>About Me</h1>
       </Grid.Item>
 
       <Grid.Item mobile={12} desktop={4} justifySelf="center">
@@ -18,6 +17,11 @@ const About: NextPage = () => (
           alt="me and les"
           src="/assets/images/static/about-me-picture.jpeg"
         />
+      </Grid.Item>
+      <Grid.Item mobile={12} desktop={8}>
+        Hello! My name is Mike McGrath and I'm a Senior Frontend Software
+        Engineer! I'm working on finishing off my portfolio and blog. Check back
+        soon!
       </Grid.Item>
     </Grid>
   </AppLayout>
