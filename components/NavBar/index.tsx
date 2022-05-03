@@ -20,6 +20,7 @@ interface NavRoutesProps {
 
 interface Scrolled {
   isScrolled?: boolean | undefined;
+  size?: string;
 }
 const Container = styled(AppBar)<Scrolled>`
   ${({ isScrolled }) =>
@@ -116,8 +117,9 @@ const NavRoutesContainer = styled.div<Scrolled>`
 
 const NavRoutes = ({ routes }: NavRoutesProps) => {
   const { thresholdMet } = useScroll(70);
+  const { size } = useMediaQuery({});
   return (
-    <NavRoutesContainer isScrolled={thresholdMet}>
+    <NavRoutesContainer size={size} isScrolled={thresholdMet}>
       {routes.map(({ href, external, name }: RouteProps) => (
         <StyledLink key={name} href={href} external={external}>
           {name}
@@ -149,7 +151,7 @@ NavRoutes.defaultProps = {
   ],
 };
 
-const NavLogo = React.forwardRef((props, ref) => (
+const NavLogo = React.forwardRef((props: Scrolled, ref) => (
   <StyledLogo href={ref} {...props} />
 ));
 
@@ -158,13 +160,14 @@ NavLogo.displayName = "NavLogo";
 const NavBarLogo = ({ className }: LogoProps) => {
   const { thresholdMet } = useScroll(70);
   const { size } = useMediaQuery({});
-
-  console.log(size);
-
   return (
-    <NavBarLogoContainer isScrolled={thresholdMet} className={className}>
+    <NavBarLogoContainer
+      size={size}
+      isScrolled={thresholdMet}
+      className={className}
+    >
       <NextLink href="/" passHref>
-        <NavLogo />
+        <NavLogo size={size} />
       </NextLink>
     </NavBarLogoContainer>
   );
@@ -172,9 +175,10 @@ const NavBarLogo = ({ className }: LogoProps) => {
 
 const NavBar = ({ children, className }: NavBarProps) => {
   const { thresholdMet } = useScroll(70);
+  const { size } = useMediaQuery({});
 
   return (
-    <Container isScrolled={thresholdMet} className={className}>
+    <Container size={size} isScrolled={thresholdMet} className={className}>
       <NavBarContainer>{children}</NavBarContainer>
     </Container>
   );
