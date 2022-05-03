@@ -8,7 +8,6 @@ import AnimatedLogo from "@components/AnimatedLogo";
 import Section from "@components/Section";
 import Typography from "@components/Typography";
 import Image from "@components/Image";
-import Card from "@components/Card";
 
 const HeroContainer = styled.div`
   position: relative;
@@ -47,10 +46,6 @@ const ContentContainer = styled.div`
 
 const WorkLogoContainer = styled.div`
   width: 80%;
-`;
-
-const WorkLogo = styled(Image)`
-  object-fit: contain;
 `;
 
 const Home: NextPage = () => {
