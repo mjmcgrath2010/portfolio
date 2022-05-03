@@ -82,8 +82,8 @@ const NavBarLogoContainer = styled.div<Scrolled>`
       }
     `}
 
-  ${({ mobile }) =>
-    mobile &&
+  ${({ mobile, tablet }) =>
+    (mobile || tablet) &&
     css`
       width: 100%;
       display: flex;

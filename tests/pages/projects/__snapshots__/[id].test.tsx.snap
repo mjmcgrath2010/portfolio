@@ -103,15 +103,6 @@ Object {
   -ms-flex: 1;
   flex: 1;
   justify-self: flex-start;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 .c4 .c5 {
@@ -153,7 +144,6 @@ Object {
   -ms-flex-pack: end;
   justify-content: flex-end;
   gap: 24px;
-  display: none;
 }
 
 .c7 .c9 {
@@ -474,15 +464,6 @@ Object {
   -ms-flex: 1;
   flex: 1;
   justify-self: flex-start;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 .c4 .c5 {
@@ -524,7 +505,6 @@ Object {
   -ms-flex-pack: end;
   justify-content: flex-end;
   gap: 24px;
-  display: none;
 }
 
 .c7 .c9 {

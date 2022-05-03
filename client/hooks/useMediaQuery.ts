@@ -11,25 +11,24 @@ const useMediaQuery = ({
   mobile = 640,
   tablet = 768,
 }: Props) => {
-  const [size, setSize] = useState("mobile");
+  const [size, setSize] = useState("desktop");
 
   const setDimension = useCallback(() => {
     if (window.innerWidth <= mobile) {
-      setSize("mobile");
-    }
-
-    if (window.innerWidth > tablet) {
-      setSize("desktop");
+      return setSize("mobile");
     }
 
     if (window.innerWidth < desktop && window.innerWidth >= tablet) {
-      setSize("tablet");
+      return setSize("tablet");
+    }
+
+    if (window.innerWidth > tablet) {
+      return setSize("desktop");
     }
   }, [setSize, desktop, mobile, tablet]);
 
   useEffect(() => {
     window.addEventListener("resize", setDimension);
-
     return () => {
       window.removeEventListener("resize", setDimension);
     };
