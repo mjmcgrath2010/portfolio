@@ -3,10 +3,17 @@ import styled from "styled-components";
 import { GridProps, GridItemProps } from "./types";
 
 const GridItemContainer = styled.div<GridItemProps>`
-  grid-column: ${({ desktop, mobile, tablet }) =>
-    `span ${desktop || tablet || mobile}`};
+  grid-column: ${({ desktop }) => `span ${desktop}`};
   align-self: ${({ alignSelf }) => alignSelf};
   justify-self: ${({ justifySelf }) => justifySelf};
+
+  ${({ theme }) => theme.breakpoints.tablet} {
+    grid-column: ${({ tablet }) => `span ${tablet}`};
+  }
+
+  ${({ theme }) => theme.breakpoints.mobile} {
+    grid-column: ${({ mobile }) => `span ${mobile}`};
+  }
 `;
 
 const GridItem = ({

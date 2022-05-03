@@ -23,6 +23,20 @@ const HeroContainer = styled.div`
   z-index: 1;
 `;
 
+const WorkLogoContainer = styled(Grid)`
+  gap: ${({ theme }) => theme.spacing.xl};
+`;
+
+const ImageContainer = styled(Grid.Item).attrs({
+  justifySelf: "center",
+  alignSelf: "center",
+  mobile: 12,
+  desktop: 4,
+  tablet: 6,
+})`
+  padding: ${({ theme }) => theme.spacing.xl};
+`;
+
 const HeroTextContainer = styled.div`
   width: 100%;
   position: fixed;
@@ -44,15 +58,11 @@ const ContentContainer = styled.div`
   position: relative;
 `;
 
-const WorkLogoContainer = styled.div`
-  width: 80%;
-`;
-
 const Home: NextPage = () => {
   return (
     <AppLayout>
       <HeroContainer>
-        <Grid>
+        <Grid justifyItems="center">
           <Grid.Item mobile={12} justifySelf="center">
             <HeroTextContainer>
               <LogoContainer>
@@ -65,51 +75,43 @@ const Home: NextPage = () => {
       </HeroContainer>
       <ContentContainer>
         <Section color="dark">
-          <Grid
+          <Grid.Item mobile={12}>
+            <Typography fontStyle="heading2">Work Experience</Typography>
+          </Grid.Item>
+          <WorkLogoContainer
             justifyContent="space-evenly"
             alignItems="center"
             alignContent="center"
+            justifyItems="center"
           >
-            <Grid.Item mobile={12}>
-              <Typography fontStyle="heading2">Work Experience</Typography>
-            </Grid.Item>
+            <ImageContainer>
+              <Image
+                alt="privy-logo"
+                src="/assets/images/work-logos/privy-logo-purple.png"
+              />
+            </ImageContainer>
 
-            <Grid.Item mobile={12} desktop={4} tablet={6}>
-              <WorkLogoContainer>
-                <Image
-                  alt="privy-logo"
-                  src="/assets/images/work-logos/privy-logo-purple.png"
-                />
-              </WorkLogoContainer>
-            </Grid.Item>
+            <ImageContainer>
+              <Image
+                alt="attentive-mobile"
+                src="/assets/images/work-logos/attentive-logo-yellow.png"
+              />
+            </ImageContainer>
 
-            <Grid.Item mobile={12} desktop={4} tablet={6}>
-              <WorkLogoContainer>
-                <Image
-                  alt="attentive-mobile"
-                  src="/assets/images/work-logos/attentive-logo-yellow.png"
-                />
-              </WorkLogoContainer>
-            </Grid.Item>
+            <ImageContainer>
+              <Image
+                alt="attentive-mobile"
+                src="/assets/images/work-logos/hapyak-logo-color.png"
+              />
+            </ImageContainer>
 
-            <Grid.Item mobile={12} desktop={4} tablet={6}>
-              <WorkLogoContainer>
-                <Image
-                  alt="attentive-mobile"
-                  src="/assets/images/work-logos/hapyak-logo-color.png"
-                />
-              </WorkLogoContainer>
-            </Grid.Item>
-          </Grid>
-
-          <Grid.Item mobile={12} desktop={4} tablet={6}>
-            <WorkLogoContainer>
+            <ImageContainer>
               <Image
                 alt="attentive-mobile"
                 src="/assets/images/work-logos/tolemi-logo-white.png"
               />
-            </WorkLogoContainer>
-          </Grid.Item>
+            </ImageContainer>
+          </WorkLogoContainer>
         </Section>
 
         <Section color="accent">

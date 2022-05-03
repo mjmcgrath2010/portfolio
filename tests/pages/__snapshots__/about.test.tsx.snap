@@ -158,25 +158,33 @@ Object {
   color: rgb(228,151,93);
 }
 
-.c14 {
-  padding: 16px;
+.c17 {
   background: rgb(30,20,10);
   min-height: 300px;
-  margin: 0;
-  width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding: 24px;
 }
 
 .c13 {
-  grid-column: span 12;
+  grid-column: span undefined;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
   justify-self: center;
 }
 
-.c17 {
-  grid-column: span 12;
+.c14 {
+  grid-column: span 4;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  justify-self: center;
+}
+
+.c20 {
+  grid-column: span undefined;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -203,7 +211,7 @@ Object {
   padding: 24px;
 }
 
-.c16 {
+.c19 {
   display: grid;
   gap: 16px;
   grid-template-rows: auto;
@@ -223,7 +231,7 @@ Object {
   padding: 24px;
 }
 
-.c19 {
+.c22 {
   color: #fbfbfb;
   padding: 0;
   margin: 0;
@@ -231,17 +239,33 @@ Object {
   font-size: 16px;
 }
 
-.c15 {
+.c18 {
   height: 200px;
 }
 
-.c18 {
+.c21 {
   display: block;
   position: relative;
   margin: 16px auto;
   text-align: center;
   width: 100%;
   padding-top: 188px;
+}
+
+.c15 {
+  min-width: 300px;
+  overflow: hidden;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  display: block;
+}
+
+.c16 {
+  min-width: 200px;
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
 }
 
 @media screen and (max-width:767px) {
@@ -257,6 +281,42 @@ Object {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .c13 {
+    grid-column: span undefined;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .c13 {
+    grid-column: span 12;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .c14 {
+    grid-column: span undefined;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .c14 {
+    grid-column: span 12;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .c20 {
+    grid-column: span undefined;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .c20 {
+    grid-column: span 12;
   }
 }
 
@@ -329,29 +389,41 @@ Object {
             About Page
           </h1>
         </div>
+        <div
+          class="c14"
+        >
+          <div
+            class="c15"
+          >
+            <img
+              class="c16"
+              src="/assets/images/static/about-me-picture.jpeg"
+            />
+          </div>
+        </div>
       </div>
       <div
-        class="c14 c15"
+        class="c17 c18"
         color="dark"
       >
         <div
-          class="c16"
+          class="c19"
         >
           <div
-            class="c17"
+            class="c20"
           >
             <div
-              class="c18"
+              class="c21"
             >
               <p
-                class="c19"
+                class="c22"
                 color="light"
                 font-style="body"
               >
                 Built with ♥️ in Boston, MA
               </p>
               <p
-                class="c19"
+                class="c22"
                 color="light"
                 font-style="body"
               >
@@ -519,25 +591,33 @@ Object {
   color: rgb(228,151,93);
 }
 
-.c14 {
-  padding: 16px;
+.c17 {
   background: rgb(30,20,10);
   min-height: 300px;
-  margin: 0;
-  width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding: 24px;
 }
 
 .c13 {
-  grid-column: span 12;
+  grid-column: span undefined;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
   justify-self: center;
 }
 
-.c17 {
-  grid-column: span 12;
+.c14 {
+  grid-column: span 4;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  justify-self: center;
+}
+
+.c20 {
+  grid-column: span undefined;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -564,7 +644,7 @@ Object {
   padding: 24px;
 }
 
-.c16 {
+.c19 {
   display: grid;
   gap: 16px;
   grid-template-rows: auto;
@@ -584,7 +664,7 @@ Object {
   padding: 24px;
 }
 
-.c19 {
+.c22 {
   color: #fbfbfb;
   padding: 0;
   margin: 0;
@@ -592,17 +672,33 @@ Object {
   font-size: 16px;
 }
 
-.c15 {
+.c18 {
   height: 200px;
 }
 
-.c18 {
+.c21 {
   display: block;
   position: relative;
   margin: 16px auto;
   text-align: center;
   width: 100%;
   padding-top: 188px;
+}
+
+.c15 {
+  min-width: 300px;
+  overflow: hidden;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  display: block;
+}
+
+.c16 {
+  min-width: 200px;
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
 }
 
 @media screen and (max-width:767px) {
@@ -618,6 +714,42 @@ Object {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .c13 {
+    grid-column: span undefined;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .c13 {
+    grid-column: span 12;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .c14 {
+    grid-column: span undefined;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .c14 {
+    grid-column: span 12;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .c20 {
+    grid-column: span undefined;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .c20 {
+    grid-column: span 12;
   }
 }
 
@@ -689,29 +821,41 @@ Object {
           About Page
         </h1>
       </div>
+      <div
+        class="c14"
+      >
+        <div
+          class="c15"
+        >
+          <img
+            class="c16"
+            src="/assets/images/static/about-me-picture.jpeg"
+          />
+        </div>
+      </div>
     </div>
     <div
-      class="c14 c15"
+      class="c17 c18"
       color="dark"
     >
       <div
-        class="c16"
+        class="c19"
       >
         <div
-          class="c17"
+          class="c20"
         >
           <div
-            class="c18"
+            class="c21"
           >
             <p
-              class="c19"
+              class="c22"
               color="light"
               font-style="body"
             >
               Built with ♥️ in Boston, MA
             </p>
             <p
-              class="c19"
+              class="c22"
               color="light"
               font-style="body"
             >

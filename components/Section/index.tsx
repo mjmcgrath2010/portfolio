@@ -3,13 +3,14 @@ import styled from "styled-components";
 import SectionProps from "./types";
 
 const Container = styled.div<SectionProps>`
-  padding: ${({ theme }) => theme.spacing.md};
   background: ${({ theme, color = "light" }) =>
     theme.palette.background[color]};
   min-height: 300px;
-  margin: 0;
-  width: 100%;
-  overflow-x: hidden;
+
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding: ${({ theme }) => theme.spacing.lg};
 `;
 
 const Section = ({ children, className, color }: SectionProps) => (

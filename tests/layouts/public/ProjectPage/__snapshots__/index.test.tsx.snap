@@ -159,16 +159,16 @@ Object {
 }
 
 .c14 {
-  padding: 16px;
   background: rgb(30,20,10);
   min-height: 300px;
-  margin: 0;
-  width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding: 24px;
 }
 
 .c13 {
-  grid-column: span 1;
+  grid-column: span undefined;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -176,7 +176,7 @@ Object {
 }
 
 .c17 {
-  grid-column: span 12;
+  grid-column: span undefined;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -257,6 +257,30 @@ Object {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .c13 {
+    grid-column: span undefined;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .c13 {
+    grid-column: span 1;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .c17 {
+    grid-column: span undefined;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .c17 {
+    grid-column: span 12;
   }
 }
 
@@ -520,16 +544,16 @@ Object {
 }
 
 .c14 {
-  padding: 16px;
   background: rgb(30,20,10);
   min-height: 300px;
-  margin: 0;
-  width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding: 24px;
 }
 
 .c13 {
-  grid-column: span 1;
+  grid-column: span undefined;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -537,7 +561,7 @@ Object {
 }
 
 .c17 {
-  grid-column: span 12;
+  grid-column: span undefined;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -618,6 +642,30 @@ Object {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .c13 {
+    grid-column: span undefined;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .c13 {
+    grid-column: span 1;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .c17 {
+    grid-column: span undefined;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .c17 {
+    grid-column: span 12;
   }
 }
 

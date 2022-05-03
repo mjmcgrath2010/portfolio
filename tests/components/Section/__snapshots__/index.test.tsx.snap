@@ -4,12 +4,12 @@ exports[`<Section /> matches the snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": .c0 {
-  padding: 16px;
   background: rgb(223,223,223);
   min-height: 300px;
-  margin: 0;
-  width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding: 24px;
 }
 
 <body>
@@ -23,12 +23,12 @@ Object {
     </div>
   </body>,
   "container": .c0 {
-  padding: 16px;
   background: rgb(223,223,223);
   min-height: 300px;
-  margin: 0;
-  width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding: 24px;
 }
 
 <div>
