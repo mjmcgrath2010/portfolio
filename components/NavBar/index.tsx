@@ -157,14 +157,14 @@ NavRoutes.defaultProps = {
       href: "/about",
       name: "About",
     },
-    {
-      href: "/projects",
-      name: "Projects",
-    },
-    {
-      href: "/blog",
-      name: "Blog",
-    },
+    // {
+    //   href: "/projects",
+    //   name: "Projects",
+    // },
+    // {
+    //   href: "/blog",
+    //   name: "Blog",
+    // },
     {
       href: "/components/index.html",
       name: "Components",

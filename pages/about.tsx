@@ -19,9 +19,9 @@ const About: NextPage = () => (
         />
       </Grid.Item>
       <Grid.Item mobile={12} desktop={8}>
-        Hello! My name is Mike McGrath and I'm a Senior Frontend Software
-        Engineer! I'm working on finishing off my portfolio and blog. Check back
-        soon!
+        Hello! My name is Mike McGrath and I&apos;m a Senior Frontend Software
+        Engineer! I&apos;m working on finishing off my portfolio and blog. Check
+        back soon!
       </Grid.Item>
     </Grid>
   </AppLayout>

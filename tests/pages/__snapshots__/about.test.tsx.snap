@@ -377,18 +377,6 @@ Object {
                 About
               </a>
               <a
-                class="c8 c9 c10"
-                href="/projects"
-              >
-                Projects
-              </a>
-              <a
-                class="c8 c9 c10"
-                href="/blog"
-              >
-                Blog
-              </a>
-              <a
                 class="c11 c9 c10"
                 href="/components/index.html"
                 target="_blank"
@@ -832,18 +820,6 @@ Object {
               href="/about"
             >
               About
-            </a>
-            <a
-              class="c8 c9 c10"
-              href="/projects"
-            >
-              Projects
-            </a>
-            <a
-              class="c8 c9 c10"
-              href="/blog"
-            >
-              Blog
             </a>
             <a
               class="c11 c9 c10"
