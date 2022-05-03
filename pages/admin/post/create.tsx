@@ -29,6 +29,7 @@ const Admin: NextPage = () => {
           body: JSON.stringify(body),
           title: "Hello World",
           description: "World",
+          featuredImage: "hello",
         },
       },
     });
