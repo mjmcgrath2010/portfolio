@@ -1,5 +1,6 @@
 import { DefaultTheme } from "styled-components";
 import * as AspectRatio from "@radix-ui/react-aspect-ratio";
+import { StaticImageData } from "next/image";
 
 export interface ImageContainerProps
   extends AspectRatio.AspectRatioProps,
@@ -8,8 +9,9 @@ export interface ImageContainerProps
 }
 
 interface ImageProps {
-  src: string;
-  ratio: number;
+  src: string | any;
+  ratio?: number;
+  alt?: string;
 }
 
 export default ImageProps;

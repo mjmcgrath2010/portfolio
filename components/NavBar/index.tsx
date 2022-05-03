@@ -1,4 +1,4 @@
-import React, { FC, forwardRef } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
 import NextLink from "next/link";
 import NavBarProps, { LogoProps } from "./types";
@@ -6,6 +6,7 @@ import AppBar from "../AppBar";
 import Logo from "../../public/assets/branding/logo.svg";
 import Link from "../Link";
 import useScroll from "../../client/hooks/useScroll";
+import useMediaQuery from "../../client/hooks/useMediaQuery";
 
 interface RouteProps {
   href: string;
@@ -19,6 +20,9 @@ interface NavRoutesProps {
 
 interface Scrolled {
   isScrolled?: boolean | undefined;
+  desktop?: boolean | undefined;
+  tablet?: boolean | undefined;
+  mobile?: boolean | undefined;
 }
 const Container = styled(AppBar)<Scrolled>`
   ${({ isScrolled }) =>
@@ -41,9 +45,15 @@ const StyledLogo = styled(Logo)`
   ${({ theme }) => theme.breakpoints.mobile} {
     flex-direction: column;
   }
+
+  ${({ mobile }) =>
+    mobile &&
+    css`
+      width: 100%;
+    `}
 `;
 
-const NavBarContainer = styled.div`
+const NavBarContainer = styled.div<Scrolled>`
   width: 100%;
   height: 100%;
   display: flex;
@@ -70,6 +80,14 @@ const NavBarLogoContainer = styled.div<Scrolled>`
           color: ${({ theme }) => theme.palette.info.light};
         }
       }
+    `}
+
+  ${({ mobile, tablet }) =>
+    (mobile || tablet) &&
+    css`
+      width: 100%;
+      display: flex;
+      justify-content: center;
     `}
 `;
 
@@ -111,12 +129,19 @@ const NavRoutesContainer = styled.div<Scrolled>`
   ${({ theme }) => theme.breakpoints.mobile} {
     flex-direction: column;
   }
+
+  ${({ mobile }) =>
+    mobile &&
+    css`
+      display: none;
+    `}
 `;
 
 const NavRoutes = ({ routes }: NavRoutesProps) => {
   const { thresholdMet } = useScroll(70);
+  const queries = useMediaQuery({});
   return (
-    <NavRoutesContainer isScrolled={thresholdMet}>
+    <NavRoutesContainer {...queries} isScrolled={thresholdMet}>
       {routes.map(({ href, external, name }: RouteProps) => (
         <StyledLink key={name} href={href} external={external}>
           {name}
@@ -148,7 +173,7 @@ NavRoutes.defaultProps = {
   ],
 };
 
-const NavLogo = React.forwardRef((props, ref) => (
+const NavLogo = React.forwardRef((props: Scrolled, ref) => (
   <StyledLogo href={ref} {...props} />
 ));
 
@@ -156,9 +181,13 @@ NavLogo.displayName = "NavLogo";
 
 const NavBarLogo = ({ className }: LogoProps) => {
   const { thresholdMet } = useScroll(70);
-
+  const queries = useMediaQuery({});
   return (
-    <NavBarLogoContainer isScrolled={thresholdMet} className={className}>
+    <NavBarLogoContainer
+      {...queries}
+      isScrolled={thresholdMet}
+      className={className}
+    >
       <NextLink href="/" passHref>
         <NavLogo />
       </NextLink>
@@ -168,10 +197,11 @@ const NavBarLogo = ({ className }: LogoProps) => {
 
 const NavBar = ({ children, className }: NavBarProps) => {
   const { thresholdMet } = useScroll(70);
+  const queries = useMediaQuery({});
 
   return (
-    <Container isScrolled={thresholdMet} className={className}>
-      <NavBarContainer>{children}</NavBarContainer>
+    <Container {...queries} isScrolled={thresholdMet} className={className}>
+      <NavBarContainer {...queries}>{children}</NavBarContainer>
     </Container>
   );
 };

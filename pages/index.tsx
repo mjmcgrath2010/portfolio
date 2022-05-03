@@ -7,6 +7,8 @@ import Grid from "@components/Grid";
 import AnimatedLogo from "@components/AnimatedLogo";
 import Section from "@components/Section";
 import Typography from "@components/Typography";
+import Image from "@components/Image";
+import Card from "@components/Card";
 
 const HeroContainer = styled.div`
   position: relative;
@@ -43,6 +45,14 @@ const ContentContainer = styled.div`
   position: relative;
 `;
 
+const WorkLogoContainer = styled.div`
+  width: 80%;
+`;
+
+const WorkLogo = styled(Image)`
+  object-fit: contain;
+`;
+
 const Home: NextPage = () => {
   return (
     <AppLayout>
@@ -63,6 +73,24 @@ const Home: NextPage = () => {
           <Grid>
             <Grid.Item mobile={12}>
               <Typography fontStyle="heading2">Work Experience</Typography>
+            </Grid.Item>
+
+            <Grid.Item mobile={6} tablet={2} desktop={3}>
+              <WorkLogoContainer>
+                <Image
+                  alt="privy-logo"
+                  src="/assets/images/work-logos/privy-logo-purple.png"
+                />
+              </WorkLogoContainer>
+            </Grid.Item>
+
+            <Grid.Item mobile={6} tablet={2} desktop={3}>
+              <WorkLogoContainer>
+                <Image
+                  alt="attentive-mobile"
+                  src="/assets/images/work-logos/attentive-logo-yellow.png"
+                />
+              </WorkLogoContainer>
             </Grid.Item>
           </Grid>
         </Section>
