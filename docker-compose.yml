@@ -1,4 +1,4 @@
-version: "3.9"
+version: "3"
 
 services:
   # Component Libray
@@ -59,24 +59,18 @@ services:
       - mmdev
 
   mongodb:
-    image: mongo
     container_name: mongodb
+    image: mongo:4.4.6
+    volumes:
+      - ~/mongo:/data/db
+    ports:
+      - "27017:27017"
     environment:
-      - MONGO_INITDB_DATABASE=portfolio
       - MONGO_INITDB_ROOT_USERNAME=mmcgrath
       - MONGO_INITDB_ROOT_PASSWORD=password
-    volumes:
-      - mongodb-data:/data/db
-      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo-js:ro
+      - MONGO_INITDB_DATABASE=portfolio
     networks:
       - mmdev
-    ports:
-      - "27017-27019:27017-27017-2701"
-    healthcheck:
-      interval: 30s
-      timeout: 10s
-      retries: 3
-    restart: unless-stopped
 
 volumes:
   components:
@@ -87,4 +81,4 @@ volumes:
 
 networks:
   mmdev:
-  mongodb_network:
+    driver: bridge
