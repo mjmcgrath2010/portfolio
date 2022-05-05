@@ -1,4 +1,4 @@
-version: "3.9"
+version: "3"
 
 services:
   # Component Libray
@@ -14,15 +14,22 @@ services:
     ports:
       - 3001
     volumes:
-      - .:/home/app
-      - /node_modules
+      - .:/app
+      - .:/app:cached
+      - node_modules:/app/node_modules
       - /.storybook
+    networks:
+      - mmdev
 
   # NextJS Portfolio
   portfolio:
     build: .
     command: yarn dev -p 443
     container_name: portfolio
+    links:
+      - mongodb
+    depends_on:
+      - mongodb
     environment:
       - VIRTUAL_HOST=mmcgrath.io
       - VIRTUAL_PATH=/
@@ -30,9 +37,12 @@ services:
     ports:
       - 443
     volumes:
-      - .:/home/app
-      - /node_modules
+      - .:/app
+      - .:/app:cached
+      - node_modules:/app/node_modules
       - /.next
+    networks:
+      - mmdev
 
   nginx-proxy:
     build:
@@ -42,16 +52,36 @@ services:
     depends_on:
       - components
       - portfolio
+      - mongodb
     ports:
       - "443:443"
+      - "80:80"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./nginx-proxy/certs:/etc/nginx/certs
+    networks:
+      - mmdev
+
+  mongodb:
+    container_name: mongodb
+    env_file: .env.local
+    image: mongo:latest
+    volumes:
+      - ~/mongo:/data/db
+    ports:
+      - "27017:27017"
+    environment:
+      VIRTUAL_PORT: 27017
+    networks:
+      - mmdev
 
 volumes:
   components:
   portfolio:
+  nginx-proxy:
+  node_modules:
+  mongodb-data:
 
 networks:
-  default:
-    name: mmdev
+  mmdev:
+    driver: bridge
