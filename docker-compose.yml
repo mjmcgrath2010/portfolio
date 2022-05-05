@@ -14,9 +14,12 @@ services:
     ports:
       - 3001
     volumes:
-      - .:/home/app
-      - /node_modules
+      - .:/app
+      - .:/app:cached
+      - node_modules:/app/node_modules
       - /.storybook
+    networks:
+      - mmdev
 
   # NextJS Portfolio
   portfolio:
@@ -30,9 +33,12 @@ services:
     ports:
       - 443
     volumes:
-      - .:/home/app
-      - /node_modules
+      - .:/app
+      - .:/app:cached
+      - node_modules:/app/node_modules
       - /.next
+    networks:
+      - mmdev
 
   nginx-proxy:
     build:
@@ -42,16 +48,43 @@ services:
     depends_on:
       - components
       - portfolio
+      - mongodb
     ports:
       - "443:443"
+      - "80:80"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./nginx-proxy/certs:/etc/nginx/certs
+    networks:
+      - mmdev
+
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    environment:
+      - MONGO_INITDB_DATABASE=portfolio
+      - MONGO_INITDB_ROOT_USERNAME=mmcgrath
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes:
+      - mongodb-data:/data/db
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo-js:ro
+    networks:
+      - mmdev
+    ports:
+      - "27017-27019:27017-27017-2701"
+    healthcheck:
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
 
 volumes:
   components:
   portfolio:
+  nginx-proxy:
+  node_modules:
+  mongodb-data:
 
 networks:
-  default:
-    name: mmdev
+  mmdev:
+  mongodb_network:
