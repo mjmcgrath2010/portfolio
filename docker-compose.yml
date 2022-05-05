@@ -26,6 +26,10 @@ services:
     build: .
     command: yarn dev -p 443
     container_name: portfolio
+    links:
+      - mongodb
+    depends_on:
+      - mongodb
     environment:
       - VIRTUAL_HOST=mmcgrath.io
       - VIRTUAL_PATH=/
@@ -60,15 +64,14 @@ services:
 
   mongodb:
     container_name: mongodb
-    image: mongo:4.4.6
+    env_file: .env.local
+    image: mongo:latest
     volumes:
       - ~/mongo:/data/db
     ports:
       - "27017:27017"
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=mmcgrath
-      - MONGO_INITDB_ROOT_PASSWORD=password
-      - MONGO_INITDB_DATABASE=portfolio
+      VIRTUAL_PORT: 27017
     networks:
       - mmdev
 
