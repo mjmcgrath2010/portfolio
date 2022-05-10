@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ProjectsId /> matches the snapshot 1`] = `
+exports[`<CompanyLayout /> matches the snapshot 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": .c0 {
@@ -12,6 +12,11 @@ Object {
   background: #f6f6f6;
   box-shadow: hsl(0deg 0% 27% / 15%) 2px 3px 5px;
   z-index: 1000;
+}
+
+.c12 {
+  margin-top: 70px;
+  width: 100%;
 }
 
 .c2 {
@@ -172,40 +177,12 @@ Object {
   margin: 0 auto;
 }
 
-.c13 {
-  grid-column: span 12;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  justify-self: center;
-}
-
 .c18 {
   grid-column: span 12;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
   justify-self: stretch;
-}
-
-.c12 {
-  display: grid;
-  gap: 16px;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(12,1fr);
-  -webkit-align-content: start;
-  -ms-flex-line-pack: start;
-  align-content: start;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  justify-items: start;
-  padding: 24px;
 }
 
 .c17 {
@@ -238,6 +215,8 @@ Object {
 
 .c15 {
   height: 200px;
+  position: relative;
+  width: 100%;
 }
 
 .c19 {
@@ -247,6 +226,11 @@ Object {
   text-align: center;
   width: 100%;
   padding-top: 188px;
+}
+
+.c13 {
+  padding: 24px;
+  min-height: calc(65vh);
 }
 
 @media screen and (max-width:767px) {
@@ -262,18 +246,6 @@ Object {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-  }
-}
-
-@media screen and (min-width:768px) and (max-width:1023px) {
-  .c13 {
-    grid-column: span 12;
-  }
-}
-
-@media screen and (max-width:767px) {
-  .c13 {
-    grid-column: span 12;
   }
 }
 
@@ -338,14 +310,11 @@ Object {
       </div>
       <div
         class="c12"
+      />
+      <div
+        class="c13"
       >
-        <div
-          class="c13"
-        >
-          <h1>
-            ProjectsId Page
-          </h1>
-        </div>
+         hi
       </div>
       <div
         class="c14 c15"
@@ -394,6 +363,11 @@ Object {
   background: #f6f6f6;
   box-shadow: hsl(0deg 0% 27% / 15%) 2px 3px 5px;
   z-index: 1000;
+}
+
+.c12 {
+  margin-top: 70px;
+  width: 100%;
 }
 
 .c2 {
@@ -554,40 +528,12 @@ Object {
   margin: 0 auto;
 }
 
-.c13 {
-  grid-column: span 12;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  justify-self: center;
-}
-
 .c18 {
   grid-column: span 12;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
   justify-self: stretch;
-}
-
-.c12 {
-  display: grid;
-  gap: 16px;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(12,1fr);
-  -webkit-align-content: start;
-  -ms-flex-line-pack: start;
-  align-content: start;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  justify-items: start;
-  padding: 24px;
 }
 
 .c17 {
@@ -620,6 +566,8 @@ Object {
 
 .c15 {
   height: 200px;
+  position: relative;
+  width: 100%;
 }
 
 .c19 {
@@ -629,6 +577,11 @@ Object {
   text-align: center;
   width: 100%;
   padding-top: 188px;
+}
+
+.c13 {
+  padding: 24px;
+  min-height: calc(65vh);
 }
 
 @media screen and (max-width:767px) {
@@ -644,18 +597,6 @@ Object {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-  }
-}
-
-@media screen and (min-width:768px) and (max-width:1023px) {
-  .c13 {
-    grid-column: span 12;
-  }
-}
-
-@media screen and (max-width:767px) {
-  .c13 {
-    grid-column: span 12;
   }
 }
 
@@ -719,14 +660,11 @@ Object {
     </div>
     <div
       class="c12"
+    />
+    <div
+      class="c13"
     >
-      <div
-        class="c13"
-      >
-        <h1>
-          ProjectsId Page
-        </h1>
-      </div>
+       hi
     </div>
     <div
       class="c14 c15"

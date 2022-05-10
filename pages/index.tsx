@@ -10,7 +10,7 @@ import Typography from "@components/Typography";
 import Image from "@components/Image";
 
 const HeroContainer = styled.div`
-  position: relative;
+  position: fixed;
   display: block;
   width: 100%;
   height: 100vh;
@@ -20,7 +20,8 @@ const HeroContainer = styled.div`
   background-size: cover;
   background-attachment: fixed;
   color: ${({ theme }) => theme.palette.text.light};
-  z-index: 1;
+  top: 0;
+  left: 0;
 `;
 
 const WorkLogoContainer = styled(Grid).attrs({
@@ -61,6 +62,7 @@ const ContentContainer = styled.div`
   z-index: 2;
   background: ${({ theme }) => theme.colors.gray_200};
   position: relative;
+  margin-top: 100vh;
 `;
 
 const Home: NextPage = () => {

@@ -14,6 +14,11 @@ Object {
   z-index: 1000;
 }
 
+.c12 {
+  margin-top: 70px;
+  width: 100%;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -158,7 +163,7 @@ Object {
   color: rgb(228,151,93);
 }
 
-.c14 {
+.c15 {
   background: rgb(30,20,10);
   min-height: 300px;
   overflow: hidden;
@@ -167,12 +172,12 @@ Object {
   padding: 32px;
 }
 
-.c16 {
+.c17 {
   max-width: 1440px;
   margin: 0 auto;
 }
 
-.c13 {
+.c14 {
   grid-column: span 12;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
@@ -180,7 +185,7 @@ Object {
   justify-self: center;
 }
 
-.c18 {
+.c19 {
   grid-column: span 12;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
@@ -188,7 +193,7 @@ Object {
   justify-self: stretch;
 }
 
-.c12 {
+.c13 {
   display: grid;
   gap: 16px;
   grid-template-rows: auto;
@@ -208,7 +213,7 @@ Object {
   padding: 24px;
 }
 
-.c17 {
+.c18 {
   display: grid;
   gap: 16px;
   grid-template-rows: auto;
@@ -228,7 +233,7 @@ Object {
   padding: 24px;
 }
 
-.c20 {
+.c21 {
   color: #fbfbfb;
   padding: 0;
   margin: 0;
@@ -236,11 +241,13 @@ Object {
   font-size: 16px;
 }
 
-.c15 {
+.c16 {
   height: 200px;
+  position: relative;
+  width: 100%;
 }
 
-.c19 {
+.c20 {
   display: block;
   position: relative;
   margin: 16px auto;
@@ -266,25 +273,25 @@ Object {
 }
 
 @media screen and (min-width:768px) and (max-width:1023px) {
-  .c13 {
+  .c14 {
     grid-column: span 12;
   }
 }
 
 @media screen and (max-width:767px) {
-  .c13 {
+  .c14 {
     grid-column: span 12;
   }
 }
 
 @media screen and (min-width:768px) and (max-width:1023px) {
-  .c18 {
+  .c19 {
     grid-column: span 12;
   }
 }
 
 @media screen and (max-width:767px) {
-  .c18 {
+  .c19 {
     grid-column: span 12;
   }
 }
@@ -338,9 +345,12 @@ Object {
       </div>
       <div
         class="c12"
+      />
+      <div
+        class="c13"
       >
         <div
-          class="c13"
+          class="c14"
         >
           <h1>
             ProjectsIndex Page
@@ -348,30 +358,30 @@ Object {
         </div>
       </div>
       <div
-        class="c14 c15"
+        class="c15 c16"
         color="dark"
       >
         <div
-          class="c16"
+          class="c17"
         >
           <div
-            class="c17"
+            class="c18"
           >
             <div
-              class="c18"
+              class="c19"
             >
               <div
-                class="c19"
+                class="c20"
               >
                 <p
-                  class="c20"
+                  class="c21"
                   color="light"
                   font-style="body"
                 >
                   Built with ♥️ in Boston, MA
                 </p>
                 <p
-                  class="c20"
+                  class="c21"
                   color="light"
                   font-style="body"
                 >
@@ -394,6 +404,11 @@ Object {
   background: #f6f6f6;
   box-shadow: hsl(0deg 0% 27% / 15%) 2px 3px 5px;
   z-index: 1000;
+}
+
+.c12 {
+  margin-top: 70px;
+  width: 100%;
 }
 
 .c2 {
@@ -540,7 +555,7 @@ Object {
   color: rgb(228,151,93);
 }
 
-.c14 {
+.c15 {
   background: rgb(30,20,10);
   min-height: 300px;
   overflow: hidden;
@@ -549,12 +564,12 @@ Object {
   padding: 32px;
 }
 
-.c16 {
+.c17 {
   max-width: 1440px;
   margin: 0 auto;
 }
 
-.c13 {
+.c14 {
   grid-column: span 12;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
@@ -562,7 +577,7 @@ Object {
   justify-self: center;
 }
 
-.c18 {
+.c19 {
   grid-column: span 12;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
@@ -570,7 +585,7 @@ Object {
   justify-self: stretch;
 }
 
-.c12 {
+.c13 {
   display: grid;
   gap: 16px;
   grid-template-rows: auto;
@@ -590,7 +605,7 @@ Object {
   padding: 24px;
 }
 
-.c17 {
+.c18 {
   display: grid;
   gap: 16px;
   grid-template-rows: auto;
@@ -610,7 +625,7 @@ Object {
   padding: 24px;
 }
 
-.c20 {
+.c21 {
   color: #fbfbfb;
   padding: 0;
   margin: 0;
@@ -618,11 +633,13 @@ Object {
   font-size: 16px;
 }
 
-.c15 {
+.c16 {
   height: 200px;
+  position: relative;
+  width: 100%;
 }
 
-.c19 {
+.c20 {
   display: block;
   position: relative;
   margin: 16px auto;
@@ -648,25 +665,25 @@ Object {
 }
 
 @media screen and (min-width:768px) and (max-width:1023px) {
-  .c13 {
+  .c14 {
     grid-column: span 12;
   }
 }
 
 @media screen and (max-width:767px) {
-  .c13 {
+  .c14 {
     grid-column: span 12;
   }
 }
 
 @media screen and (min-width:768px) and (max-width:1023px) {
-  .c18 {
+  .c19 {
     grid-column: span 12;
   }
 }
 
 @media screen and (max-width:767px) {
-  .c18 {
+  .c19 {
     grid-column: span 12;
   }
 }
@@ -719,9 +736,12 @@ Object {
     </div>
     <div
       class="c12"
+    />
+    <div
+      class="c13"
     >
       <div
-        class="c13"
+        class="c14"
       >
         <h1>
           ProjectsIndex Page
@@ -729,30 +749,30 @@ Object {
       </div>
     </div>
     <div
-      class="c14 c15"
+      class="c15 c16"
       color="dark"
     >
       <div
-        class="c16"
+        class="c17"
       >
         <div
-          class="c17"
+          class="c18"
         >
           <div
-            class="c18"
+            class="c19"
           >
             <div
-              class="c19"
+              class="c20"
             >
               <p
-                class="c20"
+                class="c21"
                 color="light"
                 font-style="body"
               >
                 Built with ♥️ in Boston, MA
               </p>
               <p
-                class="c20"
+                class="c21"
                 color="light"
                 font-style="body"
               >

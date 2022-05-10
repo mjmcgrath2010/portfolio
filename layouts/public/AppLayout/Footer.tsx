@@ -7,6 +7,8 @@ import Typography from "@components/Typography";
 
 const FooterContainer = styled(Section)`
   height: 200px;
+  position: relative;
+  width: 100%;
 `;
 
 const CreditContainer = styled.div`
@@ -20,20 +22,22 @@ const CreditContainer = styled.div`
 
 const Footer = () => {
   return (
-    <FooterContainer color="dark">
-      <Grid justifyContent="center" alignItems="center">
-        <Grid.Item mobile={12} desktop={12} tablet={12}>
-          <CreditContainer>
-            <Typography fontStyle="body" color="light">
-              Built with ♥️ in Boston, MA
-            </Typography>
-            <Typography fontStyle="body" color="light">
-              Mike McGrath, © {dayjs().format("YYYY")}
-            </Typography>
-          </CreditContainer>
-        </Grid.Item>
-      </Grid>
-    </FooterContainer>
+    <>
+      <FooterContainer color="dark">
+        <Grid justifyContent="center" alignItems="center">
+          <Grid.Item mobile={12} desktop={12} tablet={12}>
+            <CreditContainer>
+              <Typography fontStyle="body" color="light">
+                Built with ♥️ in Boston, MA
+              </Typography>
+              <Typography fontStyle="body" color="light">
+                Mike McGrath, © {dayjs().format("YYYY")}
+              </Typography>
+            </CreditContainer>
+          </Grid.Item>
+        </Grid>
+      </FooterContainer>
+    </>
   );
 };
 
