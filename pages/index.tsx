@@ -81,7 +81,7 @@ const Home: NextPage = () => {
       <ContentContainer>
         <Section color="light">
           <Grid.Item mobile={12}>
-            <Typography fontStyle="heading2">Work Experience</Typography>
+            <Typography fontStyle="heading1">Work Experience</Typography>
           </Grid.Item>
           <WorkLogoContainer>
             <ImageContainer>
@@ -114,33 +114,29 @@ const Home: NextPage = () => {
           </WorkLogoContainer>
         </Section>
 
-        {/* <Section color="accent">
-          <Grid>
-            <Grid.Item mobile={12}>
-              <Typography color="light" fontStyle="heading2">
-                Featured Projects
-              </Typography>
-            </Grid.Item>
-          </Grid>
+        <Section color="secondary">
+          <Grid.Item>
+            <Typography fontStyle="heading1" color="light">
+              Featured Work
+            </Typography>
+          </Grid.Item>
         </Section>
 
-        <Section>
-          <Grid>
-            <Grid.Item mobile={12}>
-              <Typography fontStyle="heading2">Featured Blog Posts</Typography>
-            </Grid.Item>
-          </Grid>
+        <Section color="light">
+          <Grid.Item>
+            <Typography fontStyle="heading1" color="dark">
+              Featured Posts
+            </Typography>
+          </Grid.Item>
         </Section>
 
         <Section color="accent">
-          <Grid>
-            <Grid.Item mobile={12}>
-              <Typography color="light" fontStyle="heading2">
-                Drop me a line
-              </Typography>
-            </Grid.Item>
-          </Grid>
-        </Section> */}
+          <Grid.Item>
+            <Typography fontStyle="heading1" color="light">
+              Get in touch
+            </Typography>
+          </Grid.Item>
+        </Section>
       </ContentContainer>
     </AppLayout>
   );

@@ -9,7 +9,12 @@ Object {
   overflow: hidden;
   display: block;
   position: relative;
-  padding: 24px;
+  padding: 32px;
+}
+
+.c1 {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 <body>
@@ -18,7 +23,11 @@ Object {
         class="c0"
         color="light"
       >
-        hi
+        <div
+          class="c1"
+        >
+          hi
+        </div>
       </div>
     </div>
   </body>,
@@ -28,7 +37,12 @@ Object {
   overflow: hidden;
   display: block;
   position: relative;
-  padding: 24px;
+  padding: 32px;
+}
+
+.c1 {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 <div>
@@ -36,7 +50,11 @@ Object {
       class="c0"
       color="light"
     >
-      hi
+      <div
+        class="c1"
+      >
+        hi
+      </div>
     </div>
   </div>,
   "debug": [Function],

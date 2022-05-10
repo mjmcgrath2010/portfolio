@@ -159,6 +159,7 @@ declare module "styled-components" {
         accent: string;
         dark: string;
         light: string;
+        secondary: string;
       };
       disabled: string;
       error: IPalette;

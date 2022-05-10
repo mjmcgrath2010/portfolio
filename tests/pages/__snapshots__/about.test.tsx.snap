@@ -164,7 +164,12 @@ Object {
   overflow: hidden;
   display: block;
   position: relative;
-  padding: 24px;
+  padding: 32px;
+}
+
+.c20 {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .c13 {
@@ -191,7 +196,7 @@ Object {
   justify-self: stretch;
 }
 
-.c21 {
+.c22 {
   grid-column: span 12;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
@@ -219,7 +224,7 @@ Object {
   padding: 24px;
 }
 
-.c20 {
+.c21 {
   display: grid;
   gap: 16px;
   grid-template-rows: auto;
@@ -239,7 +244,7 @@ Object {
   padding: 24px;
 }
 
-.c23 {
+.c24 {
   color: #fbfbfb;
   padding: 0;
   margin: 0;
@@ -251,7 +256,7 @@ Object {
   height: 200px;
 }
 
-.c22 {
+.c23 {
   display: block;
   position: relative;
   margin: 16px auto;
@@ -329,13 +334,13 @@ Object {
 }
 
 @media screen and (min-width:768px) and (max-width:1023px) {
-  .c21 {
+  .c22 {
     grid-column: span 12;
   }
 }
 
 @media screen and (max-width:767px) {
-  .c21 {
+  .c22 {
     grid-column: span 12;
   }
 }
@@ -428,21 +433,25 @@ Object {
             <div
               class="c22"
             >
-              <p
+              <div
                 class="c23"
-                color="light"
-                font-style="body"
               >
-                Built with ♥️ in Boston, MA
-              </p>
-              <p
-                class="c23"
-                color="light"
-                font-style="body"
-              >
-                Mike McGrath, © 
-                2022
-              </p>
+                <p
+                  class="c24"
+                  color="light"
+                  font-style="body"
+                >
+                  Built with ♥️ in Boston, MA
+                </p>
+                <p
+                  class="c24"
+                  color="light"
+                  font-style="body"
+                >
+                  Mike McGrath, © 
+                  2022
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -610,7 +619,12 @@ Object {
   overflow: hidden;
   display: block;
   position: relative;
-  padding: 24px;
+  padding: 32px;
+}
+
+.c20 {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .c13 {
@@ -637,7 +651,7 @@ Object {
   justify-self: stretch;
 }
 
-.c21 {
+.c22 {
   grid-column: span 12;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
@@ -665,7 +679,7 @@ Object {
   padding: 24px;
 }
 
-.c20 {
+.c21 {
   display: grid;
   gap: 16px;
   grid-template-rows: auto;
@@ -685,7 +699,7 @@ Object {
   padding: 24px;
 }
 
-.c23 {
+.c24 {
   color: #fbfbfb;
   padding: 0;
   margin: 0;
@@ -697,7 +711,7 @@ Object {
   height: 200px;
 }
 
-.c22 {
+.c23 {
   display: block;
   position: relative;
   margin: 16px auto;
@@ -775,13 +789,13 @@ Object {
 }
 
 @media screen and (min-width:768px) and (max-width:1023px) {
-  .c21 {
+  .c22 {
     grid-column: span 12;
   }
 }
 
 @media screen and (max-width:767px) {
-  .c21 {
+  .c22 {
     grid-column: span 12;
   }
 }
@@ -873,21 +887,25 @@ Object {
           <div
             class="c22"
           >
-            <p
+            <div
               class="c23"
-              color="light"
-              font-style="body"
             >
-              Built with ♥️ in Boston, MA
-            </p>
-            <p
-              class="c23"
-              color="light"
-              font-style="body"
-            >
-              Mike McGrath, © 
-              2022
-            </p>
+              <p
+                class="c24"
+                color="light"
+                font-style="body"
+              >
+                Built with ♥️ in Boston, MA
+              </p>
+              <p
+                class="c24"
+                color="light"
+                font-style="body"
+              >
+                Mike McGrath, © 
+                2022
+              </p>
+            </div>
           </div>
         </div>
       </div>

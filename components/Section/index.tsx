@@ -9,12 +9,17 @@ const Container = styled.div<SectionProps>`
   overflow: hidden;
   display: block;
   position: relative;
-  padding: ${({ theme }) => theme.spacing.lg};
+  padding: ${({ theme }) => theme.spacing.xl};
+`;
+
+const ContentContainer = styled.div`
+  max-width: 1440px;
+  margin: 0 auto;
 `;
 
 const Section = ({ children, className, color }: SectionProps) => (
   <Container className={className} color={color}>
-    {children}
+    <ContentContainer>{children}</ContentContainer>
   </Container>
 );
 
