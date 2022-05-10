@@ -8,6 +8,7 @@ interface ImageProps {
   src: string | any;
   alt?: string;
   className?: string;
+  onClick?: any;
 }
 
 export default ImageProps;

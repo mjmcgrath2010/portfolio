@@ -19,8 +19,8 @@ const StyledImage = styled.img`
   height: auto;
 `;
 
-const Image = ({ src, className }: ImageProps) => (
-  <Container className={className}>
+const Image = ({ src, className, onClick }: ImageProps) => (
+  <Container className={className} onClick={onClick}>
     <StyledImage src={src} />
   </Container>
 );

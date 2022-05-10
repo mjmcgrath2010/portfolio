@@ -8,6 +8,7 @@ import AnimatedLogo from "@components/AnimatedLogo";
 import Section from "@components/Section";
 import Typography from "@components/Typography";
 import Image from "@components/Image";
+import { useRouter } from "next/router";
 
 const HeroContainer = styled.div`
   position: fixed;
@@ -66,6 +67,10 @@ const ContentContainer = styled.div`
 `;
 
 const Home: NextPage = () => {
+  const router = useRouter();
+  const handleClick = (path: string) => () => {
+    router.push(path);
+  };
   return (
     <AppLayout>
       <HeroContainer>
@@ -88,13 +93,15 @@ const Home: NextPage = () => {
           <WorkLogoContainer>
             <ImageContainer>
               <CompanyLogo
-                alt="attentive-mobile"
+                onClick={handleClick("/companies/attentive")}
+                alt="attentive-logo"
                 src="/assets/images/work-logos/attentive-logo-yellow.png"
               />
             </ImageContainer>
 
             <ImageContainer>
               <CompanyLogo
+                onClick={handleClick("/companies/privy")}
                 alt="privy-logo"
                 src="/assets/images/work-logos/privy-logo-purple.png"
               />
@@ -102,6 +109,7 @@ const Home: NextPage = () => {
 
             <ImageContainer>
               <CompanyLogo
+                onClick={handleClick("/companies/hapyak")}
                 alt="attentive-mobile"
                 src="/assets/images/work-logos/hapyak-logo-color.png"
               />
@@ -109,6 +117,7 @@ const Home: NextPage = () => {
 
             <ImageContainer>
               <CompanyLogo
+                onClick={handleClick("/companies/tolemi")}
                 alt="attentive-mobile"
                 src="/assets/images/work-logos/tolemi-logo-white.png"
               />
