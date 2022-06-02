@@ -23,7 +23,9 @@ Object {
         class="c0"
         data-state="closed"
         type="button"
-      />
+      >
+        Click me
+      </button>
     </div>
   </body>,
   "container": .c0 {
@@ -45,7 +47,9 @@ Object {
       class="c0"
       data-state="closed"
       type="button"
-    />
+    >
+      Click me
+    </button>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
