@@ -62,7 +62,7 @@ const CloseButton = styled(Dialog.Close)`
   right: ${({ theme }) => theme.spacing.sm};
   color: ${({ theme }) => theme.palette.text.light};
   background-color: ${({ theme }) => theme.palette.secondary.main};
-  border-radius: ${({ theme }) => theme.borderRadius};
+  border-radius: 100%;
   box-shadow: ${({ theme }) => theme.shadows.main};
   font-family: ${({ theme }) => theme.fontFamilies.sans_1};
   &:hover {
@@ -75,6 +75,7 @@ const Modal = ({
   children = "",
   size,
   buttonText = "Click me",
+  hideCloseButton = false,
 }: ModalProps) => (
   <Container>
     <Trigger>{buttonText}</Trigger>
@@ -83,7 +84,7 @@ const Modal = ({
       <ModalContent size={size}>
         <Dialog.Title title="Hello" />
         <Dialog.Description title="Hello" />
-        <CloseButton>X</CloseButton>
+        {!hideCloseButton && <CloseButton>X</CloseButton>}
         {children}
       </ModalContent>
     </OverlayContainer>

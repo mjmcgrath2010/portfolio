@@ -3,6 +3,7 @@ interface ModalProps {
   children: any;
   buttonText: string | ReactElement;
   size: "sm" | "md" | "lg" | "fullWidth";
+  hideCloseButton: boolean;
 }
 
 export interface HeaderProps {
