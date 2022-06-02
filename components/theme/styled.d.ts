@@ -159,6 +159,7 @@ declare module "styled-components" {
         accent: string;
         dark: string;
         light: string;
+        lightest: string;
         secondary: string;
       };
       disabled: string;

@@ -18,6 +18,7 @@ const palette = {
     accent: colors.blue_800,
     dark: colors.black_900,
     light: colors.gray_200,
+    lightest: colors.white_200,
     secondary: colors.indigo_900,
   },
   disabled: colors.gray_400,
