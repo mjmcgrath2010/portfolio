@@ -1,9 +1,10 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import * as Dialog from "@radix-ui/react-dialog";
 
 import ModalProps from "./types";
 import ModalHeader from "./ModalHeader";
+import ModalBody from "./ModalBody";
 
 const Container = styled(Dialog.Root)``;
 
@@ -18,18 +19,39 @@ const SizeMap = {
   fullWidth: "100vw",
 };
 
+const HeightSizeMap = {
+  sm: css`
+    max-height: 600px;
+    min-height: 200px;
+    margin: 5% auto;
+  `,
+  md: css`
+    max-height: 600px;
+    min-height: 200px;
+    margin: 5% auto;
+  `,
+  lg: css`
+    max-height: 600px;
+    min-height: 200px;
+    margin: 5% auto;
+  `,
+  fullWidth: css`
+    height: 100vh;
+    top: 0;
+  `,
+};
+
 const ModalContent = styled(Dialog.Content)<Partial<ModalProps>>`
   min-width: ${({ size = "md" }) => SizeMap[size]};
-  min-height: 35vh;
+  min-height: ${({ size = "md" }) => (size === "fullWidth" ? "100vh" : "35vh")};
   position: fixed;
-  top: ${({ size = "md" }) =>
-    size === "fullWidth" ? 0 : `calc(50% - 35vh / 2)`};
   left: calc(50% - (${({ size = "md" }) => SizeMap[size]} / 2));
   justify-content: center;
   background: ${({ theme }) => theme.palette.background.lightest};
-  padding: ${({ theme }) => theme.spacing.md};
   border-radius: ${({ theme }) => theme.borderRadius};
   box-shadow: ${({ theme }) => theme.shadows.main};
+  font-family: ${({ theme }) => theme.fontFamilies.sans_1};
+  ${({ size = "md" }) => HeightSizeMap[size]}
 `;
 
 const OverlayContainer = styled(Dialog.Portal)``;
@@ -38,10 +60,19 @@ const CloseButton = styled(Dialog.Close)`
   position: absolute;
   top: ${({ theme }) => theme.spacing.sm};
   right: ${({ theme }) => theme.spacing.sm};
+  color: ${({ theme }) => theme.palette.text.light};
+  background-color: ${({ theme }) => theme.palette.secondary.main};
+  border-radius: ${({ theme }) => theme.borderRadius};
+  box-shadow: ${({ theme }) => theme.shadows.main};
+  font-family: ${({ theme }) => theme.fontFamilies.sans_1};
+  &:hover {
+    background-color: ${({ theme }) => theme.palette.secondary.hover};
+    cursor: pointer;
+  }
 `;
 
 const Modal = ({
-  children = "Modal Content",
+  children = "",
   size,
   buttonText = "Click me",
 }: ModalProps) => (
@@ -62,5 +93,6 @@ const Modal = ({
 Modal.defaultProps = {};
 
 Modal.Header = ModalHeader;
+Modal.Body = ModalBody;
 
 export default Modal;

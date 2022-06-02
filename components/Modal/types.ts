@@ -9,4 +9,8 @@ export interface HeaderProps {
   title: string | ReactElement;
 }
 
+export interface ModalBodyProps {
+  children: ReactElement | string;
+}
+
 export default ModalProps;
